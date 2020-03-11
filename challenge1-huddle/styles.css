@@ -40,9 +40,43 @@ body {
     align-items: center;
 }
 
+.hero-title {
+    padding: 20px 38px;
+    text-align: center;
+}
+
+.hero-button {
+    background-color: hsl(322, 100%, 66%);
+    border-radius: 40%;
+    color: white;
+    display: inline-block;
+    font-weight: 700;
+    font-size: .8rem;
+    padding: 1rem 4rem;
+    border-radius: 10rem;
+    box-shadow: 0 .25rem .5rem rgba(20, 20, 20, .1);
+    text-transform: capitalize;
+    text-align: center;
+    transition: .1s ease-out;
+  
+}
+
 .hero-description {
     text-align: center;
-    padding: 50px;
+    padding: 25px 50px;
     font-size: 13px;
     font-weight: 100;
+}
+
+.illustration {
+    width: 80vw;
+    margin: 25px;
+}
+
+.container-info-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 0px;
 }
