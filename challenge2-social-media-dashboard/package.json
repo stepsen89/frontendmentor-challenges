@@ -1,0 +1,14 @@
+{
+  "name": "challenge2-social-media-dashboard",
+  "version": "1.0.0",
+  "description": "![Design preview for the Social media dashboard with theme switcher coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "live-server": "^1.2.1"
+  }
+}
