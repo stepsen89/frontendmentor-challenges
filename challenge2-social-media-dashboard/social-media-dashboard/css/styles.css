@@ -1,0 +1,90 @@
+body, html {
+ margin: 0;
+ font-family: 'Inter', sans-serif;}
+
+.header {
+  display: grid;
+  padding-bottom: 100px;
+  background-color: #f5f7ff;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  justify-content: center;
+}
+
+.header .social {
+  padding: 20px;
+}
+
+.header .social h1 {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.section-overview {
+  display: flex;
+  flex-wrap: nowrap;
+  z-index: 1;
+  width: 100%;
+  margin-top: -330px;
+}
+
+.section-box {
+  background-color: hsl(227, 47%, 96%);
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-top: blue;
+  border-radius: 25%;
+  margin: 30px auto;
+  border-radius: 5px;
+  border-top: 4px solid deepskyblue;
+  margin-top: 200px;
+}
+
+.section-box-logo {
+
+}
+
+.section-followers-number {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.section-followers-title {
+  text-transform: uppercase;
+  color: #63687e;
+  font-weight: 400;
+  margin-top: -2px;
+  font-size: 1rem;
+  letter-spacing: 6px;
+}
+
+.section-status {
+    padding-top: 20px;
+  display: flex;
+          flex-direction: row;
+      flex-wrap: nowrap;
+  text-align: center;
+          justify-content: center;
+  color: #1db489;
+  font-weight: 700;
+}
+
+.section-status .increase {
+    color: #1db489;
+}
+
+.container-small-overview {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dashboard-container {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  width: 25vw
+}
