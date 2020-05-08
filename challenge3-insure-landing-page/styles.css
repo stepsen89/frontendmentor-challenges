@@ -124,7 +124,7 @@ header {
   letter-spacing: 3px;
   line-height: 1;
   margin: 0;
-  padding-top: 50px;
+  width: 40vw;
 }
 
 .line:before {
@@ -135,6 +135,10 @@ header {
   left: 0;
   height: 3px;
   width: 150px;
+}
+
+.line {
+  padding-top: 50px;
 }
 
 .line-violet:before {
@@ -155,4 +159,74 @@ header {
 .two {
   flex-direction: column;
   align-items: baseline;
+}
+
+.more {
+  background-color: var(--dark-violet);
+  background-image: url("images/bg-pattern-how-we-work-desktop.svg");
+  background-size: 50% 100%;
+  background-position: top right;
+  background-repeat: no-repeat;
+  padding: 70px;
+  margin: 100px auto;
+  color: white;
+}
+
+footer {
+  background-color: var(--very-light-gray);
+  background-image: url("images/bg-pattern-footer-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: top left;
+  padding: 60px 0 30px;
+}
+
+.footer {
+  padding: 0 20px;
+  max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 1200px;
+}
+
+.footer-list {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-list li {
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+}
+
+.footer-social,
+.footer-social-items {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-social li {
+  margin-left: 10px;
+}
+
+.footer-sections {
+  display: flex;
+  padding: 0;
+  align-items: baseline;
+}
+
+.footer-section h3 {
+  letter-spacing: 2px;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: var(--dark-grayish-violet);
+  margin-bottom: 25px;
+}
+
+.white {
+  color: white;
 }
