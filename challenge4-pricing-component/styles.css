@@ -114,6 +114,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-bottom: 25px;
 }
 
 .cards {
@@ -257,4 +258,10 @@ header {
 
 .currency.white {
   color: white;
+}
+
+header h1 {
+  color: var(--grayish-blue);
+  font-size: 34px;
+  margin-bottom: 20px;
 }
