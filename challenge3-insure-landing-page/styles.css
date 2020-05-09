@@ -230,3 +230,123 @@ footer {
 .white {
   color: white;
 }
+
+@media screen and (max-width: 500px) {
+  body {
+    text-align: center;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  header {
+    padding: 20px 0;
+  }
+
+  .navbar-logo {
+    text-align: left;
+  }
+
+  .navbar-burger {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    display: flex;
+  }
+
+  .navbar-burger .close {
+    display: none;
+  }
+
+  .navbar-burger .open {
+    display: none;
+  }
+
+  .navbar-menu {
+    display: none;
+  }
+
+  .navbar {
+    flex-direction: row;
+  }
+
+  nav.container {
+    flex-direction: row;
+  }
+
+  /* .hero.container {
+    flex-direction: row-reverse;
+  } */
+
+  /* .hero:before,
+  .hero:after {
+    background-image: none;
+  }
+
+  .hero-box-left {
+    background-image: url("images/bg-pattern-intro-left-mobile.svg");
+    background-position: left top;
+    background-repeat: no-repeat;
+    /* margin-left: -20px; */
+  /* } */
+  /* .hero-box-left:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("images/bg-pattern-intro-right-mobile.svg");
+    margin-top: -20px;
+    background-repeat: no-repeat;
+    /* margin-right: 10%;
+  } */
+  .hero-img {
+    display: inline-block;
+    margin-left: -20px;
+    margin-bottom: -10px;
+    max-width: calc(100% + 40px);
+  }
+  */ .title {
+    width: auto;
+  }
+
+  .hero {
+    display: none;
+  }
+
+  footer {
+    background-image: url("images/bg-pattern-footer-mobile.svg");
+    background-position: top center;
+  }
+  .footer-social {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footer-sections {
+    align-items: center;
+  }
+
+  .footer-social-items {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .footer-social-items li {
+    margin: 20;
+  }
+
+  .footer-social-items li:first-child {
+    margin-left: 0;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    width: 80vw;
+    padding-bottom: 25px;
+  }
+
+  .information-boxes {
+    flex-direction: column;
+  }
+}
