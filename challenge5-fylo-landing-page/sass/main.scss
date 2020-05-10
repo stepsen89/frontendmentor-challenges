@@ -17,6 +17,7 @@
 .container {
   width: 85vw;
   margin: 1.5rem auto;
+  height: 60vh;
 }
 
 header {
@@ -36,6 +37,17 @@ header {
   width: 50%;
 }
 
-.hero-image {
+.illustration-image-big {
   width: 100%;
+}
+
+.margin-top-large {
+  margin-top: 7rem;
+}
+
+.background-image {
+  background-image: url("../images/bg-curve-desktop.svg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
