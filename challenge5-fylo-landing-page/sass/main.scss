@@ -1,0 +1,41 @@
+@import "base/reset";
+@import "base/typography";
+@import "base/colours";
+@import "components/buttons";
+@import "components/forms";
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+.flex-columns {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  width: 85vw;
+  margin: 1.5rem auto;
+}
+
+header {
+  height: 15vh;
+}
+
+.navbar-list a {
+  text-decoration: none;
+  left: 0;
+}
+
+.space-between {
+  justify-content: space-between;
+}
+
+.hero-box {
+  width: 50%;
+}
+
+.hero-image {
+  width: 100%;
+}
