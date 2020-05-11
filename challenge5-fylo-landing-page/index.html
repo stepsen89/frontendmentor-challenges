@@ -27,7 +27,7 @@
   </head>
   <body>
     <header>
-      <nav class="container flex space-between">
+      <nav class="container small flex space-between">
         <div>
           <img src="images/logo.svg" alt="logo" />
         </div>
@@ -67,20 +67,28 @@
           folders with friends, family and colleagues for live collaboration. No
           email attachments required!
         </p>
-        <span>
-          See how Fylo works <img src="images/icon-arrow.svg" alt="arrow"
-        /></span>
+        <p>
+          See how Fylo works <img src="images/icon-arrow.svg" alt="arrow" />
+        </p>
         <div class="card">
           <div class="card-quotation">
             <img src="images/icon-quotes.svg" alt="quotes" />
           </div>
-          <div class="card-text">
+          <p class="card-text">
             Fylo has improved our team productivity by an order of magnitude.
             Since making the switch our team has become a well-oiled
             collaboration machine.
-          </div>
+          </p>
           <div class="person">
-            Kyle Burton Founder & CEO, Huddle
+            <img
+              src="images/avatar-testimonial.jpg"
+              alt="Avatar"
+              class="avatar"
+            />
+            <div>
+              <p>Kyle Burton</p>
+              <p>Founder & CEO, Huddle</p>
+            </div>
           </div>
         </div>
       </div>
@@ -92,19 +100,58 @@
         />
       </div>
     </div>
-
-    Get early access today It only takes a minute to sign up and our free
-    starter tier is extremely generous. If you have any questions, our support
-    team would be happy to help you. Get Started For Free Phone: +1-543-123-4567
-    example@fylo.com About Us Jobs Press Blog Contact Us Terms Privacy
-
-    <footer>
-      <p class="attribution">
+    <div class="container access flex">
+      <div>
+        <h1 class="has-text-white">Get early access today</h1>
+        <p>
+          It only takes a minute to sign up and our free starter tier is
+          extremely generous. If you have any questions, our support team would
+          be happy to help you.
+        </p>
+      </div>
+      <div class="access-box-right">
+        <input type="text" />
+        <button class="btn has-margin-top">Get Started for Free</button>
+      </div>
+    </div>
+    <footer class="access footer">
+      <img src="images/logo.svg" class="inverted-logo" alt="logo" />
+      <div class="flex space-evenly has-margin-top">
+        <div>
+          <div class="has-padding-bottom">
+            <img src="images/icon-phone.svg" alt="phone" />
+            <span class="has-white-text small-p-left">
+              Phone: +1-543-123-4567
+            </span>
+          </div>
+          <div>
+            <img src="images/icon-email.svg" alt="phone" />
+            <span class="has-white-text small-p-left"> example@fylo.com </span>
+          </div>
+        </div>
+        <div>
+          <ul>
+            <li>About Us</li>
+            <li>Jobs</li>
+            <li>Press</li>
+            <li>Blog</li>
+          </ul>
+        </div>
+        <div>
+          <ul>
+            <li>Contact Us</li>
+            <li>Terms</li>
+            <li>Privacy</li>
+          </ul>
+        </div>
+      </div>
+      <div></div>
+      <!-- <p class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
         >. Coded by <a href="#">Your Name Here</a>.
-      </p>
+      </p> -->
     </footer>
   </body>
 </html>
