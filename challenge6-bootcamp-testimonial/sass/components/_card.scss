@@ -1,0 +1,40 @@
+@import '../base/colours';
+
+.card {
+  background-color: green;
+  display: flex;
+  width: 70vw;
+  height: 50vh;
+
+  &-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+  }
+
+  &-text {
+          background-image: url('../../images/pattern-quotes.svg');
+      background-position: top left;
+      background-repeat: no-repeat;
+
+  }
+
+    &-box.right {
+      background-image: url('../../images/pattern-bg.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+    &-text {
+    background-color: lightblue;
+    font-size: 2rem;
+    color: $dark-blue
+  }
+
+  &-image {
+    width: 80%;
+    height: auto
+  }
+}
+
