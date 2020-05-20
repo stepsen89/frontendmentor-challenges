@@ -1,0 +1,35 @@
+{
+  "name": "frontendmentor-challenges",
+  "version": "1.0.0",
+  "description": "Improving Design, Front End Skills with Frontendmentor.io challenges",
+  "main": "index.js",
+  "scripts": {
+    "challenge-5-compile:sass": "node-sass challenge5-fylo-landing-page/sass/main.scss challenge5-fylo-landing-page/css/style.css -w ",
+    "challenge-6-compile:sass": "node-sass challenge6-bootcamp-testimonial/sass/main.scss challenge6-bootcamp-testimonial/css/style.css -w "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stepsen89/frontendmentor-challenges.git"
+  },
+  "keywords": [
+    "front",
+    "end",
+    "apps",
+    "design",
+    "css",
+    "sass",
+    "scss",
+    "html",
+    "javascript",
+    "js"
+  ],
+  "author": "Stephanie Senoner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stepsen89/frontendmentor-challenges/issues"
+  },
+  "homepage": "https://github.com/stepsen89/frontendmentor-challenges#readme",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
