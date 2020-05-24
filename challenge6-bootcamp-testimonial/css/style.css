@@ -153,9 +153,42 @@ table {
     width: 80%;
     height: auto; }
 
+.slider {
+  position: relative;
+  display: flex;
+  background-color: white;
+  box-shadow: lightsalmon;
+  border-radius: 25%;
+  margin-top: -30px;
+  height: 3vh;
+  width: 10vw;
+  -webkit-box-shadow: -2px 0px 42px 10px #756675;
+  -moz-box-shadow: -2px 0px 42px 10px #756675;
+  box-shadow: -2px 0px 42px 10px #756675;
+  border: none; }
+  .slider-button {
+    background-color: transparent;
+    background-size: 25%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50%;
+    z-index: 100;
+    border: none; }
+  .slider-button.next {
+    background-image: url("../../images/icon-next.svg"); }
+
+.slider-button.previous {
+  background-image: url("../../images/icon-prev.svg"); }
+
 .container {
   justify-content: center;
   display: flex;
   width: 100vw;
   height: 100vh;
   align-items: center; }
+
+.hidden {
+  display: none; }
+
+.shown {
+  display: block; }

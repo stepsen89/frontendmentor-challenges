@@ -1,0 +1,32 @@
+.slider {
+  position: relative;
+  display: flex;
+  background-color: white;
+  box-shadow: lightsalmon;
+  border-radius: 25%;
+    margin-top: -30px;
+      height: 3vh;
+  width: 10vw;
+  -webkit-box-shadow: -2px 0px 42px 10px rgba(117,102,117,1);
+-moz-box-shadow: -2px 0px 42px 10px rgba(117,102,117,1);
+box-shadow: -2px 0px 42px 10px rgba(117,102,117,1);
+border: none;
+
+
+  &-button {
+  background-color: transparent;
+  background-size: 25%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50%;
+  z-index: 100;
+  border: none;
+  }
+
+  &-button.next {
+    background-image: url('../../images/icon-next.svg');
+  }
+}
+  .slider-button.previous {
+    background-image: url('../../images/icon-prev.svg');
+  }

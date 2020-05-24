@@ -2,6 +2,7 @@
 @import 'base/typography';
 @import 'base/colours';
 @import 'components/card';
+@import 'components/slider';
 
 .container {
   justify-content: center;
@@ -9,4 +10,12 @@
   width: 100vw;
   height: 100vh;
   align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.shown {
+  display: block
 }
