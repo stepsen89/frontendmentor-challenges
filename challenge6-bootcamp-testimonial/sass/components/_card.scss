@@ -23,6 +23,17 @@
   //   color: $dark-blue
   // }
 
+  &-username {
+    font-weight: 700;
+    font-size: 1.3rem;
+  }
+
+  &-job {
+    color: $grayish-blue;
+    font-weight: 500;
+    font-size: 1.3rem;
+  }
+
   &-image {
     width: 80%;
     height: auto

@@ -139,6 +139,13 @@ table {
     height: 100%; }
   .card-text {
     background: url("../../images/pattern-quotes.svg") no-repeat 10% 0; }
+  .card-username {
+    font-weight: 700;
+    font-size: 1.3rem; }
+  .card-job {
+    color: #babacf;
+    font-weight: 500;
+    font-size: 1.3rem; }
   .card-image {
     width: 80%;
     height: auto; }
