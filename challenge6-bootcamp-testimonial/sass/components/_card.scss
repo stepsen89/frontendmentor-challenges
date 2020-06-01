@@ -1,7 +1,6 @@
 @import '../base/colours';
 
 .card {
-  background-color: green;
   display: flex;
   width: 70vw;
   height: 50vh;
@@ -15,22 +14,14 @@
   }
 
   &-text {
-          background-image: url('../../images/pattern-quotes.svg');
-      background-position: top left;
-      background-repeat: no-repeat;
-
+      background: url('../../images/pattern-quotes.svg') no-repeat 10% 0;
   }
 
-    &-box.right {
-      background-image: url('../../images/pattern-bg.svg');
-      background-repeat: no-repeat;
-      background-size: contain;
-    }
-    &-text {
-    background-color: lightblue;
-    font-size: 2rem;
-    color: $dark-blue
-  }
+  //   &-text {
+  //   background-color: lightblue;
+  //   font-size: 2rem;
+  //   color: $dark-blue
+  // }
 
   &-image {
     width: 80%;

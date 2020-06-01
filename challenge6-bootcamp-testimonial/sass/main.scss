@@ -9,16 +9,23 @@ body {
   font-size: 2rem;
   font-family: $primary;
   height: 100vh;
-  background: url('../images/pattern-bg.svg') no-repeat 70% 30%;
 }
 
+
 .container {
+  background: url('../images/pattern-bg.svg') no-repeat 70% 30%;
   justify-content: center;
   display: flex;
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
   align-items: center;
 }
+
+.footer {
+  height: 20vh;
+  background: url('../images/pattern-curve.svg') no-repeat 0 90%;
+}
+
 
 .hidden {
   display: none;

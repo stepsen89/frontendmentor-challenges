@@ -128,7 +128,6 @@ table {
   border-spacing: 0; }
 
 .card {
-  background-color: green;
   display: flex;
   width: 70vw;
   height: 50vh; }
@@ -139,17 +138,7 @@ table {
     width: 50%;
     height: 100%; }
   .card-text {
-    background-image: url("../../images/pattern-quotes.svg");
-    background-position: top left;
-    background-repeat: no-repeat; }
-  .card-box.right {
-    background-image: url("../../images/pattern-bg.svg");
-    background-repeat: no-repeat;
-    background-size: contain; }
-  .card-text {
-    background-color: lightblue;
-    font-size: 2rem;
-    color: #202046; }
+    background: url("../../images/pattern-quotes.svg") no-repeat 10% 0; }
   .card-image {
     width: 80%;
     height: auto; }
@@ -185,15 +174,19 @@ body {
   margin: 0;
   font-size: 2rem;
   font-family: "Inter", sans-serif;
-  height: 100vh;
-  background: url("../images/pattern-bg.svg") no-repeat 70% 30%; }
+  height: 100vh; }
 
 .container {
+  background: url("../images/pattern-bg.svg") no-repeat 70% 30%;
   justify-content: center;
   display: flex;
   width: 100vw;
-  height: 100vh;
+  height: 80vh;
   align-items: center; }
+
+.footer {
+  height: 20vh;
+  background: url("../images/pattern-curve.svg") no-repeat 0 90%; }
 
 .hidden {
   display: none; }
