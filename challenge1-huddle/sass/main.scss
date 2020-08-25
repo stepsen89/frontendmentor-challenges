@@ -9,7 +9,7 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .header {
@@ -79,15 +79,64 @@ body {
     font-weight: 100;
 }
 
-// .illustration {
-//     width: 81vw;
-//     margin: 25px;
-// }
+.illustration {
+    width: 81vw;
+    margin: 25px;
+}
 
-// .container-info-box {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     justify-content: center;
-//     margin: 50px 0px;
-// }
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-info-box {
+  max-width: 40vw;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
+    margin: 5rem auto;
+
+    h1 {
+      font-size: 3.5rem;
+    }
+
+    p {
+      color: blue;
+      text-align: center;
+    }
+}
+
+.card {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+
+  img {
+    width: 70vw;
+    padding-bottom: 3rem;
+  }
+
+  &-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+      font-size: 1.5rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      text-transform: capitalize;
+    }
+  }
+
+  &-description {
+    margin: 1rem;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+}
+
+.m-large {
+  margin: 300px 40px;
+}

@@ -8,7 +8,7 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
-  font-size: 1rem; }
+  font-size: 1.2rem; }
 
 .header {
   height: 5vh;
@@ -65,3 +65,44 @@ body {
   padding: 25px;
   font-size: 1rem;
   font-weight: 100; }
+
+.illustration {
+  width: 81vw;
+  margin: 25px; }
+
+.container {
+  display: flex;
+  flex-direction: column; }
+
+.container-info-box {
+  max-width: 40vw;
+  margin: 5rem auto; }
+  .container-info-box h1 {
+    font-size: 3.5rem; }
+  .container-info-box p {
+    color: blue;
+    text-align: center; }
+
+.card {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center; }
+  .card img {
+    width: 70vw;
+    padding-bottom: 3rem; }
+  .card-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+    .card-box h2 {
+      font-size: 1.5rem;
+      text-align: center;
+      margin-bottom: 2rem;
+      text-transform: capitalize; }
+  .card-description {
+    margin: 1rem;
+    text-align: center;
+    font-size: 0.9rem; }
+
+.m-large {
+  margin: 300px 40px; }
