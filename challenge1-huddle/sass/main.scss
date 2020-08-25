@@ -140,3 +140,42 @@ body {
 .m-large {
   margin: 300px 40px;
 }
+
+.p-small {
+  padding: 100px 40px;
+}
+
+footer {
+  background: black;
+  color: white;
+
+  &-section {
+    display: flex;
+  }
+
+  p {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 1rem;
+    font-weight: 300;
+  }
+
+  h3 {
+    text-transform: uppercase;
+  }
+
+  input {
+    width: 80vw;
+    height: 3rem;
+    border-radius: 10px;
+  }
+}
+
+.edged {
+    border-radius: 10px;
+}
+
+.footer-image {
+  width: 50%;
+  color: white;
+}
