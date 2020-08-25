@@ -4,6 +4,7 @@
   "description": "Improving Design, Front End Skills with Frontendmentor.io challenges",
   "main": "index.js",
   "scripts": {
+    "huddle:sass": "node-sass challenge1-huddle/sass/main.scss challenge1-huddle/css/style.css -w ",
     "challenge-5-compile:sass": "node-sass challenge5-fylo-landing-page/sass/main.scss challenge5-fylo-landing-page/css/style.css -w ",
     "challenge-6-compile:sass": "node-sass challenge6-bootcamp-testimonial/sass/main.scss challenge6-bootcamp-testimonial/css/style.css -w "
   },
