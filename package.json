@@ -6,7 +6,9 @@
   "scripts": {
     "huddle:sass": "node-sass challenge1-huddle/sass/main.scss challenge1-huddle/css/style.css -w ",
     "challenge-5-compile:sass": "node-sass challenge5-fylo-landing-page/sass/main.scss challenge5-fylo-landing-page/css/style.css -w ",
-    "challenge-6-compile:sass": "node-sass challenge6-bootcamp-testimonial/sass/main.scss challenge6-bootcamp-testimonial/css/style.css -w "
+    "challenge-6-compile:sass": "node-sass challenge6-bootcamp-testimonial/sass/main.scss challenge6-bootcamp-testimonial/css/style.css -w ",
+    "challenge-7-compile:sass": "node-sass challenge7-fylo-storage/sass/main.scss challenge7-fylo-storage/css/style.css -w ",
+    "article-preview-compile:sass": "node-sass article-preview/sass/main.scss article-preview/css/style.css -w "
   },
   "repository": {
     "type": "git",
