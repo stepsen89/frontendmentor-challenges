@@ -1,39 +1,157 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;600&display=swap");
-body {
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
-  font-family: 'Manrope', sans-serif;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  margin: 0;
   font-size: 13px;
-  background-color: white;
-  width: 100vw;
-  background-color: var(--very-light-grayish-blue); }
+  display: flex;
+  height: 100vh;
+  color: #6d7f97;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Manrope', sans-serif;
+  background-color: #ecf2f8; }
 
 h2 {
   font-weight: 600;
-  font-size: 1.5rem;
-  color: var(--dark-grayish-blue); }
-
-h4 {
-  font-weight: 400;
-  padding: 0;
-  margin: 0; }
-
-:root {
-  --light-blue: hsl(236, 72%, 79%);
-  --dark-blue: hsl(237, 63%, 64%);
-  --grayish-blue: hsl(233, 13%, 49%);
-  --dark-grayish-blue: hsl(232, 13%, 33%);
-  --light-grayish-blue: hsl(234, 14%, 74%);
-  --very-light-grayish-blue: hsl(240, 78%, 98%); }
+  font-size: 1.3rem;
+  color: #48556A;
+  line-height: 28px;
+  letter-spacing: 0.25px; }
 
 .container {
   display: grid;
-  grid-template-columns: 40% 60%;
+  grid-template-columns: 285px 445px;
   align-items: center;
   justify-content: center;
-  max-width: 45vw;
-  height: 350px;
-  margin: 10em auto;
+  width: 730px;
+  height: 280px;
   background-color: white;
   border-radius: 10px;
   -webkit-box-shadow: 3px 3px 9px 3px rgba(219, 210, 219, 0.63);
@@ -41,26 +159,85 @@ h4 {
   box-shadow: 3px 3px 9px 3px rgba(219, 210, 219, 0.63); }
 
 .description {
-  padding: 40px;
-  max-width: 450px; }
+  padding: 32px 40px;
+  max-width: 365px;
+  height: 216px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
+
+.profile {
+  display: grid;
+  grid-template-columns: 15% 70% 10%;
+  align-items: center; }
+  .profile-icon {
+    justify-self: end;
+    background-color: #ecf2f8;
+    border-radius: 50%; }
+  .profile-icon:hover {
+    background-color: blue; }
 
 .avatar {
   border-radius: 50%;
   height: 100%;
-  width: 50%; }
+  justify-self: start;
+  width: 70%; }
 
-.profile {
-  display: grid;
-  grid-template-columns: 20% 60% 20%;
-  justify-items: center;
-  align-items: center; }
+.arrow {
+  color: white;
+  padding: 10px 12px;
+  object-fit: contain; }
 
 .drawer {
+  width: 280px;
+  height: 280px; }
+
+.drawer img {
   display: inline-block;
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 10px 0 0 10px; }
 
-.profile-column {
-  justify-self: baseline; }
+.text {
+  font-size: 13px;
+  font-weight: 500;
+  color: #6E8098;
+  letter-spacing: 0.12px;
+  line-height: 20px; }
+
+.tooltip {
+  background-color: #48556a;
+  border-radius: 0 0 10px 10px;
+  position: relative; }
+
+.social-icons {
+  padding: 25px 0;
+  width: 80%;
+  max-width: 375px;
+  margin: auto; }
+
+.icons {
+  display: flex; }
+  .icons h5 {
+    color: #9eafc2;
+    font-weight: 400;
+    font-size: 1rem;
+    letter-spacing: 5px;
+    padding-right: 15px;
+    padding-top: 0.4rem; }
+  .icons img {
+    max-width: 35px;
+    object-fit: contain;
+    padding-right: 15px; }
+
+.icons-share {
+  background-color: #6d7f97;
+  border-radius: 10px;
+  padding: 10px 12px;
+  position: absolute;
+  right: 3rem;
+  top: 1.5rem; }
+  .icons-share img {
+    width: 20px;
+    filter: grayscale(200%); }
