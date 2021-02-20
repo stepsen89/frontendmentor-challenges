@@ -1,55 +1,79 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500;600&display=swap');
 @import 'variables';
 @import 'reset';
+@import 'mixins';
 
 body {
+  background-color: $light-grayish-blue;
   margin: 0;
-  font-size: 13px;
-  display: flex;
   height: 100vh;
   color: $desaturated-grayish-blue;
+  font-family: 'Manrope', sans-serif;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Manrope', sans-serif;
-  background-color: $light-grayish-blue
+  font-size: 13px;
+  
+  @include respond(desktop){
+  }
 }
 
 h2 {
   font-weight: 600;
-  font-size: 1.3rem;
   color: #48556A;
-  line-height: 28px;
+  font-size: 1rem;
+  line-height: 20px;
   letter-spacing: 0.25px;
+
+  @include respond(desktop) {
+    line-height: 28px;
+    font-size: 1.3rem;
+    letter-spacing: 0.25px;
+  }
 }
 
 .container {
-  display: grid;
-  grid-template-columns: 285px 445px;
   align-items: center;
   justify-content: center;
-  width: 730px;
-  height: 280px;
-  // max-height: 350px;
-  // margin: 10em auto;
+  width: 327px;
+  height: 512px;
   background-color: white; 
-border-radius: 10px;
--webkit-box-shadow: 3px 3px 9px 3px rgba(219,210,219,0.63);
--moz-box-shadow: 3px 3px 9px 3px rgba(219,210,219,0.63);
-box-shadow: 3px 3px 9px 3px rgba(219,210,219,0.63);}
+  border-radius: 10px;
+  
+  @include respond(desktop){
+    -webkit-box-shadow: 3px 3px 9px 3px rgba(219,210,219,0.63);
+    -moz-box-shadow: 3px 3px 9px 3px rgba(219,210,219,0.63);
+    box-shadow: 3px 3px 9px 3px rgba(219,210,219,0.63);
+    grid-template-columns: 285px 445px;
+    width: 730px;
+    height: 280px;
+  }
+}
 
   .description {
-    padding: 32px 40px;
-    max-width: 365px;
-    height: 216px;
+    padding: 32px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    height: 312px;
+
+
+    @include respond(desktop){
+      max-width: 365px;
+      height: 216px;
+    }
   }
 
   .profile {
     display: grid;
-    grid-template-columns: 15% 70% 10%;
+    grid-template-columns: 20% 75% 5%;
     align-items: center;
+    height: 40px;
+
+    @include respond(desktop){
+          grid-template-columns: 15% 70% 10%;
+          height: auto;
+    }
 
     &-icon {
       justify-self: end;
@@ -60,9 +84,21 @@ box-shadow: 3px 3px 9px 3px rgba(219,210,219,0.63);}
     &-icon:hover {
       background-color: blue;
     }
+
+    &-column {
+      line-height: 20px;
+
+      h4 {
+        font-weight: 900;
+        color: $very-dark-grayish-blue
+      }
+    }
   }
 
   .avatar {
+    @include respond(desktop){
+    }
+
     border-radius: 50%;
     height: 100%;
     justify-self: start;
@@ -78,15 +114,20 @@ box-shadow: 3px 3px 9px 3px rgba(219,210,219,0.63);}
   }
 
   .drawer {
-    width: 280px;
-    height: 280px;
+    width: 327px;
+    height: 200px;
   }
   .drawer img {
+    border-radius: 10px 10px 0 0;
+
     display: inline-block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px 0 0 10px;
+
+    @include respond(desktop){
+      border-radius: 10px 0 0 10px;
+    }
   }
 
   .text {
@@ -99,13 +140,13 @@ box-shadow: 3px 3px 9px 3px rgba(219,210,219,0.63);}
 
   .tooltip {
     background-color: $very-dark-grayish-blue;
-	border-radius: 0 0 10px 10px;
-	position: relative;
+	  border-radius: 0 0 10px 10px;
+	  position: relative;
   }
 
   .social-icons {
     padding: 25px 0;
-		width: 80%;
+		width: 100%;
 		max-width: 375px;
 		margin: auto;
   }
@@ -128,7 +169,6 @@ box-shadow: 3px 3px 9px 3px rgba(219,210,219,0.63);}
 		}
 
     .icons-share {
-
       background-color: $desaturated-grayish-blue;
       border-radius: 10px;
       padding: 10px 12px;
