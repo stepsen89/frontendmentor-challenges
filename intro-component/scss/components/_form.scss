@@ -27,3 +27,34 @@ input {
 .error {
   display: none;
 }
+
+main {
+                .form-wrapper {
+                    margin: 0;
+                    padding: 0;
+                    .trial {
+                        padding: 0 50px;
+                        height: 90px;
+                        line-height: 25px;
+                    }
+                    .form-container {
+                        width: 100%;
+                        padding: 20px;
+                        form {
+                            .container {
+                                margin: 0;
+                                padding: 0;
+                                input {
+                                    width: 100%;
+                                    margin-bottom: 15px;
+                                }
+                            }
+                            .agree {
+                                margin-top: 10px;
+                                padding: 0 20px;
+                                line-height: 20px;
+                            }
+                        }
+                    }
+                }
+            }
