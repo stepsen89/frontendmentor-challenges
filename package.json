@@ -10,7 +10,7 @@
     "challenge-7-compile:sass": "node-sass challenge7-fylo-storage/sass/main.scss challenge7-fylo-storage/css/style.css -w ",
     "article-compile:sass": "node-sass article-preview/sass/main.scss article-preview/css/style.css -w ",
     "profile:sass": "node-sass profile-card-component/sass/main.scss profile-card-component/css/style.css -w ",
-    "intro:sass": "node-sass intro-component/sass/main.scss intro-component/css/style.css -w "
+    "intro:sass": "node-sass intro-component/scss/main.scss intro-component/css/style.css -w "
   },
   "repository": {
     "type": "git",
