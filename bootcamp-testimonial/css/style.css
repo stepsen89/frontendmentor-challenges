@@ -217,10 +217,15 @@ table {
 
 .card-personal {
   display: flex;
-  flex-direction: row;
-  align-self: flex-start;
-  padding-top: 40px;
+  flex-direction: column;
   align-items: center; }
+  @media only screen and (min-width: 110em) {
+    .card-personal {
+      display: flex;
+      flex-direction: row;
+      align-self: flex-start;
+      padding-top: 40px;
+      align-items: center; } }
 
 .card-personal span {
   font-weight: 100; }
@@ -239,7 +244,7 @@ table {
   display: flex;
   background-color: white;
   border-radius: 14px;
-  margin-top: -20px;
+  margin-top: 250px;
   height: 5vh;
   width: 80px;
   -webkit-box-shadow: -2px 0px 42px 10px #756675;
