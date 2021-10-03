@@ -11,6 +11,14 @@
   box-shadow: -2px 0px 42px 10px rgba(117, 102, 117, 1);
   border: none;
 
+  @include respond(desktop) {
+    margin-top: 440px;
+    align-self: flex-start;
+    margin-left: 200px;
+    height: 8vh;
+    width: 112px;
+  }
+
   &-button {
     background-color: transparent;
     background-size: 25%;

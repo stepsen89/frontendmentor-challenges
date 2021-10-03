@@ -1,4 +1,5 @@
-// @import "../base/colours";
+@import "../base/colours";
+@import "../base/mixins";
 
 .card {
   width: auto;
@@ -8,11 +9,20 @@
   position: relative;
   display: flex;
   flex-direction: column-reverse;
+
+  @include respond(desktop) {
+    flex-direction: row;
+    height: 80vh;
+    width: 60vw;
+  }
 }
 
 .card-box {
   display: flex;
   flex-direction: column;
+  @include respond(desktop) {
+    height: 600px;
+  }
 }
 
 .card-box.right {
@@ -24,6 +34,15 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
+  overflow: visible;
+
+  @include respond(desktop) {
+    width: 50%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }
 
 .card-box.left {
@@ -31,6 +50,12 @@
   height: 228px;
   justify-content: space-around;
   align-items: center;
+
+  @include respond(desktop) {
+    width: 50%;
+    height: 50%;
+    align-self: center;
+  }
 }
 
 //   &-box {
@@ -44,6 +69,10 @@
 .card-box.left {
   background: url("../../images/pattern-quotes.svg") no-repeat 10% 0;
   background-position: top;
+
+  @include respond(desktop) {
+    background-position: initial;
+  }
 }
 
 //   //   &-text {
@@ -61,6 +90,11 @@
 .card-box img {
   width: 254px;
   height: 253px;
+
+  @include respond(desktop) {
+    width: 440px;
+    height: 440px;
+  }
 }
 
 .card-text {
@@ -69,6 +103,13 @@
   font-weight: 200;
   font-size: 1.2rem;
   padding-top: 20px;
+
+  @include respond(desktop) {
+    font-size: 2rem;
+    text-align: left;
+    line-height: 50px;
+    padding-top: 140px;
+  }
 }
 
 .card-username {
@@ -78,8 +119,32 @@
   font-weight: 700;
   font-size: 1.3rem;
   line-height: 30px;
+
+  @include respond(desktop) {
+    // display: flex;
+    padding-top: 0;
+    // flex-direction: column;
+  }
 }
 
-.card-username span {
+.card-personal {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  padding-top: 40px;
+  align-items: center;
+}
+
+.card-personal span {
   font-weight: 100;
+  @include respond(desktop) {
+    padding-left: 10px;
+    color: $grayish-blue;
+    font-weight: 200;
+  }
+}
+
+.card-image {
+  background: green;
+  position: fixed;
 }

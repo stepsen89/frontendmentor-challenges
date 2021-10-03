@@ -134,10 +134,18 @@ table {
   position: relative;
   display: flex;
   flex-direction: column-reverse; }
+  @media only screen and (min-width: 110em) {
+    .card {
+      flex-direction: row;
+      height: 80vh;
+      width: 60vw; } }
 
 .card-box {
   display: flex;
   flex-direction: column; }
+  @media only screen and (min-width: 110em) {
+    .card-box {
+      height: 600px; } }
 
 .card-box.right {
   width: 327px;
@@ -147,21 +155,41 @@ table {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 50px; }
+  margin-bottom: 50px;
+  overflow: visible; }
+  @media only screen and (min-width: 110em) {
+    .card-box.right {
+      width: 50%;
+      height: 100%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center; } }
 
 .card-box.left {
   width: 327px;
   height: 228px;
   justify-content: space-around;
   align-items: center; }
+  @media only screen and (min-width: 110em) {
+    .card-box.left {
+      width: 50%;
+      height: 50%;
+      align-self: center; } }
 
 .card-box.left {
   background: url("../../images/pattern-quotes.svg") no-repeat 10% 0;
   background-position: top; }
+  @media only screen and (min-width: 110em) {
+    .card-box.left {
+      background-position: initial; } }
 
 .card-box img {
   width: 254px;
   height: 253px; }
+  @media only screen and (min-width: 110em) {
+    .card-box img {
+      width: 440px;
+      height: 440px; } }
 
 .card-text {
   line-height: 25px;
@@ -169,6 +197,12 @@ table {
   font-weight: 200;
   font-size: 1.2rem;
   padding-top: 20px; }
+  @media only screen and (min-width: 110em) {
+    .card-text {
+      font-size: 2rem;
+      text-align: left;
+      line-height: 50px;
+      padding-top: 140px; } }
 
 .card-username {
   padding-top: 20px;
@@ -177,9 +211,28 @@ table {
   font-weight: 700;
   font-size: 1.3rem;
   line-height: 30px; }
+  @media only screen and (min-width: 110em) {
+    .card-username {
+      padding-top: 0; } }
 
-.card-username span {
+.card-personal {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  padding-top: 40px;
+  align-items: center; }
+
+.card-personal span {
   font-weight: 100; }
+  @media only screen and (min-width: 110em) {
+    .card-personal span {
+      padding-left: 10px;
+      color: #babacf;
+      font-weight: 200; } }
+
+.card-image {
+  background: green;
+  position: fixed; }
 
 .slider {
   position: relative;
@@ -193,6 +246,13 @@ table {
   -moz-box-shadow: -2px 0px 42px 10px #756675;
   box-shadow: -2px 0px 42px 10px #756675;
   border: none; }
+  @media only screen and (min-width: 110em) {
+    .slider {
+      margin-top: 440px;
+      align-self: flex-start;
+      margin-left: 200px;
+      height: 8vh;
+      width: 112px; } }
   .slider-button {
     background-color: transparent;
     background-size: 25%;
