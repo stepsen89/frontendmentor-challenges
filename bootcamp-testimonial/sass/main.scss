@@ -1,35 +1,35 @@
-@import 'base/reset';
-@import 'base/typography';
-@import 'base/colours';
-@import 'components/card';
-@import 'components/slider';
+@import "base/reset";
+@import "base/typography";
+@import "base/colours";
+@import "components/card";
+@import "components/slider";
 
 body {
-  margin: 0;
-  font-size: 2rem;
+  // margin: 0;
+  font-size: 1rem;
   font-family: $primary;
   height: 100vh;
+  width: 100vw;
+  position: relative;
 }
 
+// .footer {
+//   height: 20vh;
+//   background: url("../images/pattern-curve.svg") no-repeat 0 90%;
+// }
 
 .container {
-  background: url('../images/pattern-bg.svg') no-repeat 70% 30%;
-  justify-content: center;
-  display: flex;
   width: 100vw;
-  height: 80vh;
-  align-items: center;
-}
-
-.footer {
-  height: 20vh;
-  background: url('../images/pattern-curve.svg') no-repeat 0 90%;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
 }
 
 .hidden {
   display: none;
 }
 
-.shown {
-  display: block
-}
+// .shown {
+//   display: block;
+// }

@@ -1,42 +1,85 @@
-@import '../base/colours';
+// @import "../base/colours";
 
 .card {
+  width: auto;
+  // height: 80vh;
+  margin: auto;
+  background: white;
+  position: relative;
   display: flex;
-  width: 70vw;
-  height: 50vh;
-
-  &-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 50%;
-    height: 100%;
-  }
-
-  &-text {
-      background: url('../../images/pattern-quotes.svg') no-repeat 10% 0;
-  }
-
-  //   &-text {
-  //   background-color: lightblue;
-  //   font-size: 2rem;
-  //   color: $dark-blue
-  // }
-
-  &-username {
-    font-weight: 700;
-    font-size: 1.3rem;
-  }
-
-  &-job {
-    color: $grayish-blue;
-    font-weight: 500;
-    font-size: 1.3rem;
-  }
-
-  &-image {
-    width: 80%;
-    height: auto
-  }
+  flex-direction: column-reverse;
 }
 
+.card-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-box.right {
+  width: 327px;
+  height: 308px;
+  background: url("../../images/pattern-bg.svg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.card-box.left {
+  width: 327px;
+  height: 228px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+//   &-box {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     width: 50%;
+//     height: 100%;
+//   }
+
+.card-box.left {
+  background: url("../../images/pattern-quotes.svg") no-repeat 10% 0;
+  background-position: top;
+}
+
+//   //   &-text {
+//   //   background-color: lightblue;
+//   //   font-size: 2rem;
+//   //   color: $dark-blue
+//   // }
+
+//   &-job {
+//     color: $grayish-blue;
+//     font-weight: 500;
+//     font-size: 1.3rem;
+//   }
+
+.card-box img {
+  width: 254px;
+  height: 253px;
+}
+
+.card-text {
+  line-height: 25px;
+  text-align: center;
+  font-weight: 200;
+  font-size: 1.2rem;
+  padding-top: 20px;
+}
+
+.card-username {
+  padding-top: 20px;
+  width: 145px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 30px;
+}
+
+.card-username span {
+  font-weight: 100;
+}

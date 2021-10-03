@@ -1,7 +1,7 @@
-window.onload = function () {
+document.onload = () => {
   const testimonialOne = document.querySelector("#tanya");
   const testimonialTwo = document.querySelector("#john");
-}
-function nextTestimonial() {
-  console.log("here");
-}
+  function nextTestimonial() {
+    testimonialOne.classList.toggle("hidden");
+  }
+};

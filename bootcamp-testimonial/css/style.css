@@ -128,37 +128,67 @@ table {
   border-spacing: 0; }
 
 .card {
+  width: auto;
+  margin: auto;
+  background: white;
+  position: relative;
   display: flex;
-  width: 70vw;
-  height: 50vh; }
-  .card-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: 50%;
-    height: 100%; }
-  .card-text {
-    background: url("../../images/pattern-quotes.svg") no-repeat 10% 0; }
-  .card-username {
-    font-weight: 700;
-    font-size: 1.3rem; }
-  .card-job {
-    color: #babacf;
-    font-weight: 500;
-    font-size: 1.3rem; }
-  .card-image {
-    width: 80%;
-    height: auto; }
+  flex-direction: column-reverse; }
+
+.card-box {
+  display: flex;
+  flex-direction: column; }
+
+.card-box.right {
+  width: 327px;
+  height: 308px;
+  background: url("../../images/pattern-bg.svg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px; }
+
+.card-box.left {
+  width: 327px;
+  height: 228px;
+  justify-content: space-around;
+  align-items: center; }
+
+.card-box.left {
+  background: url("../../images/pattern-quotes.svg") no-repeat 10% 0;
+  background-position: top; }
+
+.card-box img {
+  width: 254px;
+  height: 253px; }
+
+.card-text {
+  line-height: 25px;
+  text-align: center;
+  font-weight: 200;
+  font-size: 1.2rem;
+  padding-top: 20px; }
+
+.card-username {
+  padding-top: 20px;
+  width: 145px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 30px; }
+
+.card-username span {
+  font-weight: 100; }
 
 .slider {
   position: relative;
   display: flex;
   background-color: white;
-  box-shadow: lightsalmon;
-  border-radius: 25%;
-  margin-top: -30px;
-  height: 3vh;
-  width: 10vw;
+  border-radius: 14px;
+  margin-top: -20px;
+  height: 5vh;
+  width: 80px;
   -webkit-box-shadow: -2px 0px 42px 10px #756675;
   -moz-box-shadow: -2px 0px 42px 10px #756675;
   box-shadow: -2px 0px 42px 10px #756675;
@@ -178,25 +208,18 @@ table {
   background-image: url("../../images/icon-prev.svg"); }
 
 body {
-  margin: 0;
-  font-size: 2rem;
+  font-size: 1rem;
   font-family: "Inter", sans-serif;
-  height: 100vh; }
+  height: 100vh;
+  width: 100vw;
+  position: relative; }
 
 .container {
-  background: url("../images/pattern-bg.svg") no-repeat 70% 30%;
-  justify-content: center;
-  display: flex;
   width: 100vw;
-  height: 80vh;
-  align-items: center; }
-
-.footer {
-  height: 20vh;
-  background: url("../images/pattern-curve.svg") no-repeat 0 90%; }
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  position: relative; }
 
 .hidden {
   display: none; }
-
-.shown {
-  display: block; }
