@@ -1,67 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Article preview component</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-  <title>Frontend Mentor | Article preview component</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-  <section>
-
-    <div class="container">
-      <div class="drawer">
-        <img src="images/drawers.jpg" alt="drawers">
-      </div>
-      <div class="description">
-        <h2>
-          Shift the overall look and feel by adding these wonderful
-          touches to furniture in your home
-        </h2>
-        <p class="text">
-          Ever been in a room and felt like something was missing? Perhaps
-          it felt slightly bare and uninviting. I’ve got some simple tips
-          to help you make any room feel complete.
-        </p>
-        <div class="profile">
-          <img src="images/avatar-michelle.jpg" alt="avatar" class="avatar">
-          <div class="profile-column">
-            <h4> Michelle Appleton</h4>
-            <span> 28 Jun 2020 </span>
+  <body>
+    <section>
+      <article class="container">
+        <div class="drawer"></div>
+        <div class="description">
+          <h2 class="description-header">
+            Shift the overall look and feel by adding these wonderful touches to
+            furniture in your home
+          </h2>
+          <p class="description-text">
+            Ever been in a room and felt like something was missing? Perhaps it
+            felt slightly bare and uninviting. I’ve got some simple tips to help
+            you make any room feel complete.
+          </p>
+          <!-- right side of the article preview -->
+          <div class="profile">
+            <img
+              class="profile-avatar"
+              src="images/avatar-michelle.jpg"
+              alt="avatar"
+            />
+            <div class="profile-details">
+              <h4>Michelle Appleton</h4>
+              <span> 28 Jun 2020 </span>
+            </div>
+            <div class="profile-icon">
+              <img src="images/icon-share.svg" alt="share" class="share" />
+            </div>
           </div>
-          <div class="profile-icon">
-            <img src="images/icon-share.svg" alt="share" class="arrow">
-          </div>
-        </div>
-        <div class="tooltip hidden">
-          <div class="social-icons">
-            <div class="icons">
+          <!-- tooltip -->
+          <div class="tooltip">
+            <div class="first">
               <h5>SHARE</h5>
               <img src="images/icon-facebook.svg" alt="Facebook Icon" />
               <img src="images/icon-twitter.svg" alt="Twitter Icon" />
               <img src="images/icon-pinterest.svg" alt="Pinterest Icon" />
             </div>
-            <div class="icons-share">
-              <img src="images/icon-share.svg" alt="" class="share" />
+            <div class="arrow">
+              <element class="arrow-middle"></element>
             </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-  <!-- 
-  <footer>
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
-    </div>
-  </footer> -->
-</body>
+      </article>
+    </section>
+    <!-- 
+      <footer>
+        <div class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+          Coded by <a href="#">Your Name Here</a>.
+        </div>
+      </footer> -->
+  </body>
+  <script>
+    let icon = document.querySelector(".profile-icon");
+    let toolbox = document.querySelector(".tooltip");
 
+    icon.addEventListener("click", () => {
+      console.log("hovered");
+      console.log(toolbox);
+      toolbox.classList.toggle("active");
+    });
+  </script>
 </html>
