@@ -148,6 +148,10 @@ body {
   width: 100vw;
   height: auto;
   margin-top: 30px; }
+  @media only screen and (min-width: 110em) {
+    .hero {
+      height: 500px;
+      flex-direction: row; } }
 
 .hero-text {
   display: flex;
@@ -155,14 +159,24 @@ body {
   align-items: center;
   justify-content: center;
   margin: 10px 20px; }
+  @media only screen and (min-width: 110em) {
+    .hero-text {
+      margin: 10px 0px; } }
   .hero-text h1 {
     padding: 40px;
     font-size: 2.5rem;
     text-align: center; }
+    @media only screen and (min-width: 110em) {
+      .hero-text h1 {
+        font-size: 5rem;
+        width: 55%; } }
   .hero-text p {
     text-align: center;
     line-height: 25px;
     color: #86869c; }
+    @media only screen and (min-width: 110em) {
+      .hero-text p {
+        width: 70%; } }
 
 .hero-image {
   background-image: url("../assets/tablet/image-hero.png");
@@ -170,12 +184,19 @@ body {
   height: 153px;
   background-repeat: no-repeat;
   background-size: cover; }
+  @media only screen and (min-width: 110em) {
+    .hero-image {
+      display: none; } }
 
 .btn-group {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center; }
+  @media only screen and (min-width: 110em) {
+    .btn-group {
+      flex-direction: row;
+      gap: 20px; } }
 
 .btn {
   width: 139px;
@@ -189,6 +210,9 @@ body {
     color: #fafafa;
     opacity: 0.7; }
 
+.btn:hover {
+  opacity: 0.5; }
+
 .btn.large {
   width: 193px; }
 
@@ -199,12 +223,12 @@ body {
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 50%;
-  border: 1px solid #87879d;
+  border: 1px solid #87879d82;
   margin: 0 auto;
   display: grid;
   place-content: center;
   position: relative;
-  color: #87879d;
+  color: #86869c;
   margin-top: 9.25rem;
   background: white;
   margin-bottom: -1rem; }
@@ -216,7 +240,8 @@ body {
   left: 50%;
   width: 1px;
   height: 84px;
-  background-color: #87879d; }
+  background-color: #86869c;
+  opacity: 0.4; }
 
 .section {
   margin: 0 auto;
@@ -228,6 +253,9 @@ body {
   gap: 28px;
   width: 90vw;
   position: relative; }
+  @media only screen and (min-width: 110em) {
+    .description-gallery {
+      justify-content: center; } }
 
 .description {
   margin: 0 auto;
@@ -241,12 +269,19 @@ body {
   height: 143px;
   width: 151px;
   border-radius: 12px; }
+  @media only screen and (min-width: 110em) {
+    .description-gallery img {
+      width: 255px;
+      height: 242px; } }
 
 .description-text {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0 20px; }
+  @media only screen and (min-width: 110em) {
+    .description-text {
+      width: 31vw; } }
   .description-text h5 {
     margin-top: 40px;
     text-transform: uppercase;
@@ -258,6 +293,10 @@ h2 {
   padding: 20px;
   font-size: 1.8rem;
   text-align: center; }
+  @media only screen and (min-width: 110em) {
+    h2 {
+      font-size: 2rem;
+      padding: 2rem 0px; } }
 
 p {
   color: #86869c;
@@ -265,6 +304,9 @@ p {
   font-size: 1.2rem;
   line-height: 25px;
   text-align: center; }
+  @media only screen and (min-width: 110em) {
+    p {
+      line-height: 35px; } }
 
 .footer {
   height: 428px;
@@ -273,17 +315,42 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
-  text-align: center;
   color: #fafafa;
   position: relative;
+  padding-top: 20px;
   z-index: -2;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 20px; }
+  text-align: center; }
+  @media only screen and (min-width: 110em) {
+    .footer {
+      height: 308px;
+      justify-content: center;
+      text-align: left;
+      background-image: url("../assets/desktop/image-footer.jpg"); } }
+  @media only screen and (min-width: 110em) {
+    .footer div {
+      display: flex;
+      flex-direction: row;
+      width: 70vw;
+      align-items: center;
+      justify-content: space-between; } }
   .footer p {
     color: white;
     padding: 20px; }
+    @media only screen and (min-width: 110em) {
+      .footer p {
+        text-align: left;
+        width: 30%; } }
+  @media only screen and (min-width: 110em) {
+    .footer h2 {
+      text-align: left;
+      font-size: 3rem;
+      width: 30%; } }
+  .footer.btn {
+    align-self: flex-end;
+    width: 30%; }
 
 .footer::after {
   content: "";
@@ -297,3 +364,23 @@ p {
   height: 100%;
   opacity: 0.9;
   z-index: -1; }
+
+.hero-image-left .hero-image-right {
+  display: none; }
+
+@media only screen and (min-width: 110em) {
+  .hero-image-left {
+    background-image: url("../assets/desktop/image-hero-left.png");
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30vw;
+    margin-left: -75px; } }
+
+@media only screen and (min-width: 110em) {
+  .hero-image-right {
+    background-image: url("../assets/desktop/image-hero-right.png");
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 30vw; } }
