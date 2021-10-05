@@ -1,10 +1,12 @@
 import React from "react";
+import { ReactComponent as Icon } from "./assets/icon-search.svg";
 
 const Search = () => {
   return (
-    <div style={{ background: "green", width: "100%", height: "15%" }}>
-      {" "}
-      Test
+    <div class='search'>
+      <Icon class='icon' />
+      <input placeholder='Search GitHub username...' />
+      <button class='btn bold'> Search </button>
     </div>
   );
 };
