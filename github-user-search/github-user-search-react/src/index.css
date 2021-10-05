@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Space Mono", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+#root {
+  --primary: #f6f8ff;
+  --secondary: #0079ff;
+  --card: #fefefe;
+}
+
+#root {
+  background: var(--primary);
+  width: 100vw;
+  height: 100vh;
+  /* margin: 0 auto; */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.container {
+  width: 80%;
+  height: 60%;
+  margin: auto;
+  background-color: grey;
+  /* background-color: var(--card, white); */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+  width: 80%;
+}
+
+.bold {
+  font-weight: 800;
+}

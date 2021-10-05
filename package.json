@@ -13,7 +13,8 @@
     "intro:sass": "node-sass intro-component/scss/main.scss intro-component/css/style.css -w ",
     "sunnyside:sass": "node-sass sunnyside/scss/main.scss sunnyside/css/style.css -w ",
     "bootcamp:sass": "node-sass bootcamp-testimonial/sass/main.scss bootcamp-testimonial/css/style.css -w ",
-    "meet:sass": "node-sass meet-landing-page/scss/main.scss meet-landing-page/css/style.css -w "
+    "meet:sass": "node-sass meet-landing-page/scss/main.scss meet-landing-page/css/style.css -w ",
+    "github:sass": "node-sass github-user-search/scss/main.scss github-user-search/css/style.css -w "
   },
   "repository": {
     "type": "git",

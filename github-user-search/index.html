@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | GitHub user search app</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div>
+      <div class="box-header">
+        <h1>devfinder</h1>
+        <span> Light <img src="./public/icon-moon.svg" alt="Moon" /></span>
+      </div>
+    </div>
+    <div class="box-search">
+      <input type="text" placeholder="Search GitHub username..." />
+      <button>Search</button>
+    </div>
+    <div class="box-user">
+      <div class="box-user--first">
+        <img src="./public/icon-website.svg" alt="Icon Profile" />
+      </div>
+      <div class="box-user--second">
+        <p>Lorem ipsum etc.</p>
+      </div>
+      <div class="box-user--stats">
+        <div>
+          <h4>Repos</h4>
+          <p>9</p>
+        </div>
+        <div>
+          <h4>Repos</h4>
+          <p>9</p>
+        </div>
+        <div>
+          <h4>Repos</h4>
+          <p>9</p>
+        </div>
+      </div>
+    </div>
+    devfinder Light Dark Search GitHub username... Search Joined Repos Followers
+    Following
+  </body>
+  <script>
+    axios
+      .get("https://api.github.com/users/octocat", {})
+      .then(function (response) {
+        console.log(response);
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  </script>
+</html>
