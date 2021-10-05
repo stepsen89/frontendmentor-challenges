@@ -5,7 +5,7 @@ const Header = () => {
   let mode = "Light";
   return (
     <div className='header'>
-      <h2 class='bold'> devfinder </h2>
+      <h2 className='bold'> devfinder </h2>
       <div>
         <span> {mode} </span>
         <Logo />

@@ -3,10 +3,10 @@ import { ReactComponent as Icon } from "./assets/icon-search.svg";
 
 const Search = () => {
   return (
-    <div class='search'>
-      <Icon class='icon' />
+    <div className='search'>
+      <Icon className='icon' />
       <input placeholder='Search GitHub username...' />
-      <button class='btn bold'> Search </button>
+      <button className='btn bold'> Search </button>
     </div>
   );
 };
