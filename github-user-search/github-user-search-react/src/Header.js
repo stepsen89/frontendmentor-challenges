@@ -1,17 +1,31 @@
-import React from "react";
-import { ReactComponent as Logo } from "./assets/icon-moon.svg";
+import React, { useEffect, useState } from "react";
+import { connect } from "react-redux";
+import { ReactComponent as Moon } from "./assets/icon-moon.svg";
+import { ReactComponent as Sun } from "./assets/icon-sun.svg";
+import { setTheme } from "./redux/action";
 
-const Header = () => {
-  let mode = "Light";
+const Header = ({ theme, setTheme }) => {
+  const [chosenTheme, setChosenTheme] = useState(theme);
+
+  const handleThemeChange = (e) => {
+    let newTheme = chosenTheme === "light" ? "dark" : "light";
+    setChosenTheme(newTheme);
+  };
+
   return (
     <div className='header'>
       <h2 className='bold'> devfinder </h2>
-      <div>
-        <span> {mode} </span>
-        <Logo />
-      </div>
+      <button className='switcher' onClick={handleThemeChange}>
+        <span> {chosenTheme} </span>
+        {chosenTheme === "light" ? <Sun /> : <Moon />}
+      </button>
     </div>
   );
 };
 
-export default Header;
+function mapStateToProps(state) {
+  const theme = state.theme.theme;
+  return { theme };
+}
+
+export default connect(mapStateToProps, { setTheme })(Header);
