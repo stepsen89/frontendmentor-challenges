@@ -15,7 +15,7 @@ export function userReducer(state = initialUserState, action) {
     case FETCH_USER:
       return action.payload;
     case FETCH_USER_FAIL:
-      return { error: action.payload };
+      return { ...state, error: action.payload };
     default:
       return state;
   }

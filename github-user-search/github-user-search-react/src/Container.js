@@ -3,9 +3,12 @@ import Search from "./Search";
 import UserProfile from "./UserProfile";
 import { getUser } from "./redux/action";
 import { connect } from "react-redux";
+import { Formik } from "formik";
 
 function Container({ getUser, user }) {
   // const [user, setUser] = useState({});
+  const [value, setValue] = useState({});
+  const [error, setError] = useState({});
 
   // componentDidMount() {
   //   const { user } = this.props;
@@ -21,9 +24,19 @@ function Container({ getUser, user }) {
 
   useEffect(() => {
     getUser("octocat");
-    console.log(user);
-    // console.log(props);
+    setValue({ searchTerm: user.login });
   }, []);
+
+  useEffect(() => {
+    console.log("inner useEffect nr 2");
+    console.log(value);
+    getUser(value.searchTerm)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => console.log("err", err));
+    console.log(getUser(value.searchTerm));
+  }, [value]);
 
   // componentDidUpdate(prevProps) {
   //   if (prevProps.user !== this.props.user) {
@@ -32,10 +45,23 @@ function Container({ getUser, user }) {
   //   }
   // }
 
+  function handleUserSearch(e) {
+    e.preventDefault();
+    setValue(e);
+    console.log("value", e);
+  }
+
   return (
     <div className='container'>
-      <Search />
-      <UserProfile user={user} />
+      {/* <Search onChange={handleUserSearch} error={false} /> */}
+      <Formik
+        component={Search}
+        initialValues={{ searchTerm: "" }}
+        onSubmit={(value) => {
+          setValue(value);
+        }}
+      />
+      <UserProfile user={user} error />
     </div>
   );
 }
