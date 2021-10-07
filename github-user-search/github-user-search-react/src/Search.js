@@ -1,13 +1,34 @@
 import React from "react";
 import { ReactComponent as Icon } from "./assets/icon-search.svg";
+import { Form, Field } from "formik";
 
-const Search = () => {
+const Search = ({ userSearch, error }) => {
+  console.log("onChange");
+  function onSubmit(e) {
+    e.preventDefault();
+    console.log(e.target.value);
+    // handleUserSearch()
+  }
   return (
-    <div className='search'>
+    <Form className='search'>
       <Icon className='icon' />
-      <input placeholder='Search GitHub username...' />
-      <button className='btn bold'> Search </button>
-    </div>
+      <Field name='searchTerm' class='input'>
+        {({ field, form }) => (
+          <div>
+            <input
+              type='text'
+              name='searchTerm'
+              className='input'
+              placeholder='Search GitHub username'
+              {...field}
+            />
+          </div>
+        )}
+      </Field>
+      <button className='btn bold' type='submit'>
+        Search
+      </button>
+    </Form>
   );
 };
 
