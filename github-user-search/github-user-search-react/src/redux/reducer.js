@@ -1,8 +1,9 @@
 import { combineReducers } from "redux";
-import { FETCH_USER, SET_THEME } from "./types";
+import { FETCH_USER, SET_THEME, FETCH_USER_FAIL } from "./types";
 
 const initialUserState = {
   user: null,
+  error: null,
 };
 
 const initialThemeState = {
@@ -13,6 +14,8 @@ export function userReducer(state = initialUserState, action) {
   switch (action.type) {
     case FETCH_USER:
       return action.payload;
+    case FETCH_USER_FAIL:
+      return { error: action.payload };
     default:
       return state;
   }

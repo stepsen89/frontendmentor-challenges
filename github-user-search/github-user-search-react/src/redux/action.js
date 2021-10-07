@@ -1,5 +1,5 @@
 import axios from "axios";
-import { FETCH_USER, SET_THEME } from "./types";
+import { FETCH_USER, SET_THEME, FETCH_USER_FAIL } from "./types";
 
 export function getUser(username) {
   return (dispatch) => {
@@ -13,7 +13,11 @@ export function getUser(username) {
         });
       })
       .catch((error) => {
-        console.error(error);
+        console.log("Error", error);
+        dispatch({
+          type: FETCH_USER_FAIL,
+          payload: error.response.data,
+        });
       });
   };
 }
