@@ -24,7 +24,6 @@ const UserProfile = ({ user }) => {
   return (
     <div className='card'>
       <div className='profile'>
-        {console.log(user)}
         <img src={user.avatar_url} alt='User icon' />
         <div className='profile-details'>
           <h3 className='bold'> {user.name} </h3>

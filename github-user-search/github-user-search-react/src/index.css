@@ -186,9 +186,10 @@ code {
   height: 60px;
   display: flex;
   align-items: center;
+  /* background-color: green; */
 }
 
-.search input {
+.input {
   width: 100%;
   padding: 0;
   border: none;
@@ -197,6 +198,11 @@ code {
   font-family: inherit;
   border-radius: 12px;
   font-size: 13px;
+}
+
+.input:focus {
+  outline: none;
+  border: none;
 }
 
 .search .icon {
