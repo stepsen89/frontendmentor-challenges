@@ -3,12 +3,6 @@ import { ReactComponent as Icon } from "./assets/icon-search.svg";
 import { Form, Field } from "formik";
 
 const Search = ({ userSearch, error }) => {
-  console.log("onChange");
-  function onSubmit(e) {
-    e.preventDefault();
-    console.log(e.target.value);
-    // handleUserSearch()
-  }
   return (
     <Form className='search'>
       <Icon className='icon' />
