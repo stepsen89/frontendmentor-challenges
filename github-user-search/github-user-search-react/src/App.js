@@ -5,20 +5,23 @@ import { GlobalStyles } from "./theme/GlobalStyles";
 import { useTheme } from "./theme/useTheme";
 import { useState, useEffect } from "react";
 import styled, { ThemeProvider } from "styled-components";
+import { getFromLS } from "./theme/storage";
+import { connect } from "react-redux";
 
-function App() {
-  // 3: Get the selected theme, font list, etc.
-  const { theme, themeLoaded, getFonts } = useTheme();
+function App({ th }) {
+  const { theme, themeLoaded, setThemeTwo } = useTheme();
   const [selectedTheme, setSelectedTheme] = useState(theme);
 
   useEffect(() => {
-    setSelectedTheme(theme);
-  }, [themeLoaded]);
+    let newTheme = setThemeTwo(th);
+    setSelectedTheme(newTheme);
+  }, [themeLoaded, th]);
 
   return (
     <>
       {themeLoaded && (
         <ThemeProvider theme={selectedTheme}>
+          {console.log("selectedTheme", selectedTheme)}
           <GlobalStyles />
 
           <Header />
@@ -29,4 +32,9 @@ function App() {
   );
 }
 
-export default App;
+const mapStateToProps = (state) => {
+  let th = state.theme.theme;
+  return { th };
+};
+
+export default connect(mapStateToProps, {})(App);

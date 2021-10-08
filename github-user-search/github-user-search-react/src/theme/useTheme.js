@@ -3,21 +3,17 @@ import { setToLS, getFromLS } from "./storage";
 
 export const useTheme = () => {
   const themes = getFromLS("all-themes");
-  const [theme, setTheme] = useState(themes.data.dark);
+  const [theme, setTheme] = useState(themes.data.light);
   const [themeLoaded, setThemeLoaded] = useState(false);
 
   const setMode = (mode) => {
     setToLS("theme", mode);
     setTheme(mode);
-    console.log(mode);
   };
 
-  useEffect(() => {
-    const localTheme = getFromLS("theme");
-    localTheme ? setTheme(localTheme) : setTheme(themes.data.light);
-    setThemeLoaded(true);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  const setThemeTwo = (mode) => {
+    return themes.data[mode];
+  };
 
-  return { theme, themeLoaded, setMode };
+  return { theme, themeLoaded, setMode, setThemeTwo };
 };

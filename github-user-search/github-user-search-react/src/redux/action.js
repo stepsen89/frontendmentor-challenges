@@ -23,7 +23,6 @@ export function getUser(username) {
 }
 
 export function setTheme(theme) {
-  console.log("Set theme action");
   return (dispatch) => {
     dispatch({
       type: SET_THEME,
