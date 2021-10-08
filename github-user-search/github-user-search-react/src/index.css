@@ -158,16 +158,18 @@ body {
   height: 80%;
   margin: auto;
   margin-top: 0;
+  /* display: relative; */
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10%;
-  width: 75%;
-  height: 12vh;
+  /* padding: 0 10%; */
+  width: 80%;
+  /* height: 12vh; */
   font-size: 26px;
+  margin: auto;
 }
 
 .switcher {
@@ -344,4 +346,163 @@ body {
 
 .address-box > div span.grey {
   color: var(--fontColorHighlighted);
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 573px;
+  }
+
+  body {
+    font-size: 18px;
+  }
+
+  .search {
+    height: 69px;
+  }
+
+  .btn {
+    right: 14%;
+    height: 50px;
+    width: 106px;
+  }
+
+  .header {
+    width: 573px;
+  }
+
+  .input {
+    width: 492px;
+    height: 69px;
+  }
+
+  .card {
+    height: 481px;
+    width: 573px;
+  }
+
+  .address-box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 75px;
+    width: 100%;
+  }
+
+  .stats {
+    width: 493px;
+  }
+
+  .stats div {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+  }
+
+  .stats div:first-child {
+    padding-left: 20px;
+  }
+
+  .description {
+    width: 100%;
+  }
+
+  .text {
+    width: 492px;
+    padding: 0px 8%;
+    font-size: 15px;
+  }
+
+  .profile {
+    width: 492px;
+    /* padding-top: 16px; */
+    height: auto;
+  }
+
+  .profile img {
+    width: 117px;
+    height: 117px;
+  }
+
+  .profile-details h3 {
+    font-size: 26px;
+    padding-bottom: 10px;
+  }
+
+  .stats div p:first-child {
+    font-size: 13px;
+  }
+
+  .stats div p.bold {
+    font-size: 22px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  body,
+  #root {
+    font-size: 26px;
+  }
+
+  .card {
+    width: 730px;
+  }
+  .header {
+    width: 730px;
+    margin-top: 15vh;
+    margin-bottom: 40px;
+  }
+
+  .container {
+    width: 730px;
+  }
+
+  .input {
+    width: 651px;
+  }
+
+  h2.bold {
+    font-size: 26px;
+  }
+
+  .btn {
+    right: 1%;
+    height: 50px;
+    width: 106px;
+  }
+
+  .search {
+    width: 100%;
+    position: relative;
+  }
+
+  .description {
+    width: 70%;
+  }
+
+  .profile-details {
+    display: flex;
+    flex-wrap: wrap;
+    height: 70px;
+    width: 70%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 16px;
+    padding-left: 25px;
+  }
+
+  .profile-details--username {
+    font-size: 16px;
+  }
+
+  .profile {
+    width: 640px;
+    align-items: flex-start;
+  }
+
+  /* .profile img {
+    margin-top: 900px;
+  } */
 }
