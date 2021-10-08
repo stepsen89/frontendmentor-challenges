@@ -51,19 +51,24 @@ const UserProfile = ({ user }) => {
       <div className='address-box'>
         <div>
           <MapMarkerIcon className='icon' fill='green' />
-          <span> San Francisco</span>
+          <span> {user.location}</span>
         </div>
         <div>
-          <WebsiteIcon className='icon' />
-          <span> github.blog</span>
+          <WebsiteIcon className={user.blog ? "icon" : "icon grey"} />
+          <span> {user.blog}</span>
         </div>
         <div>
-          <TwitterIcon className='icon' />
-          <span> not available</span>
+          <TwitterIcon
+            className={user.twitter_username ? "icon" : "icon grey"}
+          />
+          <span className={user.twitter_username ? "" : "grey"}>
+            {" "}
+            {user.twitter_username || "Not Available"}
+          </span>
         </div>
         <div>
           <CompanyIcon className='icon' />
-          <span> @github </span>
+          <span> {user.company} </span>
         </div>
       </div>
     </div>

@@ -18,7 +18,11 @@ const Header = ({ theme, setTheme }) => {
       <h2 className='bold'> devfinder </h2>
       <button className='switcher' onClick={handleThemeChange}>
         <span> {chosenTheme === "light" ? "dark" : "light"} </span>
-        {chosenTheme === "light" ? <Moon /> : <Sun />}
+        {chosenTheme === "light" ? (
+          <Moon className='icon' />
+        ) : (
+          <Sun className='icon' />
+        )}
       </button>
     </div>
   );

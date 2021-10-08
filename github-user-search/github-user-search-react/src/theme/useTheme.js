@@ -15,5 +15,12 @@ export const useTheme = () => {
     return themes.data[mode];
   };
 
+  useEffect(() => {
+    const localTheme = getFromLS("theme");
+    localTheme ? setTheme(localTheme) : setTheme(themes.data.light);
+    setThemeLoaded(true);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return { theme, themeLoaded, setMode, setThemeTwo };
 };

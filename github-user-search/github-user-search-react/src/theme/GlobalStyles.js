@@ -8,6 +8,7 @@ export const GlobalStyles = createGlobalStyle`
     --primary: ${({ theme }) => theme.colors.primary};
     --secondary: ${({ theme }) => theme.colors.secondary};
     --fontColor: ${({ theme }) => theme.colors.card};
-    --fontColorHighlighted: ${({ theme }) => theme.colors.fontColorHighlighted}
+    --fontColorHighlighted: ${({ theme }) => theme.colors.fontColorHighlighted};
+    --box-shadow: ${({ theme }) => theme.boxShadow};
   }
 `;
