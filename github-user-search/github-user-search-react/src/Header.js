@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { connect } from "react-redux";
 import { ReactComponent as Moon } from "./assets/icon-moon.svg";
 import { ReactComponent as Sun } from "./assets/icon-sun.svg";

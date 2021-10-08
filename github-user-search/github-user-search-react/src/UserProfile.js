@@ -27,12 +27,16 @@ const UserProfile = ({ user }) => {
         <img src={user.avatar_url} alt='User icon' />
         <div className='profile-details'>
           <h3 className='bold'> {user.name} </h3>
-          <p className='profile-details--username'> {user.name} </p>
+          <p className='profile-details--username'> @{user.login} </p>
           <p> {getJoinedDate(user.created_at)} </p>
         </div>
       </div>
       <div className='description'>
-        <p className='text'> {user.bio || "No description."}</p>
+        <p className='text'>
+          {" "}
+          {user.bio ||
+            "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros."}
+        </p>
       </div>
       <div className='stats'>
         <div>
@@ -50,19 +54,18 @@ const UserProfile = ({ user }) => {
       </div>
       <div className='address-box'>
         <div>
-          <MapMarkerIcon className='icon' fill='green' />
-          <span> {user.location}</span>
+          <MapMarkerIcon className={user.blog ? "icon" : "icon grey"} />
+          <span> {user.location || "Not Available"}</span>
         </div>
         <div>
           <WebsiteIcon className={user.blog ? "icon" : "icon grey"} />
-          <span> {user.blog}</span>
+          <span> {user.blog || "Not Available"}</span>
         </div>
         <div>
           <TwitterIcon
             className={user.twitter_username ? "icon" : "icon grey"}
           />
           <span className={user.twitter_username ? "" : "grey"}>
-            {" "}
             {user.twitter_username || "Not Available"}
           </span>
         </div>

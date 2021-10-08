@@ -13,7 +13,7 @@ const Search = ({ userSearch, error }) => {
               type='text'
               name='searchTerm'
               className='input'
-              placeholder='Search GitHub username'
+              placeholder='Search GitHub username...'
               {...field}
             />
           </div>

@@ -1,4 +1,4 @@
-import React, { Component, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Search from "./Search";
 import UserProfile from "./UserProfile";
 import { getUser } from "./redux/action";
