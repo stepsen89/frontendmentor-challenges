@@ -10,14 +10,15 @@ const Header = ({ theme, setTheme }) => {
   const handleThemeChange = (e) => {
     let newTheme = chosenTheme === "light" ? "dark" : "light";
     setChosenTheme(newTheme);
+    setTheme(newTheme);
   };
 
   return (
     <div className='header'>
       <h2 className='bold'> devfinder </h2>
       <button className='switcher' onClick={handleThemeChange}>
-        <span> {chosenTheme} </span>
-        {chosenTheme === "light" ? <Sun /> : <Moon />}
+        <span> {chosenTheme === "light" ? "dark" : "light"} </span>
+        {chosenTheme === "light" ? <Moon /> : <Sun />}
       </button>
     </div>
   );
