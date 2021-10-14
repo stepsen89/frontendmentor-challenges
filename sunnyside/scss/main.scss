@@ -28,10 +28,11 @@ body {
   background-size: cover;
   height: 528px;
   width: 100%;
-}
 
-img.logo {
-  fill: white;
+  @include respond(desktop) {
+    background-image: url("../images/desktop/image-header.jpg");
+    height: 800px;
+  }
 }
 
 .navbar > a {
@@ -39,6 +40,16 @@ img.logo {
   color: $white;
   text-decoration: none;
   display: none;
+
+  @include respond(desktop) {
+    display: inline-block;
+  }
+}
+
+.hamburger {
+  @include respond(desktop) {
+    display: none;
+  }
 }
 
 .hero--header {
@@ -48,8 +59,10 @@ img.logo {
   margin-top: 3rem;
   letter-spacing: 6px;
   color: $white;
-  margin-bottom: 3rem;
+  margin-bottom: 10rem;
 }
+
+// section with image and text box
 
 .btn {
   border: none;
@@ -79,6 +92,10 @@ img.logo {
 
 .reverse {
   flex-direction: column-reverse;
+
+  @include respond(desktop) {
+    flex-direction: row;
+  }
 }
 
 .btn::selection {
@@ -90,6 +107,12 @@ img.logo {
   height: 50%;
   width: 100%;
   background-size: cover;
+
+  @include respond(desktop) {
+    background-image: url("../images/desktop/image-transform.jpg");
+    width: 50%;
+    height: 100%;
+  }
 }
 
 // row/box styling
@@ -101,6 +124,32 @@ img.logo {
   justify-content: space-around;
   align-items: center;
   padding: 2rem 1.5rem;
+  background-color: white;
+
+  @include respond(desktop) {
+    width: 50%;
+    height: 100%;
+    padding: 0;
+  }
+}
+
+.reversed {
+  flex-direction: row-reverse;
+}
+
+.inner-box {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem 1.5rem;
+
+  @include respond(desktop) {
+    width: 80%;
+    height: 60%;
+    padding: 0;
+  }
 }
 
 .white {
