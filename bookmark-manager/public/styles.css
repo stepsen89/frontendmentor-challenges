@@ -33147,6 +33147,13 @@ video {
   background-color: rgba(247, 247, 247, var(--tw-bg-opacity));
 }
 
+div.error::after {
+  background-color: red;
+  content: "Whooops, make sure this is an email";
+  color: blue;
+  font-style: italic;
+}
+
 @media (min-width: 640px) {
   .sm\:container {
     width: 100%;

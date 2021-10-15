@@ -15,3 +15,10 @@
 .btn-white {
   @apply bg-primary-white;
 }
+
+/* div.error::after {
+  background-color: red;
+  content: "Whooops, make sure this is an email";
+  color: blue;
+  font-style: italic;
+} */

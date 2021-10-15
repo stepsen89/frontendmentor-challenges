@@ -428,15 +428,26 @@
           <h1 class="text-3xl text-center">
             Stay up-to-date with what we’re doing
           </h1>
-          <div class="flex flex-col sm:flex-row gap-6 mt-8">
-            <input
-              type="text"
-              placeholder="Enter your email address"
-              class="focus:outline-none flex-1 px-2 py-3 rounded-md text-black"
-            />
+          <div class="flex flex-col sm:flex-row gap-6 mt-8 z-20 error">
+            <div class="flex-1">
+              <input
+                type="text"
+                placeholder="Enter your email address"
+                class="
+                  focus:outline-none
+                  w-full
+                  px-2
+                  py-3
+                  rounded-md
+                  text-black
+                  error
+                "
+              />
+            </div>
             <button
               type="button"
               class="btn bg-primary-red hover:bg-primary-white hover:text-black"
+              onclick="validate()"
             >
               Contact Us
             </button>
@@ -517,12 +528,8 @@
       });
     }
 
-    let accordions = document.querySelectorAll(".accordion");
-    console.log(accordions);
-
     function accordionOpen() {
       let index = event.target.id.slice(-1);
-      console.log(event.target.classList);
       if (event.target.classList.contains("fa-chevron-down")) {
         event.target.classList.add("fa-chevron-up");
         event.target.classList.remove("fa-chevron-down");
@@ -534,6 +541,10 @@
       openPanel.classList.contains("hidden")
         ? openPanel.classList.remove("hidden")
         : openPanel.classList.add("hidden");
+    }
+
+    function validate() {
+      console.log("validate");
     }
   </script>
 </html>
