@@ -80,7 +80,6 @@
           lg:mt-28
         "
       >
-        <!-- Content -->
         <div class="flex flex-1 flex-col items-center lg:items-start">
           <h2
             class="
@@ -139,14 +138,71 @@
       ></div>
     </section>
 
-    <section class="bg-primary-white py-20 mt-20 lg:mt-60">
-      <div class="sm:w-3/4 lg:w-5/12 mx-auto px-2">
+    <section class="py-20 mt-20 lg:mt-60">
+      <div class="sm:w-3/4 lg:w-3/12 mx-auto px-2">
         <h1 class="text-3xl text-center text-primary-blue">Features</h1>
         <p class="text-center text-primary-grey mt-4">
           Our aim is to make it quick and easy for you to access your favourite
           websites. Your bookmarks sync between your devices so you can access
           them on the go.
         </p>
+      </div>
+      <div
+        class="
+          sm:w-3/4
+          lg:w-6/12
+          mx-auto
+          pt-10
+          flex flex-col
+          lg:flex-row
+          justify-center
+          pb-4
+          items-center
+        "
+      >
+        <button
+          class="
+            text-3xl
+            lg:text-xl
+            py-3
+            border-b-2 border-primary-grey
+            lg:w-2/6
+            text-primary-blue
+          "
+          type="button"
+          onclick="setActive()"
+          id="simple"
+        >
+          Simple Bookmarking
+        </button>
+        <button
+          class="
+            text-3xl
+            lg:text-xl
+            py-3
+            border-b-2 border-primary-grey
+            lg:w-2/6
+            text-primary-blue
+          "
+          id="speedy"
+          onclick="setActive()"
+        >
+          Speedy Searching
+        </button>
+        <button
+          class="
+            text-3xl
+            lg:text-xl
+            py-3
+            border-b-2 border-primary-grey
+            lg:w-2/6
+            text-primary-blue
+          "
+          id="easy"
+          onclick="setActive()"
+        >
+          Easy Sharing
+        </button>
       </div>
       <div class="relative mt-20 lg:mt-24">
         <div
@@ -157,17 +213,21 @@
             items-center
             justify-center
             gap-x-24
+            md:h-5/6
           "
         >
-          <div class="flex flex-1 justify-center z-10 mb-10 lg:mb-0">
+          <div class="flex flex-1 justify-center z-10 mb-10 lg:mb-0 md:h-96">
             <img
               src="./images/illustration-features-tab-1.svg"
               alt="Tab 1 Feature Image"
-              class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-full md:h-full"
+              id="feature-img"
+              class="w-5/6 h-5/6 sm:w-3/4 sm:h-3/4 md:w-96 m-auto"
             />
           </div>
           <div class="flex flex-1 flex-col items-center lg:items-start">
-            <h1 class="text-3xl text-primary-blue">Bookmark in one click</h1>
+            <h1 class="text-3xl text-primary-blue" id="title">
+              Bookmark in one click
+            </h1>
             <p
               class="
                 text-primary-grey
@@ -177,12 +237,34 @@
                 sm:w-3/4
                 lg:w-full
               "
+              id="description"
             >
               Organize your bookmarks however you like. Our simple drag-and-drop
               interface gives you complete control over how you manage your
               favourite sites.
             </p>
+            <button
+              type="button"
+              class="btn btn-purple hover:bg-primary-white hover:text-black"
+            >
+              More info
+            </button>
           </div>
+          <div
+            class="
+              hidden
+              md:block
+              overflow-hidden
+              bg-primary-purple
+              rounded-r-full
+              absolute
+              h-80
+              w-2/4
+              top-32
+              left-0
+              lg:-bottom-28 lg:-right-36
+            "
+          ></div>
         </div>
       </div>
     </section>
@@ -202,47 +284,93 @@
     free to email us. -->
 
     <!-- Question 1 -->
-    What is Bookmark?
+    <!-- What is Bookmark? -->
 
     <!-- Answer 1 -->
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt
+    <!-- Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce tincidunt
     justo eget ultricies fringilla. Phasellus blandit ipsum quis quam ornare
-    mattis.
+    mattis. -->
 
     <!-- Question 2 -->
-    How can I request a new browser?
+    <!-- How can I request a new browser? -->
 
     <!-- Answer 2 -->
-    Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
+    <!-- Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
     ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros aliquet
     convallis ultricies. Mauris augue massa, ultricies non ligula. Suspendisse
     imperdie tVivamus luctus eros aliquet convallis ultricies. Mauris augue
-    massa, ultricies non ligula. Suspendisse imperdiet.
+    massa, ultricies non ligula. Suspendisse imperdiet. -->
 
     <!-- Question 3 -->
-    Is there a mobile app?
+    <!-- Is there a mobile app? -->
 
-    <!-- Answer 3 -->
+    <!-- Answer 3
     Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum
     dolor, ut condimentum urna vulputate eget. Cras in ligula quis est pharetra
-    mattis sit amet pharetra purus. Sed sollicitudin ex et ultricies bibendum.
+    mattis sit amet pharetra purus. Sed sollicitudin ex et ultricies bibendum. -->
 
     <!-- Question 4 -->
-    What about other Chromium browsers?
+    <!-- What about other Chromium browsers? -->
 
     <!-- Answer 4 -->
-    Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at
+    <!-- Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at
     euismod dui. Aliquam vitae neque eget nisl gravida pellentesque non ut
     velit. More Info 35,000+ already joined Stay up-to-date with what we’re
-    doing Contact Us Features Pricing Contact
+    doing Contact Us Features Pricing Contact -->
 
-    <footer>
+    <!-- <footer>
       <p class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
         >. Coded by <a href="#">Your Name Here</a>.
       </p>
-    </footer>
+    </footer> -->
   </body>
+  <script>
+    let speedyButton = document.querySelector("#speedy");
+    let easyButton = document.querySelector("#easy");
+    let simpleButton = document.querySelector("#simple");
+    let simple = {
+      button: simpleButton,
+      img: "./images/illustration-features-tab-1.svg",
+      title: "Bookmark in one click",
+      description:
+        "Organize your bookmarks however you like. Our simple drag-and-drop interface gives you complete control over how you manage your favourite sites.",
+    };
+    let speedy = {
+      button: speedyButton,
+      img: "./images/illustration-features-tab-2.svg",
+      title: "Intelligent search",
+      description:
+        "Our powerful search feature will help you find saved sites in no time at all. No need to trawl through all of your bookmarks.",
+    };
+    let easy = {
+      button: easyButton,
+      title: "Share your bookmarks",
+      img: "./images/illustration-features-tab-3.svg",
+      description:
+        "Easily share your bookmarks and collections with others. Create a shareable link that you can send at the click of a button.",
+    };
+    let title = document.querySelector("#title");
+    let description = document.querySelector("#description");
+    let image = document.querySelector("#feature-img");
+    let tabs = [speedy, easy, simple];
+    function setActive() {
+      let active = event.target.id;
+      tabs.map((e) => {
+        console.log(e.button.id);
+        if (e.button.id === active) {
+          e.button.classList.add("border-primary-red");
+          e.button.classList.remove("border-primary-grey");
+          title.innerHTML = e.title;
+          description.innerHTML = e.description;
+          image.src = e.img;
+        } else {
+          e.button.classList.add("border-primary-grey");
+          e.button.classList.remove("border-primary-red");
+        }
+      });
+    }
+  </script>
 </html>
