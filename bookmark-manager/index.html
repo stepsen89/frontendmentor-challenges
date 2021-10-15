@@ -334,7 +334,74 @@
       </div>
     </section>
 
-    <section></section>
+    <section class="py-20">
+      <div class="w-3/4 lg:w-3/12 mx-auto px-2">
+        <h1 class="text-3xl text-center text-primary-blue">
+          Frequently Asked Questions
+        </h1>
+        <p class="text-center text-primary-grey mt-4">
+          Here are some of our FAQs. If you have any other questions you’d like
+          answered please feel free to email us.
+        </p>
+      </div>
+
+      <div class="flex flex-col w-3/4 lg:w-5/12 mt-12 mx-auto">
+        <div class="flex flex-col items-center border-b py-4">
+          <div class="w-full flex items-center justify-between py-4">
+            <h3 class="flex-1">What is Bookmark?</h3>
+            <i class="fas fa-chevron-down text-black"></i>
+          </div>
+          <p class="hidden lg:block">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+            tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum
+            quis quam ornare mattis.
+          </p>
+        </div>
+        <div class="flex flex-col items-center border-b py-4">
+          <div class="w-full flex items-center justify-between py-4">
+            <h3 class="flex-1">How can I request a new browser?</h3>
+            <i class="fas fa-chevron-down text-black"></i>
+          </div>
+          <p class="hidden lg:block">
+            Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
+            ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros
+            aliquet convallis ultricies. Mauris augue massa, ultricies non
+            ligula. Suspendisse imperdie tVivamus luctus eros aliquet convallis
+            ultricies. Mauris augue massa, ultricies non ligula. Suspendisse
+            imperdiet.
+          </p>
+        </div>
+        <div class="flex flex-col items-center border-b py-4">
+          <div class="w-full flex items-center justify-between py-4">
+            <h3 class="flex-1">What about other Chromium browsers?</h3>
+            <i
+              onclick="accordionOpen()"
+              class="fas fa-chevron-down text-black"
+            ></i>
+          </div>
+          <p class="hidden lg:block">
+            Sed consectetur quam id neque fermentum accumsan. Praesent luctus
+            vestibulum dolor, ut condimentum urna vulputate eget. Cras in ligula
+            quis est pharetra mattis sit amet pharetra purus. Sed sollicitudin
+            ex et ultricies bibendum.
+          </p>
+        </div>
+        <div class="flex flex-col items-center border-b py-4">
+          <div class="w-full flex items-center justify-between py-4">
+            <h3 class="flex-1">What is Bookmark?</h3>
+            <i class="fas fa-chevron-down text-black"></i>
+          </div>
+          <p class="hidden lg:block">
+            Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat
+            mi, at euismod dui. Aliquam vitae neque eget nisl gravida
+            pellentesque non ut velit.
+          </p>
+        </div>
+        <button class="mt-12 btn btn-purple flex self-center hover:text-black">
+          More Info
+        </button>
+      </div>
+    </section>
     <!--  
     Download the extension  Add to Chrome Minimum version 62 Add & Install Extension Add to
     Firefox Minimum version 55 Add & Install Extension Add to Opera Minimum
@@ -430,6 +497,11 @@
           e.button.classList.remove("border-primary-red");
         }
       });
+    }
+
+    function accordionOpen() {
+      console.log(event);
+      console.log(event.target);
     }
   </script>
 </html>
