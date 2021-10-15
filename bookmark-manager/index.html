@@ -53,9 +53,9 @@
             text-xs
           "
         >
-          <li cursor-pointer>Features</li>
-          <li cursor-pointer>Pricing</li>
-          <li cursor-pointer>Contact</li>
+          <li class="cursor-pointer">Features</li>
+          <li class="cursor-pointer">Pricing</li>
+          <li class="cursor-pointer">Contact</li>
           <button
             type="button"
             class="bg-primary-red text-white rounded-md px-7 py-3 uppercase"
@@ -340,19 +340,25 @@
         <h1 class="text-3xl text-center text-primary-blue">
           Frequently Asked Questions
         </h1>
-        <p class="text-center text-primary-grey mt-4">
-          Here are some of our FAQs. If you have any other questions you’d like
-          answered please feel free to email us.
-        </p>
+        <div class="panel">
+          <p class="text-center text-primary-grey mt-4">
+            Here are some of our FAQs. If you have any other questions you’d
+            like answered please feel free to email us.
+          </p>
+        </div>
       </div>
 
       <div class="flex flex-col w-3/4 lg:w-5/12 mt-12 mx-auto">
         <div class="flex flex-col items-center border-b py-4">
           <div class="w-full flex items-center justify-between py-4">
             <h3 class="flex-1">What is Bookmark?</h3>
-            <i class="fas fa-chevron-down text-black"></i>
+            <i
+              id="acc1"
+              onclick="accordionOpen()"
+              class="fas fa-chevron-down text-black"
+            ></i>
           </div>
-          <p class="hidden lg:block">
+          <p id="panel1" class="hidden">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
             tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum
             quis quam ornare mattis.
@@ -361,9 +367,13 @@
         <div class="flex flex-col items-center border-b py-4">
           <div class="w-full flex items-center justify-between py-4">
             <h3 class="flex-1">How can I request a new browser?</h3>
-            <i class="fas fa-chevron-down text-black"></i>
+            <i
+              id="acc2"
+              onclick="accordionOpen()"
+              class="fas fa-chevron-down text-black"
+            ></i>
           </div>
-          <p class="hidden lg:block">
+          <p id="panel2" class="hidden">
             Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
             ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros
             aliquet convallis ultricies. Mauris augue massa, ultricies non
@@ -376,11 +386,12 @@
           <div class="w-full flex items-center justify-between py-4">
             <h3 class="flex-1">What about other Chromium browsers?</h3>
             <i
+              id="acc3"
               onclick="accordionOpen()"
               class="fas fa-chevron-down text-black"
             ></i>
           </div>
-          <p class="hidden lg:block">
+          <p id="panel3" class="hidden">
             Sed consectetur quam id neque fermentum accumsan. Praesent luctus
             vestibulum dolor, ut condimentum urna vulputate eget. Cras in ligula
             quis est pharetra mattis sit amet pharetra purus. Sed sollicitudin
@@ -390,9 +401,13 @@
         <div class="flex flex-col items-center border-b py-4">
           <div class="w-full flex items-center justify-between py-4">
             <h3 class="flex-1">What is Bookmark?</h3>
-            <i class="fas fa-chevron-down text-black"></i>
+            <i
+              id="acc4"
+              onclick="accordionOpen()"
+              class="fas fa-chevron-down text-black"
+            ></i>
           </div>
-          <p class="hidden lg:block">
+          <p id="panel4" class="hidden">
             Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat
             mi, at euismod dui. Aliquam vitae neque eget nisl gravida
             pellentesque non ut velit.
@@ -430,7 +445,7 @@
       </div>
     </section>
 
-    <footer class="bg-primary-blue">
+    <footer class="bg-primary-blue py-8">
       <div class="container flex flex-col md:flex-row items-center">
         <div
           class="
@@ -441,40 +456,21 @@
             gap-12
           "
         >
-          <img
-            src="./images/logo-bookmark-white.svg"
-            class="fill-current"
-            alt=""
-          />
+          <img src="./images/logo-bookmark-white.svg" alt="" />
+          <ul class="flex text-white uppercase gap-12 text-xs">
+            <li class="cursor-pointer">Features</li>
+            <li class="cursor-pointer">Pricing</li>
+            <li class="cursor-pointer">Contact</li>
+          </ul>
+        </div>
+        <div class="flex gap-10 mt-12 md:mt-0 list-none">
+          <span><i class="text-white text-2xl fab fa-twitter"></i></span>
+          <span
+            ><i class="text-white text-2xl fab fa-facebook-square"></i
+          ></span>
         </div>
       </div>
     </footer>
-
-    <!-- Question 3 -->
-    <!-- Is there a mobile app? -->
-
-    <!-- Answer 3
-    Sed consectetur quam id neque fermentum accumsan. Praesent luctus vestibulum
-    dolor, ut condimentum urna vulputate eget. Cras in ligula quis est pharetra
-    mattis sit amet pharetra purus. Sed sollicitudin ex et ultricies bibendum. -->
-
-    <!-- Question 4 -->
-    <!-- What about other Chromium browsers? -->
-
-    <!-- Answer 4 -->
-    <!-- Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat mi, at
-    euismod dui. Aliquam vitae neque eget nisl gravida pellentesque non ut
-    velit. More Info 35,000+ already joined Stay up-to-date with what we’re
-    doing Contact Us Features Pricing Contact -->
-
-    <!-- <footer>
-      <p class="attribution">
-        Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-          >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
-      </p>
-    </footer> -->
   </body>
   <script>
     let speedyButton = document.querySelector("#speedy");
@@ -508,7 +504,6 @@
     function setActive() {
       let active = event.target.id;
       tabs.map((e) => {
-        console.log(e.button.id);
         if (e.button.id === active) {
           e.button.classList.add("border-primary-red");
           e.button.classList.remove("border-primary-grey");
@@ -522,9 +517,23 @@
       });
     }
 
+    let accordions = document.querySelectorAll(".accordion");
+    console.log(accordions);
+
     function accordionOpen() {
-      console.log(event);
-      console.log(event.target);
+      let index = event.target.id.slice(-1);
+      console.log(event.target.classList);
+      if (event.target.classList.contains("fa-chevron-down")) {
+        event.target.classList.add("fa-chevron-up");
+        event.target.classList.remove("fa-chevron-down");
+      } else {
+        event.target.classList.add("fa-chevron-down");
+        event.target.classList.remove("fa-chevron-up");
+      }
+      let openPanel = document.querySelector(`#panel${index}`);
+      openPanel.classList.contains("hidden")
+        ? openPanel.classList.remove("hidden")
+        : openPanel.classList.add("hidden");
     }
   </script>
 </html>
