@@ -120,3 +120,4 @@ dist
 bootcamp-testimonial/resources-non-git
 
 time-tracking-dashboard/
+.vscode/settings.json
