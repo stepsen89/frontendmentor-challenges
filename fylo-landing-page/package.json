@@ -1,0 +1,14 @@
+{
+  "name": "fylo-landing-page",
+  "version": "1.0.0",
+  "description": "Frontend Mentor Challenge Fylo Landing Page",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node-sass sass/main.scss css/style.css -w "
+  },
+  "author": "Stephanie Senoner",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:800,400|Raleway:400,700&display=swap");
+@import url("https://fonts.google.com/specimen/Open+Sans");
+@import "../base/colours";
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: $dark-blue;
+  line-height: 1.5;
+  padding-bottom: 30px;
+}
+
+// p {
+//   line-height: 1.5;
+//   padding-bottom: 25px;
+//   width: 80%;
+//   text-align: justify;
+// }
