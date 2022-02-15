@@ -155,6 +155,9 @@ input {
 
 body {
   font-size: 13px; }
+  @media only screen and (min-width: 110em) {
+    body {
+      font-size: 18px; } }
 
 .nav {
   width: 85vw;
@@ -169,15 +172,24 @@ header .nav {
   align-items: center;
   height: 5vh;
   padding-top: 10px; }
+  @media only screen and (min-width: 110em) {
+    header .nav {
+      padding-top: 4rem; } }
 
 nav div img {
   width: 80px; }
+  @media only screen and (min-width: 110em) {
+    nav div img {
+      width: 160px; } }
 
 .navbar-list {
   width: 55%;
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  @media only screen and (min-width: 110em) {
+    .navbar-list {
+      width: 30%; } }
 
 .navbar-list li a {
   color: #585989; }
@@ -191,6 +203,9 @@ nav div img {
 .container {
   margin: auto;
   width: 100%; }
+  @media only screen and (min-width: 110em) {
+    .container {
+      margin-bottom: 4rem; } }
 
 .flex {
   width: 85%;
@@ -204,18 +219,42 @@ nav div img {
     height: 40%;
     width: 80%;
     margin: auto; }
+    @media only screen and (min-width: 110em) {
+      .flex img {
+        width: 50%; } }
+  @media only screen and (min-width: 110em) {
+    .flex {
+      flex-direction: row;
+      padding-top: 6rem; } }
 
 .text-area {
   padding-top: 2rem;
   padding-bottom: 2rem; }
+  @media only screen and (min-width: 110em) {
+    .text-area {
+      width: 45%;
+      padding-top: 0; } }
   .text-area h1 {
     font-size: 1.7rem;
     text-align: center; }
+    @media only screen and (min-width: 110em) {
+      .text-area h1 {
+        text-align: left;
+        font-size: 2.5rem; } }
   .text-area p {
     text-align: center;
     font-size: 1rem;
     line-height: 140%;
     padding-bottom: 2rem; }
+    @media only screen and (min-width: 110em) {
+      .text-area p {
+        text-align: left;
+        font-size: 1.2rem; } }
+  @media only screen and (min-width: 110em) {
+    .text-area .input-area {
+      display: flex;
+      margin-right: 1rem;
+      width: 80%; } }
   .text-area .text-align {
     text-align: left; }
   .text-area h2 {
@@ -223,6 +262,12 @@ nav div img {
     font-weight: 800;
     text-align: center;
     padding: 1.5rem 1rem; }
+    @media only screen and (min-width: 110em) {
+      .text-area h2 {
+        font-size: 2rem;
+        text-align: left;
+        padding-left: 0;
+        font-weight: 600; } }
   .text-area .text-link {
     display: flex;
     flex-direction: row;
@@ -235,6 +280,11 @@ nav div img {
     margin: auto;
     border-bottom: 2px solid green;
     margin-bottom: 3rem; }
+    @media only screen and (min-width: 110em) {
+      .text-area .text-link {
+        margin: 0;
+        margin-bottom: 2rem;
+        width: 30%; } }
     .text-area .text-link h4 {
       font-size: 1rem;
       width: 90%; }
@@ -254,6 +304,9 @@ nav div img {
   -webkit-box-shadow: 5px 5px 32px 1px #8b838b;
   -moz-box-shadow: 5px 5px 32px 1px #8b838b;
   box-shadow: 5px 5px 32px 1px #8b838b; }
+  @media only screen and (min-width: 110em) {
+    .card {
+      width: 50%; } }
   .card-quotation img {
     width: 1rem;
     height: 1rem; }
@@ -292,10 +345,19 @@ nav div img {
   background-repeat: no-repeat;
   background-position: top;
   background-size: contain; }
+  @media only screen and (min-width: 110em) {
+    .bg-grey {
+      background-image: url("../images/bg-curve-desktop.svg");
+      background-size: cover; } }
 
 .bg-grey-color {
   background-color: #f8f8fe;
   margin-top: -45px; }
+  @media only screen and (min-width: 110em) {
+    .bg-grey-color {
+      margin-top: 0;
+      padding-bottom: 9rem;
+      margin-bottom: 0; } }
 
 .access {
   background: #585989; }
@@ -306,17 +368,36 @@ nav div img {
     flex-direction: column;
     align-items: center;
     padding: 5rem 0; }
+    @media only screen and (min-width: 110em) {
+      .access-flex div:first-child {
+        width: 50%; }
+      .access-flex div:nth-child(2) {
+        width: 30%;
+        margin-right: 10rem; } }
+    @media only screen and (min-width: 110em) {
+      .access-flex {
+        flex-direction: row; } }
     .access-flex h1.has-text-white {
       text-align: center;
       font-size: 1.3rem;
       font-weight: 600;
       color: white; }
+      @media only screen and (min-width: 110em) {
+        .access-flex h1.has-text-white {
+          text-align: left;
+          font-size: 2rem; } }
     .access-flex p {
       text-align: center;
       line-height: 140%;
       color: white;
       padding: 0 1rem 2rem 1rem;
       font-size: 1rem; }
+      @media only screen and (min-width: 110em) {
+        .access-flex p {
+          text-align: left;
+          font-size: 1.2rem;
+          padding: 0;
+          width: 70%; } }
 
 footer {
   background: #070439;
@@ -331,26 +412,48 @@ footer {
     margin-left: 2rem;
     margin-bottom: 1rem;
     margin-top: 4rem; }
+    @media only screen and (min-width: 110em) {
+      footer img {
+        margin-left: 8rem;
+        margin-bottom: 4rem; } }
+  @media only screen and (min-width: 110em) {
+    footer {
+      padding-bottom: 4rem; } }
 
 .about-list ul li,
 .contact-list ul li {
   padding: 0.5rem 0;
   font-size: 1.2rem; }
+  @media only screen and (min-width: 110em) {
+    .about-list ul li,
+    .contact-list ul li {
+      padding: 0 0 1.5rem 0; } }
 
 .about-list,
 .contact-list {
   padding-top: 3rem; }
+  @media only screen and (min-width: 110em) {
+    .about-list,
+    .contact-list {
+      padding-top: 0; } }
 
 .contact-container {
   display: flex;
   flex-direction: column;
   width: 100%; }
+  @media only screen and (min-width: 110em) {
+    .contact-container {
+      width: 30%; } }
 
 .contact-icon {
   width: 80%;
   display: flex;
   align-items: center;
   padding-top: 1rem; }
+  @media only screen and (min-width: 110em) {
+    .contact-icon {
+      padding-top: 0;
+      padding-bottom: 1rem; } }
   .contact-icon h4 {
     width: 100%;
     margin-left: 1rem;
@@ -364,13 +467,24 @@ footer {
   display: flex;
   flex-direction: column;
   margin-left: 2rem; }
+  @media only screen and (min-width: 110em) {
+    .footer-flex {
+      flex-direction: row;
+      justify-content: space-around;
+      width: 85%; } }
 
 input {
   width: 97%;
   margin-bottom: 10px; }
+  @media only screen and (min-width: 110em) {
+    input {
+      margin-right: 1rem; } }
 
 .btn {
   width: 100%; }
+  @media only screen and (min-width: 110em) {
+    .btn {
+      width: 50%; } }
 
 .social-icons ul {
   list-style: none;
@@ -379,6 +493,11 @@ input {
   flex-direction: row;
   justify-content: center;
   margin: 3rem 0; }
+  @media only screen and (min-width: 110em) {
+    .social-icons ul {
+      align-items: center;
+      justify-content: flex-start;
+      margin-top: 0; } }
   .social-icons ul li a i {
     font-size: 1rem;
     fill: white;
