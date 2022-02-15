@@ -2,14 +2,14 @@ import React from "react";
 
 function HeroComponent() {
   return (
-    <div className="container h-3/5 pb-24">
-      <div className="flex flex-col-reverse md:flex-row">
-        <div className="flex justify-center flex-col gap-4 items-center m-4 my-8">
-          <h1 className="text-4xl text-center font-bold">
+    <div className="container h-3/5 pb-24 md:pt-8">
+      <div className="flex flex-col-reverse md:flex-row md:justify-center mg:items-center">
+        <div className="flex justify-center flex-col gap-4 items-center m-4 my-8 md:items-start md:w-2/5">
+          <h1 className="text-4xl text-center font-bold md:text-5xl md:text-left">
             {" "}
             More than just shorter links
           </h1>
-          <p className="text-center text-gray font-bold">
+          <p className="text-center text-gray font-bold text-4xl md:text-left md:text-lg">
             {" "}
             Build your brand's recognition and get detailed insights on how your
             links are performing.
