@@ -319,7 +319,51 @@ nav div img {
       font-size: 1rem; }
 
 footer {
-  background: #070439; }
+  background: #070439;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  color: white; }
+  footer img {
+    width: 10rem;
+    height: 3.5rem;
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+    margin-top: 4rem; }
+
+.about-list ul li,
+.contact-list ul li {
+  padding: 0.5rem 0;
+  font-size: 1.2rem; }
+
+.about-list,
+.contact-list {
+  padding-top: 3rem; }
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%; }
+
+.contact-icon {
+  width: 80%;
+  display: flex;
+  align-items: center;
+  padding-top: 1rem; }
+  .contact-icon h4 {
+    width: 100%;
+    margin-left: 1rem;
+    font-size: 1.2rem; }
+  .contact-icon img {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: auto; }
+
+.footer-flex {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem; }
 
 input {
   width: 97%;
@@ -327,3 +371,25 @@ input {
 
 .btn {
   width: 100%; }
+
+.social-icons ul {
+  list-style: none;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  margin: 3rem 0; }
+  .social-icons ul li a i {
+    font-size: 1rem;
+    fill: white;
+    color: white; }
+  .social-icons ul li a div {
+    padding: 0.5rem;
+    background: transparent;
+    border-radius: 50%;
+    border: 2px solid white;
+    min-width: 1rem;
+    height: 1rem;
+    margin-left: 1rem;
+    display: flex;
+    justify-content: center; }

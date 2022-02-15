@@ -11,6 +11,10 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <title>Frontend Mentor | Fylo Landing Page</title>
 
@@ -120,20 +124,22 @@
 
     <footer class="footer">
       <img src="images/logo-white.svg" alt="logo" />
-      <div class="flex space-evenly has-margin-top">
-        <div>
-          <div class="has-padding-bottom">
-            <img src="images/icon-phone.svg" alt="phone" />
-            <span class="has-white-text small-p-left">
-              Phone: +1-543-123-4567
-            </span>
+      <div class="footer-flex">
+        <div class="contact-container">
+          <div class="contact-icon">
+            <div>
+              <img src="images/icon-phone.svg" alt="phone" />
+            </div>
+            <h4 class="has-white-text small-p-left">Phone: +1-543-123-4567</h4>
           </div>
-          <div>
-            <img src="images/icon-email.svg" alt="phone" />
-            <span class="has-white-text small-p-left"> example@fylo.com </span>
+          <div class="contact-icon">
+            <div>
+              <img src="images/icon-email.svg" alt="phone" />
+            </div>
+            <h4 class="has-white-text small-p-left">example@fylo.com</h4>
           </div>
         </div>
-        <div>
+        <div class="about-list">
           <ul>
             <li>About Us</li>
             <li>Jobs</li>
@@ -141,15 +147,39 @@
             <li>Blog</li>
           </ul>
         </div>
-        <div>
+        <div class="contact-list">
           <ul>
             <li>Contact Us</li>
             <li>Terms</li>
             <li>Privacy</li>
           </ul>
         </div>
+        <div class="social-icons">
+          <ul>
+            <li>
+              <a href="#">
+                <div>
+                  <i class="fa fa-facebook-f"></i>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                ><div>
+                  <i class="fa fa-twitter"></i>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="#"
+                ><div>
+                  <i class="fa fa-instagram"></i>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
-      <div></div>
       <!-- <p class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
