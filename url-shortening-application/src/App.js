@@ -5,7 +5,7 @@ import Header from "./components/Header";
 import HeroComponent from "./components/Hero";
 import ShortenerComponent from "./components/Shortener";
 import StatisticsComponent from "./components/Statistics";
-
+import FooterComponent from "./components/Footer";
 function App() {
   return (
     <div>
@@ -14,6 +14,7 @@ function App() {
       {/* <ShortenerComponent /> */}
       <StatisticsComponent />
       <BoostComponent />
+      <FooterComponent />
     </div>
   );
 }

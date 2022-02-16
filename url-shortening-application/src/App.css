@@ -65,6 +65,11 @@
   background: hsl(180, 66%, 49%);
 }
 
+.logo-invert path {
+  fill: green;
+  background: green;
+}
+
 @media only screen and (min-width: 800px) {
   .boost {
     background-image: url("../public/images/bg-boost-desktop.svg");
