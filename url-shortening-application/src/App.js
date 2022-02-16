@@ -11,7 +11,7 @@ function App() {
     <div>
       <Header />
       <HeroComponent />
-      {/* <ShortenerComponent /> */}
+      <ShortenerComponent />
       <StatisticsComponent />
       <BoostComponent />
       <FooterComponent />
