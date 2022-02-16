@@ -3,3 +3,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* .boost {
+  background-image: url("/images/bg-boost-mobile.svg");
+} */

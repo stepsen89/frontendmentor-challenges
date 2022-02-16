@@ -1,5 +1,6 @@
 import "./App.css";
-
+import BoostComponent from "./components/Boost";
+import "./index.css";
 import Header from "./components/Header";
 import HeroComponent from "./components/Hero";
 import ShortenerComponent from "./components/Shortener";
@@ -12,6 +13,7 @@ function App() {
       <HeroComponent />
       {/* <ShortenerComponent /> */}
       <StatisticsComponent />
+      <BoostComponent />
     </div>
   );
 }
