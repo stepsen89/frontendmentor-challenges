@@ -44,8 +44,49 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+.line:before {
+  content: "";
+  width: 6px;
+  position: absolute;
+  height: 2rem;
+  left: 9.2rem;
+  top: -4rem;
+  background: hsl(180, 66%, 49%);
+}
+
+.line:after {
+  content: "";
+  width: 6px;
+  position: absolute;
+  height: 2rem;
+  left: 9.2rem;
+  bottom: -2rem;
+  background: hsl(180, 66%, 49%);
+}
+
 @media only screen and (min-width: 800px) {
   .boost {
     background-image: url("../public/images/bg-boost-desktop.svg");
+  }
+
+  .line:before {
+    content: "";
+    width: 2rem;
+    position: absolute;
+    height: 6px;
+    left: -2rem;
+    top: 6rem;
+    background: hsl(180, 66%, 49%);
+  }
+
+  .line:after {
+    content: "";
+    width: 2rem;
+    position: absolute;
+    height: 6px;
+    right: -2rem;
+    top: 6rem;
+    background: hsl(180, 66%, 49%);
   }
 }

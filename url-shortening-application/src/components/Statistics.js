@@ -16,7 +16,7 @@ function StatisticsComponent() {
               advanced statistics dashboard.
             </p>
           </div>
-          <div className="flex md:flex-row flex-col gap-16 md:px-12">
+          <div className="flex md:flex-row flex-col gap-16 md:gap-8 md:px-12">
             <div className="bg-white w-5/6 md:w-2/3 mx-auto py-16 px-4 md:px-8 relative rounded-lg">
               <div className="bg-dark-violet rounded-full p-6 absolute -top-8 left-1/3 md:left-8">
                 <img
@@ -36,7 +36,7 @@ function StatisticsComponent() {
                 content{" "}
               </p>
             </div>
-            <div className="bg-white w-5/6 md:w-auto mx-auto py-16 px-4 md:px-8 relative rounded-lg md:top-8">
+            <div className="bg-white w-5/6 md:w-auto mx-auto py-16 px-4 md:px-8 relative rounded-lg md:top-8 line">
               <div className="bg-dark-violet rounded-full p-6 absolute -top-8 left-1/3 md:left-8">
                 <img
                   src="./images/icon-detailed-records.svg"
