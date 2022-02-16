@@ -1,0 +1,14 @@
+{
+  "name": "article-preview",
+  "version": "1.0.0",
+  "description": "Frontend mentor challenge for Article Preview Component",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node-sass sass/main.scss css/styles.css -w "
+  },
+  "author": "Stephanie Senoner",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
