@@ -7,7 +7,7 @@ export default function Header() {
   };
 
   return (
-    <div className="container p-8 bg-blue-200">
+    <div className="container p-8 ">
       <div className="flex sm:columns-2 justify-between w-full items-center ">
         <div className="md:flex">
           <div>
