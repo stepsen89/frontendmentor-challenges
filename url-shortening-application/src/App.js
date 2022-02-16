@@ -10,8 +10,8 @@ function App() {
     <div>
       <Header />
       <HeroComponent />
-      <ShortenerComponent />
-      <StatisticsComponent />
+      {/* <ShortenerComponent />
+      <StatisticsComponent /> */}
     </div>
   );
 }

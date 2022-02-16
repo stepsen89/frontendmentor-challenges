@@ -2,9 +2,9 @@ import React from "react";
 
 function HeroComponent() {
   return (
-    <div className="container h-3/5 pb-24 md:pt-8">
-      <div className="flex flex-col-reverse md:flex-row md:justify-center mg:items-center">
-        <div className="flex justify-center flex-col gap-4 items-center m-4 my-8 md:items-start md:w-2/5">
+    <div className="container h-4/6 pb-24 md:pt-24 pt-12">
+      <div className="flex flex-col-reverse md:flex-row md:justify-around md:items-center">
+        <div className="flex justify-center flex-col gap-4 items-center p-4 my-8 md:items-start md:w-1/2">
           <h1 className="text-4xl text-center font-bold md:text-5xl md:text-left">
             {" "}
             More than just shorter links
@@ -23,7 +23,7 @@ function HeroComponent() {
           <img
             src="images/illustration-working.svg"
             alt="A person sitting on a chair in front of a computer working"
-            className="ml-8 h-80"
+            className="h-80 w-80 mx-auto md:h-96 md:w-96"
           />
         </div>
       </div>
