@@ -2,7 +2,7 @@ import React from "react";
 
 function StatisticsComponent() {
   return (
-    <div className="h-4/6 pb-48 md:pt-24 pt-12 bg-gray">
+    <div className="h-4/6 pb-48 md:pt-24 pt-12 bg-light-gray">
       <div className="container">
         <div className="flex flex-col md:items-center ">
           <div className="flex justify-center flex-col gap-4 items-center p-4 my-8 md:mb-24 md:w-1/2">
@@ -17,7 +17,7 @@ function StatisticsComponent() {
             </p>
           </div>
           <div className="flex md:flex-row flex-col gap-16 md:gap-8 md:px-12">
-            <div className="bg-white w-5/6 md:w-2/3 mx-auto py-16 px-4 md:px-8 relative rounded-lg">
+            <div className="bg-white w-5/6 mx-auto py-16 px-4 md:px-8 relative rounded-lg">
               <div className="bg-dark-violet rounded-full p-6 absolute -top-8 left-1/3 md:left-8">
                 <img
                   src="./images/icon-brand-recognition.svg"

@@ -22,16 +22,17 @@ function ShortenerComponent() {
   const shortenLink = (e) => {
     inputRef.current.value = "";
     inputRef.current.placeholder = "Shorten a link here...";
+    if (!urlRequest) {
+      inputRef.current.style.border = "2px solid hsl(0, 87%, 67%)";
+      setError("Please add a link");
+      return;
+    }
     axios
       .get(`${baseUrl}?url=${urlRequest}`)
       .then((res) => {
         setUrlResponse(res.data.result.full_short_link3);
       })
-      .catch((e) => console.log(e));
-
-    if (!urlRequest) {
-      setError("No valid link");
-    }
+      .catch((e) => setError("Please add a valid link"));
   };
 
   const handleChange = (e) => {
@@ -41,19 +42,29 @@ function ShortenerComponent() {
   };
 
   return (
-    <div className="bg-gray pb-12">
-      <div className="mx-auto h-36 -mb-16 md:-mb-16 z-50 relative">
+    <div className="bg-light-gray pb-12">
+      <div className="mx-auto h-36 -mb-16 md:-mb-16 z-50 relative ">
         <div className="absolute w-full -top-16">
-          <div className="left-0 right-0 mb-auto flex md:flex-row flex-col bg-dark-violet md:px-16 rounded-lg h-36 justify-center items-center gap-4 w-11/12 md:w-1/2 mx-auto ">
-            <input
-              className="w-11/12 bg-white border-2 border-blue-50 py-2 rounded-lg"
-              placeholder="Shorten a link here..."
-              name="link"
-              type="text"
-              onChange={handleChange}
-              ref={inputRef}
-            />
-            {console.log(error)}
+          <div className="left-0 right-0 mb-auto flex md:flex-row flex-col shortener md:px-16 rounded-lg h-36 justify-center items-center gap-4 w-11/12 md:w-1/2 mx-auto bg-dark-violet ">
+            <div className="w-11/12">
+              <input
+                className="w-full bg-white border-2 border-blue-50 py-2 rounded-lg"
+                placeholder="Shorten a link here..."
+                name="link"
+                type="text"
+                onChange={handleChange}
+                ref={inputRef}
+              />
+              {error && (
+                <div>
+                  {" "}
+                  <span className="text-red-800 md:mt-2 -mt-24 italic absolute">
+                    {" "}
+                    {error}
+                  </span>{" "}
+                </div>
+              )}
+            </div>
             <button
               className="bg-cyan md:w-48 w-11/12 py-2 rounded-lg text-white font-bold"
               onClick={shortenLink}
@@ -61,7 +72,6 @@ function ShortenerComponent() {
               Shorten It!
             </button>
           </div>
-          {/* {error && <span className="text-red"> {error} </span>} */}
           {urlResponse && (
             <div className="mx-auto z-50 relative mt-4">
               <div>
