@@ -31,48 +31,49 @@
   </head>
 
   <body>
+    <!-- Header -->
     <header class="header">
-      <div class="header-item">
+      <div>
         <img alt="Huddle logo" class="header-image" src="images/logo.svg" />
       </div>
-      <div class="header-item">
-        <a class="btn light small" href="#">Try it free</a>
-      </div>
+      <button class="btn">Try it free</button>
     </header>
 
     <!-- Hero Section -->
-    <section class="hero space-top">
-      <div class="flex space-top">
-        <h1 class="hero-title">Build The Community Your Fans Will Love</h1>
-        <p class="hero-description">
+    <section class="hero">
+      <div class="flex">
+        <h1>Build The Community Your Fans Will Love</h1>
+        <p>
           Huddle re-imagines the way we build communities. You have a voice, but
           so does your audience. Create connections with your users as you
           engage in genuine discussion.
         </p>
-        <button class="btn rounded large primary">Get Started For Free</button>
+        <button class="btn primary">Get Started For Free</button>
+        <img
+          alt="illustration of screens with mockups"
+          class="illustration"
+          src="images/screen-mockups.svg"
+        />
       </div>
-      <img
-        alt="illustration of screens with mockups"
-        class="illustration"
-        src="images/screen-mockups.svg"
-      />
     </section>
-    <!--  -->
-    <div class="flex space-top">
-      <div class="container-info-box space-top">
-        <img alt="Communities" src="images/icon-communities.svg" />
-        <h1>1.4k+</h1>
-        <p>Communities Formed</p>
-      </div>
-      <div class="container-info-box">
-        <img alt="Communities" src="images/icon-messages.svg" />
-        <h1>2.7m+</h1>
-        <p>Messages Sent</p>
+    <!--  Section Community Stats -->
+    <div class="container">
+      <div class="flex-reverse">
+        <div class="box">
+          <img alt="Communities" src="images/icon-communities.svg" />
+          <h1>1.4k+</h1>
+          <p>Communities Formed</p>
+        </div>
+        <div class="box">
+          <img alt="Communities" src="images/icon-messages.svg" />
+          <h1>2.7m+</h1>
+          <p>Messages Sent</p>
+        </div>
       </div>
     </div>
 
-    <div class="main">
-      <div class="card m-large bg-curve">
+    <div class="container">
+      <div class="section blue curve-top">
         <div class="card-box">
           <h3 class="card-title">Grow together</h3>
           <p class="card-description">
@@ -87,10 +88,10 @@
           src="images/illustration-grow-together.svg"
         />
       </div>
-      <div class="card white bg-curve-2 large-p-b">
-        <div class="card-box white">
-          <h3 class="card-title">Flowing Conversations</h3>
-          <p class="card-description">
+      <div class="section large">
+        <div class="card-box">
+          <h3>Flowing Conversations</h3>
+          <p>
             You wouldn't paginate a conversation in real life, so why do it
             online? Our threads have just-in-time loading for a more natural
             flow
@@ -102,7 +103,7 @@
           src="images/illustration-flowing-conversation.svg"
         />
       </div>
-      <div class="card m-large bg-curve-bottom">
+      <div class="section blue curve-bottom">
         <div class="card-box">
           <h3 class="card-title">Your Users</h3>
           <p class="card-description">
@@ -119,12 +120,14 @@
       </div>
     </div>
 
-    <div class="community">
-      <h2>Ready to build your community?</h2>
-      <a class="btn primary large rounded" href="#">Get Started For Free</a>
+    <div class="container">
+      <div class="community">
+        <h2>Ready to build your community?</h2>
+        <a class="btn primary large rounded" href="#">Get Started For Free</a>
+      </div>
     </div>
 
-    <footer class="footer">
+    <footer class="container">
       <div class="footer-section">
         <h3>Newsletter</h3>
         <p>
@@ -136,6 +139,7 @@
           Subscribe
         </button>
       </div>
+
       <div class="footer-section">
         <img
           alt="Huddle logo"
