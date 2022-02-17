@@ -1,0 +1,15 @@
+{
+  "name": "huddle",
+  "version": "1.0.0",
+  "description": "Frontend Mentor Challenge Huddle Landing Page",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node-sass sass/main.scss css/styles.css -w "
+  },
+  "keywords": [],
+  "author": "Stephanie Senoner",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
