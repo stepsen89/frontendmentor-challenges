@@ -1,0 +1,573 @@
+@import "./base/variables";
+@import "./base/reset";
+@import "./base/typography";
+@import "./layout/layout";
+
+// import fonts
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap");
+
+body {
+  font-size: $body-font-size;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  background-color: $header-blue;
+}
+
+.header {
+  height: 15%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 30px;
+  width: 80%;
+}
+
+.hero {
+  background-image: url("../images/mobile/image-header.jpg");
+  background-size: cover;
+  height: 528px;
+  width: 100%;
+
+  @include respond(desktop) {
+    background-image: url("../images/desktop/image-header.jpg");
+    height: 800px;
+  }
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  justify-content: flex-end;
+
+  @include respond(desktop) {
+    justify-content: space-around;
+  }
+}
+
+.navbar > a {
+  list-style: none;
+  color: $white;
+  text-decoration: none;
+  display: none;
+
+  @include respond(desktop) {
+    display: inline-block;
+  }
+}
+
+.navbar > a.active {
+  color: $very-dark-grayish-blue;
+}
+
+.hamburger {
+  @include respond(desktop) {
+    display: none;
+  }
+}
+
+.hero--header {
+  text-transform: uppercase;
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 3rem;
+  letter-spacing: 6px;
+  color: $white;
+  margin-bottom: 10rem;
+}
+
+// section with image and text box
+
+.btn {
+  border: none;
+  background-color: none;
+  position: relative;
+  color: black;
+  z-index: 100;
+  width: max-content;
+  text-transform: uppercase;
+  font-family: "Fraunces", sans-serif;
+  // box-shadow: 0px 0px 15px 0px #000000;
+}
+
+.btn::after {
+  position: absolute;
+  content: "";
+  top: 12px;
+  width: 110%;
+  left: 0;
+  background-color: $yellow;
+  opacity: 0.4;
+  height: 50%;
+  border-radius: 12px;
+  z-index: -1;
+  // box-shadow: -1px 31px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.reverse {
+  flex-direction: column-reverse;
+
+  @include respond(desktop) {
+    flex-direction: row;
+  }
+}
+
+.d-rev {
+  @include respond(desktop) {
+    flex-direction: row-reverse;
+  }
+}
+
+.d-row {
+  @include respond(desktop) {
+    display: flex;
+
+    min-height: 600px;
+  }
+}
+
+.d-row.s {
+  min-height: 500px;
+}
+.btn::selection {
+  background: #fcf113;
+}
+
+.image {
+  height: 70%;
+  width: 100%;
+  background-size: cover;
+
+  @include respond(desktop) {
+    width: 50%;
+    height: 100%;
+  }
+}
+
+#glass {
+  background-image: url("../images/mobile/image-stand-out.jpg");
+
+  @include respond(desktop) {
+    background-image: url("../images/desktop/image-stand-out.jpg");
+  }
+}
+
+#egg {
+  background-image: url("../images/mobile/image-transform.jpg");
+
+  @include respond(desktop) {
+    background-image: url("../images/desktop/image-transform.jpg");
+  }
+}
+
+// row/box styling
+
+.row {
+  min-height: 80vh;
+
+  @include respond(desktop) {
+    min-height: 700px;
+    height: 40vh;
+  }
+}
+
+.text-container {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem 1.5rem;
+  background-color: white;
+
+  @include respond(desktop) {
+    width: 50%;
+    height: 100%;
+    padding: 0;
+    justify-content: space-around;
+  }
+}
+
+.inner-box {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2rem 1.5rem;
+
+  @include respond(desktop) {
+    width: 80%;
+    height: 60%;
+    padding: 0;
+  }
+}
+
+.text-container h3 {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: $very-dark-grayish-blue;
+  text-align: center;
+
+  @include respond(desktop) {
+    font-size: 2rem;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 40%;
+  width: 70%;
+  align-items: flex-start;
+  margin: auto 0;
+}
+
+.text-container p {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: $grayish-blue;
+  line-height: 140%;
+
+  @include respond(desktop) {
+    text-align: left;
+  }
+}
+
+.image.glass {
+  background-image: url("../images/mobile/image-stand-out.jpg");
+
+  @include respond(desktop) {
+    background-image: url("../images/desktop/image-stand-out.jpg");
+  }
+}
+
+#graphic-design {
+  background-image: url("../images/mobile/image-graphic-design.jpg");
+
+  @include respond(desktop) {
+    background-image: url("../images/desktop/image-graphic-design.jpg");
+  }
+}
+
+#photography {
+  background-image: url("../images/mobile/image-photography.jpg");
+
+  @include respond(desktop) {
+    background-image: url("../images/desktop/image-photography.jpg");
+  }
+}
+
+#photography,
+#graphic-design {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 70vh;
+  // width: 100%;
+  display: flex;
+  align-items: flex-end;
+
+  @include respond(desktop) {
+    height: auto;
+    width: 50%;
+  }
+}
+
+.small {
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  // padding-top: 40%;
+  padding: 3rem;
+
+  @include respond(desktop) {
+    height: auto;
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  h3 {
+    font-family: "Fraunces", serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: $very-dark-grayish-blue;
+    text-align: center;
+
+    @include respond(desktop) {
+      padding-bottom: 3rem;
+    }
+  }
+
+  p {
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: $very-dark-grayish-blue;
+    line-height: 140%;
+  }
+}
+
+.bg-image.orange {
+  background-image: url("../images/mobile/image-photography.jpg");
+}
+
+.testimonial {
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding: 2.5rem;
+  height: 290px;
+
+  & img {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+  }
+
+  & p {
+    text-align: center;
+    line-height: 140%;
+    color: $very-dark-grayish-blue;
+  }
+
+  & h5 {
+    font-family: "Fraunces", sans-serif;
+  }
+
+  & span {
+    color: $grayish-blue;
+    font-size: 0.8rem;
+  }
+}
+
+h2.headline {
+  text-align: center;
+  padding: 1rem;
+}
+
+.testimonials {
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  height: min-content;
+
+  h2 {
+    padding: 4rem 3rem;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-family: "Fraunces", sans-serif;
+    color: $graphic-text;
+  }
+}
+
+.text-container .graphic {
+  color: $graphic-text;
+}
+
+.text-container .photography {
+  color: $photography-text;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  height: 50vh;
+  width: 100%;
+
+  @include respond(desktop) {
+    min-height: 50vh;
+  }
+}
+
+.gallery > .img {
+  min-width: 50%;
+  min-height: 50%;
+
+  @include respond(desktop) {
+    min-width: 25%;
+    min-height: 100%;
+  }
+}
+
+#gallery-1 {
+  background-image: url("../images/mobile/image-gallery-milkbottles.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+
+  @include respond(desktop) {
+    background-image: url("../images/desktop/image-gallery-milkbottles.jpg");
+  }
+}
+
+#gallery-2 {
+  background-image: url("../images/mobile/image-gallery-orange.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+
+  @include respond(desktop) {
+    background-image: url("../images/desktop/image-gallery-orange.jpg");
+  }
+}
+
+#gallery-3 {
+  background-image: url("../images/mobile/image-gallery-cone.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+
+  @include respond(desktop) {
+    background-image: url("../images/desktop/image-gallery-cone.jpg");
+  }
+}
+
+#gallery-4 {
+  background-image: url("../images/mobile/image-gallery-sugar-cubes.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+@include respond(desktop) {
+  background-image: url("../images/desktop/image-gallery-sugarcubes.jpg");
+}
+
+footer {
+  background: $footer;
+  height: 280px;
+  width: 100%;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 25px;
+  color: $dark-cyan;
+
+  @include respond(desktop) {
+    justify-content: center;
+  }
+}
+
+.smaller {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 80%;
+  align-items: center;
+
+  @include respond(desktop) {
+    width: 30%;
+    margin: auto;
+    text-align: center;
+    display: flex;
+  }
+}
+
+footer > .smaller > img {
+  width: 170px;
+  height: 15%;
+  fill: $dark-cyan;
+}
+
+.test g,
+.test path {
+  fill: $dark-cyan;
+}
+
+.footer-nav a {
+  list-style: none;
+  text-decoration: none;
+  color: $dark-cyan;
+}
+
+.footer-nav {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+
+  @include respond(desktop) {
+    width: 60%;
+  }
+}
+
+.social-icons {
+  display: flex;
+  width: 50%;
+  justify-content: space-between;
+
+  @include respond(desktop) {
+    width: 40%;
+  }
+
+  & a img {
+    width: 20px;
+    height: 20px;
+    color: white;
+  }
+}
+
+.responsive {
+  height: 300px;
+  background: white;
+  padding: 2rem;
+  position: absolute;
+  top: 8rem;
+  width: 65%;
+
+  @include respond(desktop) {
+    display: none;
+  }
+}
+
+.show {
+  display: none;
+}
+
+.responsive:before {
+  content: "";
+  position: absolute;
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+  background: white;
+  height: 3rem;
+  width: 3rem;
+  top: -3rem;
+  right: 0;
+}
+
+.responsive-nav-bar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  a {
+    padding: 1.5rem 0;
+    list-style: none;
+    color: $very-dark-grayish-blue;
+    text-decoration: none;
+  }
+}
+
+.active {
+  padding: 1rem 2rem;
+  background-color: #fcf113;
+  border-radius: 30px;
+  text-align: center;
+  width: 50%;
+
+  @include respond(desktop) {
+    width: 80px;
+  }
+}
