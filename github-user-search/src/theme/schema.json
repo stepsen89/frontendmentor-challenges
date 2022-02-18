@@ -1,0 +1,30 @@
+{
+  "data": {
+    "light": {
+      "id": "1",
+      "name": "Light mode",
+      "colors": {
+        "primary": "#FEFEFE",
+        "secondary": "#0079FF",
+        "background": "#F6F8FF",
+        "fontColor": "#222731",
+        "fontColorHighlighted": "rgba(75, 106, 155, 50)"
+      },
+      "font": "Space Mono, sans-serif",
+      "boxShadow": "2px 3px 11px 4px #4b6a9b52"
+    },
+    "dark": {
+      "id": "2",
+      "name": "Dark Mode",
+      "colors": {
+        "primary": "#1E2A47",
+        "secondary": "#0079FF",
+        "fontColor": "#D8D8D8",
+        "fontColorHighlighted": "rgba(75, 106, 155, 50)",
+        "background": "#141D2F"
+      },
+      "font": "Space Mono, sans-serif",
+      "boxShadow": "none"
+    }
+  }
+}
