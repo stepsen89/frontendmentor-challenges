@@ -1,0 +1,21 @@
+{
+  "name": "clock-app",
+  "version": "1.0.0",
+  "description": "![Design preview for the Clock app coding challenge](./preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html & npm run sass:compile",
+    "sass:compile": "node-sass scss/main.scss css/styles.css -w",
+    "build": "parcel build index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "parcel-bundler": "^1.12.5"
+  },
+  "dependencies": {
+    "axios": "^0.26.0"
+  }
+}

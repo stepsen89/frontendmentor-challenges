@@ -1,0 +1,295 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+@import "reset";
+@import "mixins";
+@import "variables";
+@import "base/typography";
+
+// @import "components/quotation";
+@import "components/clock";
+@import "components/buttons";
+
+:root {
+  font-size: 12px;
+  font-family: $font-primary;
+  line-height: 14px;
+
+  @include respond(desktop) {
+    font-size: 18px;
+  }
+}
+
+body {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  font-weight: 400;
+  color: $white;
+}
+
+.daytime {
+  background-image: url("../assets/mobile/bg-image-daytime.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include respond(tablet) {
+    background-image: url("../assets/tablet/bg-image-daytime.jpg");
+  }
+
+  @include respond(desktop) {
+    background-image: url("../assets/desktop/bg-image-daytime.jpg");
+  }
+}
+
+.nighttime {
+  background-image: url("../assets/mobile/bg-image-nighttime.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include respond(tablet) {
+    background-image: url("../assets/tablet/bg-image-nighttime.jpg");
+  }
+
+  @include respond(desktop) {
+    background-image: url("../assets/desktop/bg-image-nighttime.jpg");
+    background-size: cover;
+  }
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#refresh {
+  width: 16.67px;
+  height: 16.67px;
+}
+
+.btn {
+  border-radius: 25px;
+  background: white;
+  border: none;
+  width: 9.5rem;
+  height: 3.25rem;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-left: 1rem;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 3.75px;
+
+  span {
+    width: 9.6px;
+    background: $grey;
+    padding: 1.2rem 1rem;
+    border-radius: 50%;
+    height: 4.8px;
+    margin-left: 1rem;
+    background-image: url("../assets/desktop/icon-arrow-down.svg");
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+
+    @include respond(desktop) {
+      padding: 1rem;
+      width: 12px;
+
+      height: 12px;
+    }
+  }
+
+  span.active {
+    background-image: url("../assets/desktop/icon-arrow-up.svg");
+  }
+}
+
+.full {
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.top,
+.popup {
+  height: 40%;
+  transition: max-height 4s;
+  // transition-duration: 20s;
+}
+
+.top,
+.clock,
+.popup {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup {
+  background: #979797;
+  color: black;
+}
+
+.popup.nighttime {
+  background: black;
+  color: white;
+}
+
+.clock {
+  height: 60%;
+  width: 100%;
+  align-items: flex-end;
+}
+
+.top .inner {
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+}
+
+.inner {
+  width: 86%;
+  height: 80%;
+}
+
+.clock .inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 60%;
+  padding-bottom: 2rem;
+
+  @include respond(desktop) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 3rem;
+  }
+}
+
+.popup .inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 80%;
+  width: 86%;
+}
+
+.info {
+  height: 100%;
+  width: 100%;
+
+  @include respond(tablet) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.box {
+  height: 50%;
+
+  @include respond(tablet) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    height: 100%;
+  }
+}
+
+.section {
+  height: 50%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+
+  @include respond(tablet) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 50%;
+    height: 50%;
+  }
+
+  h2 {
+    font-size: 22px;
+    letter-spacing: 2px;
+    font-weight: 800;
+
+    @include respond(tablet) {
+      font-size: 56px;
+      padding-top: 0.5rem;
+    }
+  }
+
+  h5 {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+}
+
+.left-border {
+  @include respond(tablet) {
+    border-left: 1px solid grey;
+    padding-left: 3rem;
+  }
+}
+
+.left-border.night {
+  @include respond(tablet) {
+    border-left: 1px solid white;
+    padding-left: 3rem;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.w {
+  width: 90%;
+}
+
+.show {
+  display: flex;
+}
+
+#location {
+  font-size: 15px;
+
+  line-height: 28px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+
+  @include respond(desktop) {
+    font-size: 24px;
+  }
+}
+
+.flex-row.ending {
+  align-items: flex-end;
+}
+
+.greeting-after {
+  display: none;
+
+  @include respond(desktop) {
+    display: inline-block;
+  }
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles.b61e60ae.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.1e0171f0.png">
+
+    <title>Frontend Mentor | Clock App</title>
+  <script src="/styles.b61e60ae.js"></script></head>
+  <body>
+    <div class="full">
+      <div class="container">
+        <div class="top" id="top">
+          <div class="inner">
+            <div class="w">
+              <p class="text-small" id="quoteText"></p>
+              <h2 class="text-m" id="quoteAuthor"></h2>
+            </div>
+            <div>
+              <img id="refresh" src="/icon-refresh.0d626a07.svg">
+            </div>
+          </div>
+        </div>
+        <div class="clock">
+          <div class="inner end">
+            <div>
+              <div class="flex-row">
+                <div id="daytime-icon"></div>
+                <h3 class="greeting" id="greeting"></h3>
+                <span class="greeting greeting-after"> , It's currently</span>
+              </div>
+              <div class="flex-row ending">
+                <h1 class="text-xxl text-extra-large" id="time"></h1>
+                <h5 class="text-m" id="zone"></h5>
+              </div>
+              <h4 id="location"></h4>
+            </div>
+            <a class="btn" id="moreButton">
+              More
+              <span alt="arrow" id="arrow"></span>
+            </a>
+          </div>
+        </div>
+        <div class="popup hidden" id="popup">
+          <div class="inner">
+            <div class="info">
+              <div class="box">
+                <div class="flex-row section">
+                  <h5>Current Timezone</h5>
+                  <h2 id="curZone"></h2>
+                </div>
+                <div class="flex-row section">
+                  <h5>Day of The Year</h5>
+                  <h2 id="curDay"></h2>
+                </div>
+              </div>
+              <div class="box left-border" id="border">
+                <div class="flex-row section">
+                  <h5>Day of the week</h5>
+                  <h2 id="curDayOfWeek"></h2>
+                </div>
+                <div class="flex-row section">
+                  <h5>Week number</h5>
+                  <h2 id="curWeekNumber"></h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/main.1f19ae8e.js"></script>
+  </body>
+</html>

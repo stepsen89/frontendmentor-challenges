@@ -1,0 +1,51 @@
+.text-xxl {
+  letter-spacing: 5px;
+  line-height: 11.11rem;
+  font-weight: bold;
+}
+.text-extra-large {
+  font-size: 100px;
+  line-height: 100px;
+
+  @include respond(desktop) {
+    font-size: 11.11rem;
+    line-height: 11.11rem;
+  }
+}
+
+.text-xl {
+  font-size: 3.11rem;
+  line-height: 4.7rem;
+  font-weight: bold;
+}
+
+.text-l {
+  font-size: 1.556rem;
+  letter-spacing: 4.8px;
+  line-height: 2rem;
+  text-transform: uppercase;
+}
+
+.text-m {
+  font-size: 1.11rem;
+  // letter-spacing: 0.2rem;
+  line-height: 2rem;
+}
+
+.text-s {
+  font-size: 1rem;
+  line-height: 2rem;
+  font-weight: bold;
+}
+
+.text-xs {
+  font-size: 0.833rem;
+  letter-spacing: 3px;
+  line-height: 28px;
+  font-weight: bold;
+}
+
+.text-small {
+  font-size: 1rem;
+  line-height: 1.8rem;
+}

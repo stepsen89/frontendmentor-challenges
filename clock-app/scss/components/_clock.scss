@@ -1,0 +1,23 @@
+#daytime-icon {
+}
+
+.daytime-icon {
+  width: 40px;
+  height: 40px;
+  background: url("../assets/desktop/icon-sun.svg");
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.nighttime-icon {
+  width: 40px;
+  height: 40px;
+  background: url("../assets/desktop/icon-moon.svg");
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+.greeting {
+  @extend .text-l;
+  padding-bottom: 1rem;
+}

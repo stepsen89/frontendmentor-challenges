@@ -1,0 +1,12 @@
+@import "../variables";
+
+#quoteText {
+  width: 90%;
+  color: $white;
+  @extend .text-m;
+}
+
+#quoteAuthor {
+  padding-top: 1rem;
+  @extend .text-s;
+}
