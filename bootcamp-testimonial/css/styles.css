@@ -1,0 +1,296 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.card {
+  width: auto;
+  margin: auto;
+  background: transparent;
+  position: relative;
+  display: flex;
+  flex-direction: column-reverse; }
+  @media only screen and (min-width: 110em) {
+    .card {
+      flex-direction: row;
+      height: 80vh;
+      width: 60vw; } }
+
+.card-box {
+  display: flex;
+  flex-direction: column; }
+  @media only screen and (min-width: 110em) {
+    .card-box {
+      height: 600px; } }
+
+.card-box.right {
+  width: 327px;
+  height: 308px;
+  background: url("../../images/pattern-bg.svg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  overflow: visible; }
+  @media only screen and (min-width: 110em) {
+    .card-box.right {
+      width: 50%;
+      height: 100%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center; } }
+
+.card-box.left {
+  width: 327px;
+  height: 228px;
+  justify-content: space-around;
+  align-items: center; }
+  @media only screen and (min-width: 110em) {
+    .card-box.left {
+      width: 50%;
+      height: 50%;
+      align-self: center; } }
+
+.card-box.left {
+  background: url("../../images/pattern-quotes.svg");
+  background-position: top;
+  background-repeat: no-repeat; }
+  @media only screen and (min-width: 110em) {
+    .card-box.left {
+      background-position-x: 60px;
+      background-repeat: no-repeat; } }
+
+.card-box img {
+  width: 254px;
+  height: 253px; }
+  @media only screen and (min-width: 110em) {
+    .card-box img {
+      width: 440px;
+      height: 440px; } }
+
+.card-text {
+  line-height: 25px;
+  text-align: center;
+  font-weight: 200;
+  font-size: 1.2rem;
+  padding-top: 20px; }
+  @media only screen and (min-width: 110em) {
+    .card-text {
+      font-size: 2rem;
+      text-align: left;
+      line-height: 50px;
+      padding-top: 140px; } }
+
+.card-username {
+  padding-top: 20px;
+  width: 145px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 30px; }
+  @media only screen and (min-width: 110em) {
+    .card-username {
+      padding-top: 0; } }
+
+.card-personal {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  @media only screen and (min-width: 110em) {
+    .card-personal {
+      display: flex;
+      flex-direction: row;
+      align-self: flex-start;
+      padding-top: 40px;
+      align-items: center; } }
+
+.card-personal span {
+  font-weight: 100; }
+  @media only screen and (min-width: 110em) {
+    .card-personal span {
+      padding-left: 10px;
+      color: #babacf;
+      font-weight: 200; } }
+
+.card-image {
+  background: green;
+  position: fixed; }
+
+.slider {
+  position: relative;
+  display: flex;
+  background-color: white;
+  border-radius: 20px;
+  margin-top: 250px;
+  height: 5vh;
+  width: 80px;
+  -webkit-box-shadow: -2px 0px 42px 10px #756675;
+  -moz-box-shadow: -2px 0px 42px 10px #756675;
+  box-shadow: -2px 0px 42px 10px #756675;
+  border: none; }
+  @media only screen and (min-width: 110em) {
+    .slider {
+      margin-top: 440px;
+      align-self: flex-start;
+      margin-left: 200px;
+      height: 8vh;
+      width: 112px; } }
+  .slider-button {
+    background-color: transparent;
+    background-size: 25%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50%;
+    z-index: 100;
+    border: none; }
+  .slider-button.next {
+    background-image: url("../../images/icon-next.svg"); }
+
+.slider-button.previous {
+  background-image: url("../../images/icon-prev.svg"); }
+
+body {
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-image: url("../images/pattern-curve.svg");
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-size: 80%; }
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  position: relative; }
+
+.hidden {
+  display: none; }

@@ -1,0 +1,30 @@
+@import "base/reset";
+@import "base/typography";
+@import "base/colours";
+@import "components/card";
+@import "components/slider";
+
+body {
+  // margin: 0;
+  font-size: 1rem;
+  font-family: $primary;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-image: url("../images/pattern-curve.svg");
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-size: 80%;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+}
+
+.hidden {
+  display: none;
+}
