@@ -1,0 +1,21 @@
+.header {
+  height: 10vh;
+  width: 100%;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  background-color: #fff;
+  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  // margin-top: 2rem;
+}
+
+.btn.small {
+  padding: 0.5rem 1rem;
+  margin-top: 0;
+}

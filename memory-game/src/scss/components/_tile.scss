@@ -1,0 +1,15 @@
+.tile {
+  background: green;
+  height: 46.88px;
+  width: 46.88px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tile--container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

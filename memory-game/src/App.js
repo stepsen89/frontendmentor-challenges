@@ -1,15 +1,12 @@
 import "./App.scss";
 import "./scss/main.scss";
 
+import Main from "./components/Main";
 import { connect } from "react-redux";
 import SetupComponent from "./components/Setup";
 
-function App({ setupDone }) {
-  return (
-    <div className="App">
-      {setupDone ? <h2> Done </h2> : <SetupComponent />}
-    </div>
-  );
+function App({ setUpDone }) {
+  return <div className="App">{setUpDone ? <Main /> : <SetupComponent />}</div>;
 }
 
 const mapStateToProps = (state) => {
