@@ -1,0 +1,15 @@
+{
+  "name": "profile-card-component",
+  "version": "1.0.0",
+  "description": "Frontend Mentor Challenge for Profile Card Component",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node-sass scss/main.scss css/styles.css -w"
+  },
+  "keywords": [],
+  "author": "Stephanie Senoner",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
