@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@700&display=swap");
+
+@import "base/reset";
+@import "base/mixins";
+@import "base/variables";
+
+body {
+  font-family: "Atkinson Hyperlegible", sans-serif;
+  font-weight: 700;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  background: $very-dark-gray;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.setup {
+  width: 80%;
+  height: 55%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  // padding: 1rem;
+  justify-content: space-between;
+  align-items: center;
+
+  @include respond(tablet) {
+    width: 50%;
+  }
+
+  h1 {
+    font-size: 3rem;
+    color: #fcfcfc;
+  }
+}
+
+.form {
+  height: 70%;
+  width: 100%;
+  background-color: #fcfcfc;
+  display: flex;
+  padding: 1rem 0;
+  flex-direction: column;
+  justify-content: space-around;
+  border-radius: 20px;
+}
+
+.form--field {
+  width: 90%;
+  // margin: 1rem 0;
+  padding: 0 1rem;
+}
+.select {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  h2 {
+    text-align: left;
+    margin: 1rem 0;
+    color: $blueish-gray;
+  }
+}
+
+.select-choices {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: initial;
+  align-items: stretch;
+  width: 100%;
+}
+
+.selectable {
+  background: #bcced9;
+  // width: auto;
+  border: 2px solid transparent;
+  // padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  flex-grow: 1;
+  color: white;
+  height: 40px;
+
+  border-radius: 20px;
+}
+
+.active {
+  background: #304859;
+}
+
+.btn {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  margin-top: 1rem;
+  color: white;
+  background: #fda214;
+}
