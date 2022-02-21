@@ -1,0 +1,15 @@
+{
+  "name": "intro-component",
+  "version": "1.0.0",
+  "description": "Frontend mentor challenge intro sign up component",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node-sass scss/main.scss css/styles.css -w"
+  },
+  "keywords": [],
+  "author": "Stephanie Senoner",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}

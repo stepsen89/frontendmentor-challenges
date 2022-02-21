@@ -1,0 +1,60 @@
+@import '../base/colours';
+
+.signUpForm {
+  background-color: white;
+  color: $grayish-blue;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 2em 0;
+  border-radius: 12px;
+  box-shadow: 0px 15px 20px -15px grey;
+}
+
+input {
+  border: 1px solid #28263c17;
+  border-radius: 5px;
+  margin: 1em 0 0 0;
+  padding: 1em 1em;
+  width: 80%;  
+
+  &.alert {
+    border-color: $red;
+  }
+}
+
+.error {
+  display: none;
+}
+
+main {
+                .form-wrapper {
+                    margin: 0;
+                    padding: 0;
+                    .trial {
+                        padding: 0 50px;
+                        height: 90px;
+                        line-height: 25px;
+                    }
+                    .form-container {
+                        width: 100%;
+                        padding: 20px;
+                        form {
+                            .container {
+                                margin: 0;
+                                padding: 0;
+                                input {
+                                    width: 100%;
+                                    margin-bottom: 15px;
+                                }
+                            }
+                            .agree {
+                                margin-top: 10px;
+                                padding: 0 20px;
+                                line-height: 20px;
+                            }
+                        }
+                    }
+                }
+            }
