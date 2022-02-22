@@ -1,4 +1,4 @@
-import { INIT_GAME, SET_SOLVED } from "../types";
+import { INIT_GAME, SET_SOLVED, SET_PLAYER_WIN, SET_PLAYERS } from "../types";
 
 export function initialiseGame(items) {
   console.log(items);
@@ -16,6 +16,25 @@ export function setSolved(value) {
     dispatch({
       type: SET_SOLVED,
       payload: value,
+    });
+  };
+}
+
+export function setPlayers(players) {
+  console.log("I m here");
+  return (dispatch) => {
+    dispatch({
+      type: SET_PLAYERS,
+      payload: players,
+    });
+  };
+}
+
+export function setPlayerWin(player, stats) {
+  return (dispatch) => {
+    dispatch({
+      type: SET_PLAYER_WIN,
+      payload: { player, stats },
     });
   };
 }

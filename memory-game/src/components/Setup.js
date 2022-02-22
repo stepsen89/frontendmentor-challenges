@@ -2,10 +2,10 @@ import React, { useState } from "react";
 import SelectFields from "./shared/SelectFields";
 
 import { connect } from "react-redux";
-import { setGame } from "../redux/actions/gameSetup.actions";
+import { setupFullGame } from "../redux/actions/gameSetup.actions";
 import { initialiseGame } from "../redux/actions/game.actions";
 
-function SetupComponent({ setGame }) {
+function SetupComponent({ setupFullGame }) {
   const [setupValue, setSetupValue] = useState({
     players: 1,
     grid: 4,
@@ -18,9 +18,7 @@ function SetupComponent({ setGame }) {
   };
 
   const startGame = () => {
-    console.log("started game");
-    console.log(setupValue);
-    setGame(setupValue);
+    setupFullGame(setupValue);
   };
 
   console.log(setupValue);
@@ -67,4 +65,4 @@ function SetupComponent({ setGame }) {
   );
 }
 
-export default connect(null, { setGame })(SetupComponent);
+export default connect(null, { setupFullGame })(SetupComponent);

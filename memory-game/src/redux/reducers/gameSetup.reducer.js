@@ -12,6 +12,7 @@ const initialSetupState = {
 export function gameSetupReducer(state = initialSetupState, action) {
   switch (action.type) {
     case SET_GAME_SETUP:
+      console.log("here");
       return { setup: action.payload, done: true };
     default:
       return state;
