@@ -7,7 +7,6 @@ import { initialiseGame, setSolved } from "../redux/actions/game.actions";
 import { createRandomisedGrid } from "../utils/utils";
 
 function Game({ game, grid, initialiseGame, setSolved }) {
-  console.log(game);
   // const setGame = () => {
   //   let size = grid === "6x6" ? 36 : 16;
   //   let randomGame = createRandomisedGrid(size);
@@ -15,50 +14,78 @@ function Game({ game, grid, initialiseGame, setSolved }) {
   //   initialiseGame(randomGame);
   // };
 
+  const [gameArea, setGameArea] = useState({});
+  const [prevTry, setPrevTry] = useState(null);
+  const [prevTryPos, setPrevTryPos] = useState(null);
+
+  const [shownIndex, setShownIndex] = useState([]);
+  const [solvedIndices, setSolvedIndices] = useState([]);
   useEffect(() => {
     let size = grid === "6x6" ? 36 : 16;
 
-    // createRandomisedGrid(size);
-    initialiseGame(createRandomisedGrid(size));
+    let currentGame = createRandomisedGrid(size);
+    initialiseGame(currentGame);
+    setGameArea(currentGame);
   }, []);
-
-  const [tileShown, setTileShown] = useState(null);
 
   // const showTile = (e) => {
   //   console.log(e.target.children);
   //   return false;
   // };
 
-  const guess = (e) => {
-    console.log(e);
-    console.log("tileShown currently: ", tileShown);
-    if (tileShown === e) {
-      alert(e);
-      setSolved(e);
-      setTileShown("");
-    } else if (!tileShown) {
-      setTileShown(e);
-    } else {
-      setTileShown(null);
+  const guess = (e, index) => {
+    // push index to shown index to show both tiles
+    shownIndex.length < 2
+      ? setShownIndex((oldArray) => [...oldArray, index])
+      : setShownIndex([index]);
+
+    // when no previous try is set, set previous try
+    if (!prevTry) {
+      setPrevTry(e);
+      setPrevTryPos(index);
+      return;
+    }
+
+    // if clicked tile is the same
+    if (prevTryPos === index) {
+      return;
+    }
+
+    // when previous try is set, compare value of it and push indices to solvedIndices
+
+    if (prevTry) {
+      if (prevTry === e) {
+        // set solved properties in redux
+        // for (var key in gameArea) {
+        //       if (gameArea[key].value === e) {
+        //         gameArea[key].solved = true;
+        //       }
+        //     }
+
+        //     setGameArea((prevState) => ({
+        //       ...gameArea,
+        //     }));
+        setSolvedIndices((oldArray) => [...oldArray, prevTryPos, index]);
+        setPrevTry(null);
+        setPrevTryPos(null);
+      } else {
+        setPrevTry(null);
+        setPrevTryPos(null);
+      }
     }
   };
 
-  // const setAllHidden = (e) => {
-  //   console.log(e);
-  //   // setHasTileShown(true);
-  // };
-
   return (
     <div className="game">
-      <div className="game--area">
+      <div className={`game--area ${grid === "4x4" && `small`}`}>
         {game &&
           game.map((tile, i) => (
             <GameTile
               key={i}
+              index={i}
               tileContent={tile.value}
-              show={tile.show}
-              solved={tile.solved}
-              // showTile={setAllHidden}
+              show={shownIndex.indexOf(i) !== -1 ? true : false}
+              solved={solvedIndices.indexOf(i) !== -1 ? true : false}
               guess={guess}
             />
           ))}
@@ -74,4 +101,7 @@ const mapStateToProps = (state) => {
   return { game, grid };
 };
 
-export default connect(mapStateToProps, { initialiseGame, setSolved })(Game);
+export default connect(mapStateToProps, {
+  initialiseGame,
+  setSolved,
+})(Game);
