@@ -5,8 +5,16 @@ import { connect } from "react-redux";
 
 import { initialiseGame, setSolved } from "../redux/actions/game.actions";
 import { createRandomisedGrid } from "../utils/utils";
+import { setMove, startPlaying } from "../redux/actions/score.actions";
 
-function Game({ game, grid, initialiseGame, setSolved }) {
+function Game({
+  game,
+  grid,
+  initialiseGame,
+  startPlaying,
+  hasStarted,
+  setMove,
+}) {
   // const setGame = () => {
   //   let size = grid === "6x6" ? 36 : 16;
   //   let randomGame = createRandomisedGrid(size);
@@ -39,6 +47,9 @@ function Game({ game, grid, initialiseGame, setSolved }) {
       ? setShownIndex((oldArray) => [...oldArray, index])
       : setShownIndex([index]);
 
+    if (!hasStarted) {
+      startPlaying();
+    }
     // when no previous try is set, set previous try
     if (!prevTry) {
       setPrevTry(e);
@@ -54,6 +65,8 @@ function Game({ game, grid, initialiseGame, setSolved }) {
     // when previous try is set, compare value of it and push indices to solvedIndices
 
     if (prevTry) {
+      setMove();
+
       if (prevTry === e) {
         // set solved properties in redux
         // for (var key in gameArea) {
@@ -97,11 +110,14 @@ function Game({ game, grid, initialiseGame, setSolved }) {
 const mapStateToProps = (state) => {
   let game = state.game && state.game.items;
   let grid = state.setup.setup.grid;
+  let hasStarted = state.score.hasStarted;
 
-  return { game, grid };
+  return { game, grid, hasStarted };
 };
 
 export default connect(mapStateToProps, {
   initialiseGame,
   setSolved,
+  setMove,
+  startPlaying,
 })(Game);

@@ -38,3 +38,23 @@ export function setPlayerWin(player, stats) {
     });
   };
 }
+
+export function resetGame(value) {
+  console.log(value);
+  return (dispatch) => {
+    dispatch({
+      type: SET_SOLVED,
+      payload: value,
+    });
+  };
+}
+
+export function startNewGame(value) {
+  console.log(value);
+  return (dispatch) => {
+    dispatch({
+      type: SET_SOLVED,
+      payload: value,
+    });
+  };
+}

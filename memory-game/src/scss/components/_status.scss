@@ -1,0 +1,24 @@
+.wrapper {
+  // height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.game--stats {
+  width: 80%;
+  width: 327px;
+  display: flex;
+}
+
+.stats-box {
+  width: 50%;
+  height: 80%;
+  background-color: $soft-gray;
+  padding: 1.5rem;
+  margin: 1rem;
+  display: flex;
+  justify-content: space-between;
+}

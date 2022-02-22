@@ -19,3 +19,33 @@
   padding: 0.5rem 1rem;
   margin-top: 0;
 }
+
+.menu {
+  width: 100vw;
+  position: absolute;
+  height: 100vh;
+  background: rgba(128, 128, 128, 0.534);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  top: 0;
+}
+
+.box {
+  width: 75%;
+  height: 25%;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
+  z-index: 99;
+  position: absolute;
+  border-radius: 20px;
+}
+
+.btn.gray {
+  background: $button-gray;
+  color: black;
+}

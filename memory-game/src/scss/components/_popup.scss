@@ -1,0 +1,17 @@
+.wrapper {
+  width: 100vw;
+  position: absolute;
+  height: 100vh;
+  background: rgba(128, 128, 128, 0.534);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  top: 0;
+}
+
+.popup-container {
+  width: 40%;
+  height: 40%;
+  background-color: #fff;
+}
