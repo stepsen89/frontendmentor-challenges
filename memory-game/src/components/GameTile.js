@@ -1,17 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-function GameTile({ tileContent, solved, showTile, guess }) {
-  const [show, setShow] = useState(false);
-  // console.log(showTile);
-
+function GameTile({ tileContent, solved, show, guess, index }) {
   const guessTile = (e) => {
-    guess(tileContent);
-    setShow(true);
+    guess(tileContent, index);
   };
 
   return (
-    <div className="tile--container" onClick={guessTile}>
-      <div className="tile">{(solved || show) && <h2> {tileContent} </h2>}</div>
+    <div className="tile--container">
+      <div
+        className={`tile ${solved ? "solved" : ""} ${show ? "shown" : ""}`}
+        onClick={guessTile}
+      >
+        <div>{(solved || show) && <span> {tileContent} </span>}</div>
+      </div>
     </div>
   );
 }

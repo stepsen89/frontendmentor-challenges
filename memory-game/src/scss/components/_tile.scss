@@ -1,15 +1,39 @@
 .tile {
-  background: green;
-  height: 46.88px;
-  width: 46.88px;
+  max-height: 90%;
+  min-height: 90%;
+  width: 90%;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: $dark-gray;
+  position: relative;
+
+  div {
+    position: absolute;
+    display: flex;
+    align-items: center;
+
+    span {
+      color: white;
+      font-size: 2rem;
+      margin: auto;
+      font-weight: 400;
+    }
+  }
 }
 
 .tile--container {
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+}
+
+.tile.solved {
+  background: $soft-gray;
+}
+
+.tile.shown {
+  background: $orange;
 }

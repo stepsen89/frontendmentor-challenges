@@ -1,6 +1,5 @@
 .game {
   height: 80%;
-  background-color: aqua;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -11,7 +10,10 @@
 .game--area {
   width: 327px;
   height: 327px;
-  background-color: black;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
+}
+
+.game--area.small {
+  grid-template-columns: repeat(4, 1fr);
 }
