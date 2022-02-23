@@ -13,6 +13,8 @@ import {
 } from "../redux/actions/game.actions";
 
 import { createRandomisedGrid } from "../utils/utils";
+import PopUpSolo from "./shared/PopUpSolo";
+import PopUpMulti from "./shared/PopUpMulti";
 
 function Game({
   game,
@@ -46,7 +48,6 @@ function Game({
   const [shownIndex, setShownIndex] = useState([]);
   const [solvedIndices, setSolvedIndices] = useState([]);
   const [allPlayers, setAllPlayers] = useState(participants);
-
   // initialise game, set if single or multiple players
   useEffect(() => {
     let size = grid === "6x6" ? 36 : 16;
@@ -112,6 +113,7 @@ function Game({
         !isSinglePlayer && setPlayerWin(playerOnTurn);
         setPrevTry(null);
         setPrevTryPos(null);
+        console.log(gameArea.length);
       } else {
         if (!isSinglePlayer) {
           let nextPlayer =
@@ -145,6 +147,13 @@ function Game({
             />
           ))}
       </div>
+
+      {solvedIndices.length === gameArea.length && isSinglePlayer && (
+        <PopUpSolo />
+      )}
+      {solvedIndices.length === gameArea.length && !isSinglePlayer && (
+        <PopUpMulti />
+      )}
     </div>
   );
 }
@@ -155,8 +164,9 @@ const mapStateToProps = (state) => {
   let grid = state.setup.setup.grid;
   let hasStarted = state.game.hasStarted;
   let isReset = state.game.reset;
+  let winner = state.game.winner;
 
-  return { game, grid, hasStarted, participants, isReset };
+  return { game, grid, hasStarted, participants, isReset, winner };
 };
 
 export default connect(mapStateToProps, {

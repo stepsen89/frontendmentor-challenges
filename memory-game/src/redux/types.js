@@ -17,3 +17,4 @@ export const RESET_GAME_START = "RESET_GAME_START";
 export const SET_MOVE = "SET_MOVE";
 export const START_GAME = "START_GAME";
 export const PAUSE_GAME = "PAUSE_GAME";
+export const SET_FINISHED = "SET_FINISHED";

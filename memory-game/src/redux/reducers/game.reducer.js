@@ -8,6 +8,7 @@ import {
   PAUSE_GAME,
   SET_MOVE,
   START_GAME,
+  SET_FINISHED,
 } from "../types";
 
 const initialGameState = {
@@ -19,6 +20,7 @@ const initialGameState = {
   solvedTiles: [],
   hasStarted: false,
   pauseGame: false,
+  finished: false,
 };
 
 export function gameReducer(state = initialGameState, action) {
@@ -71,6 +73,12 @@ export function gameReducer(state = initialGameState, action) {
 
     case GET_PLAYERS:
       return state;
+
+    case SET_FINISHED:
+      return {
+        ...state,
+        finished: true,
+      };
     default:
       return state;
   }

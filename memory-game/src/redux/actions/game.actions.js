@@ -11,6 +11,7 @@ import {
   SET_MOVE,
   START_GAME,
   RESET_GAME_START,
+  SET_FINISHED,
 } from "../types";
 
 export function startPlaying() {
@@ -138,6 +139,16 @@ export function setPlayerTurn(nextPlayer) {
     dispatch({
       type: SET_PLAYER_TURN,
       payload: nextPlayer,
+    });
+  };
+}
+
+export function setWinner() {
+  LOGGER("game.actions: ------- ", "startPlaying", "set has started to true");
+
+  return (dispatch) => {
+    dispatch({
+      type: SET_FINISHED,
     });
   };
 }
