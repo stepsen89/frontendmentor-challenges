@@ -3,7 +3,11 @@ import GameTile from "./GameTile";
 
 import { connect } from "react-redux";
 
-import { initialiseGame, setSolved } from "../redux/actions/game.actions";
+import {
+  initialiseGame,
+  setSolved,
+  setPlayerTurn,
+} from "../redux/actions/game.actions";
 import { createRandomisedGrid } from "../utils/utils";
 import { setMove, startPlaying } from "../redux/actions/score.actions";
 
@@ -14,6 +18,8 @@ function Game({
   startPlaying,
   hasStarted,
   setMove,
+  participants,
+  setPlayerTurn,
 }) {
   // const setGame = () => {
   //   let size = grid === "6x6" ? 36 : 16;
@@ -23,11 +29,15 @@ function Game({
   // };
 
   const [gameArea, setGameArea] = useState({});
+
+  const [playerOnTurn, setPlayerOnTurn] = useState(0);
+
   const [prevTry, setPrevTry] = useState(null);
   const [prevTryPos, setPrevTryPos] = useState(null);
 
   const [shownIndex, setShownIndex] = useState([]);
   const [solvedIndices, setSolvedIndices] = useState([]);
+
   useEffect(() => {
     let size = grid === "6x6" ? 36 : 16;
 
@@ -36,12 +46,8 @@ function Game({
     setGameArea(currentGame);
   }, []);
 
-  // const showTile = (e) => {
-  //   console.log(e.target.children);
-  //   return false;
-  // };
-
   const guess = (e, index) => {
+    console.log("CURRENT PLAYER ON TURN:", playerOnTurn);
     // push index to shown index to show both tiles
     shownIndex.length < 2
       ? setShownIndex((oldArray) => [...oldArray, index])
@@ -66,7 +72,6 @@ function Game({
 
     if (prevTry) {
       setMove();
-
       if (prevTry === e) {
         // set solved properties in redux
         // for (var key in gameArea) {
@@ -79,11 +84,26 @@ function Game({
         //       ...gameArea,
         //     }));
         setSolvedIndices((oldArray) => [...oldArray, prevTryPos, index]);
+        // let nextPlayer =
+        //   playerOnTurn < participants.length
+        //     ? setPlayerOnTurn((prevPlayer) => prevPlayer + 1)
+        //     : setPlayerOnTurn(0);
+
+        // setPlayerTurn(nextPlayer);
         setPrevTry(null);
         setPrevTryPos(null);
       } else {
+        let nextPlayer =
+          playerOnTurn < participants.length - 1 ? playerOnTurn + 1 : 0;
+
+        setPlayerOnTurn(nextPlayer);
+
         setPrevTry(null);
         setPrevTryPos(null);
+        setTimeout(() => {
+          setShownIndex([]);
+          setPlayerTurn(nextPlayer);
+        }, 700);
       }
     }
   };
@@ -109,10 +129,11 @@ function Game({
 
 const mapStateToProps = (state) => {
   let game = state.game && state.game.items;
+  let participants = state.game && state.game.players;
   let grid = state.setup.setup.grid;
   let hasStarted = state.score.hasStarted;
 
-  return { game, grid, hasStarted };
+  return { game, grid, hasStarted, participants };
 };
 
 export default connect(mapStateToProps, {
@@ -120,4 +141,5 @@ export default connect(mapStateToProps, {
   setSolved,
   setMove,
   startPlaying,
+  setPlayerTurn,
 })(Game);

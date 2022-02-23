@@ -15,6 +15,14 @@ export function scoreReducer(state = initialScoreState, action) {
       return { ...state, hasStarted: true };
     case PAUSE_GAME:
       return { ...state, pauseGame: true };
+    // case SET_SCORE:
+    //   let arr = state.items;
+    //   for (var key in state.items) {
+    //     if (state.items[key].value === action.payload) {
+    //       state.items[key].solved = true;
+    //     }
+    //   }
+    //   return { items: arr };
     default:
       return state;
   }

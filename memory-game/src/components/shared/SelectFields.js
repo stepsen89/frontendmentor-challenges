@@ -26,8 +26,6 @@ function SelectField({ label, mode, options, setValue }) {
     });
   };
 
-  console.log(selectedOption);
-
   return (
     <div className="select">
       <h2>{label}</h2>

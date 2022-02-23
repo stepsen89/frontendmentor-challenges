@@ -5,7 +5,7 @@ import SinglePlayerStatusComponent from "./SinglePlayerStatus";
 import Game from "./Game";
 import Header from "./Header";
 
-function Main({ setup }) {
+function Main({ setup, players }) {
   return (
     <div className="full">
       <Header />
@@ -21,8 +21,9 @@ function Main({ setup }) {
 
 const mapStateToProps = (state) => {
   let setup = state.setup.setup;
+  let players = state.game.players;
 
-  return { setup };
+  return { setup, players };
 };
 
 export default connect(mapStateToProps, {})(Main);

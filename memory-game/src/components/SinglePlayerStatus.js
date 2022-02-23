@@ -34,7 +34,7 @@ function SinglePlayerStatusComponent({ hasStarted, moves }) {
       <div className="game--stats">
         <div className="stats-box">
           <h3> Time</h3>
-          <p> {hasStarted && "00:00"}</p>
+          <p> {hasStarted ? "Time" : "00:00"}</p>
         </div>
         <div className="stats-box">
           {" "}

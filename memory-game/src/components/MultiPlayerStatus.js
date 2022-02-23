@@ -1,11 +1,28 @@
 import React from "react";
+import StatsFieldComponent from "./shared/StatsField";
 
-function MultiPlayerStatusComponent() {
+import { connect } from "react-redux";
+
+function MultiPlayerStatusComponent({ players, turn }) {
   return (
-    <div>
-      <h2> Multi</h2>
+    <div className="multi-wrapper">
+      <div className="game--stats">
+        {players.map((player, i) => (
+          <StatsFieldComponent player={player} index={i} active={turn === i} />
+        ))}
+      </div>
     </div>
   );
 }
 
-export default MultiPlayerStatusComponent;
+const mapStateToProps = (state) => {
+  let players = state.game.players;
+  let turn = state.game.turn;
+
+  return {
+    turn,
+    players,
+  };
+};
+
+export default connect(mapStateToProps, {})(MultiPlayerStatusComponent);

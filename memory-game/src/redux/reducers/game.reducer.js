@@ -1,8 +1,9 @@
-import { INIT_GAME, SET_SOLVED, SET_PLAYERS } from "../types";
+import { INIT_GAME, SET_SOLVED, SET_PLAYERS, SET_PLAYER_TURN } from "../types";
 
 const initialGameState = {
   items: null,
   players: null,
+  turn: 0,
 };
 
 export function gameReducer(state = initialGameState, action) {
@@ -18,14 +19,13 @@ export function gameReducer(state = initialGameState, action) {
       }
       return { items: arr };
     case SET_PLAYERS:
-      console.log(action.payload);
       let players = [];
       for (let p = 0; p < action.payload; p++) {
-        console.log({ number: p, score: 0 });
         players.push({ number: p, score: 0 });
       }
-      console.log(players);
       return { ...state, players };
+    case SET_PLAYER_TURN:
+      return { ...state, turn: action.payload };
     default:
       return state;
   }

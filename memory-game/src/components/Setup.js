@@ -21,7 +21,6 @@ function SetupComponent({ setupFullGame }) {
     setupFullGame(setupValue);
   };
 
-  console.log(setupValue);
   return (
     <div className="container">
       <div className="setup">
@@ -29,7 +28,7 @@ function SetupComponent({ setupFullGame }) {
           <h1> memory</h1>
         </div>
         <div className="form">
-          <div class="form--field">
+          <div className="form--field">
             <SelectFields
               label={"Select Theme"}
               mode={"tiles"}
@@ -37,7 +36,7 @@ function SetupComponent({ setupFullGame }) {
               setValue={setValue}
             />
           </div>
-          <div class="form--field">
+          <div className="form--field">
             <SelectFields
               label={"Numbers of Players"}
               mode={"players"}
@@ -45,7 +44,7 @@ function SetupComponent({ setupFullGame }) {
               setValue={setValue}
             />
           </div>
-          <div class="form--field">
+          <div className="form--field">
             <SelectFields
               label={"Grid Size"}
               mode={"grid"}
@@ -53,8 +52,8 @@ function SetupComponent({ setupFullGame }) {
               setValue={setValue}
             />
           </div>
-          <div class="form--field">
-            <button class="btn" onClick={startGame}>
+          <div className="form--field">
+            <button className="btn" onClick={startGame}>
               {" "}
               Start Game{" "}
             </button>

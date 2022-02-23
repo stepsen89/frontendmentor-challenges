@@ -1,4 +1,11 @@
-import { INIT_GAME, SET_SOLVED, SET_PLAYER_WIN, SET_PLAYERS } from "../types";
+import { LOGGER } from "../../utils/utils";
+import {
+  INIT_GAME,
+  SET_SOLVED,
+  SET_PLAYER_WIN,
+  SET_PLAYERS,
+  SET_PLAYER_TURN,
+} from "../types";
 
 export function initialiseGame(items) {
   console.log(items);
@@ -55,6 +62,17 @@ export function startNewGame(value) {
     dispatch({
       type: SET_SOLVED,
       payload: value,
+    });
+  };
+}
+
+export function setPlayerTurn(nextPlayer) {
+  console.log("inside the action: setPlayerTurn", nextPlayer);
+  LOGGER("gameActions", "setPlayerTurn", nextPlayer);
+  return (dispatch) => {
+    dispatch({
+      type: SET_PLAYER_TURN,
+      payload: nextPlayer,
     });
   };
 }

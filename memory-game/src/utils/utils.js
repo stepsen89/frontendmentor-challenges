@@ -45,3 +45,7 @@ export const startTimer = () => {
 
   return beginMinutes + ":" + beginSeconds;
 };
+
+export const LOGGER = (file, text, value) => {
+  return console.log(`--- ${file.toUpperCase()}: ${text} \n ${value}`);
+};

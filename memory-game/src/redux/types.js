@@ -5,6 +5,7 @@ export const SET_SOLVED = "SET_SOLVED";
 // players
 export const SET_PLAYERS = "SET_PLAYERS";
 export const SET_PLAYER_WIN = "SET_PLAYER_WIN";
+export const SET_PLAYER_TURN = "SET_PLAYER_TURN";
 
 // scores
 export const SET_SOLVED_INDICES = "SET_SOLVED_INDICES";

@@ -11,14 +11,89 @@
   width: 80%;
   width: 327px;
   display: flex;
+  justify-content: space-around;
+  position: relative;
 }
 
 .stats-box {
-  width: 50%;
+  width: 35%;
+  border-radius: 10px;
   height: 80%;
-  background-color: $soft-gray;
-  padding: 1.5rem;
-  margin: 1rem;
+  background-color: $button-gray;
+  padding: 1rem;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
+  // justify-content: space-between;
+
+  h3 {
+    padding-bottom: 5px;
+  }
+}
+
+.stats-field {
+  width: auto;
+  padding: 1.5rem 1.5rem 1rem 1.5rem;
+  // height: 100%;
+  background-color: $button-gray;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .player-info {
+    padding-bottom: 6px;
+    color: $blueish-gray;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+}
+
+.stats-field:before {
+  position: absolute;
+  margin-top: -1rem;
+  color: $blueish-gray;
+}
+
+.stats-field.active {
+  background: $orange;
+  color: white;
+}
+
+.stats-field:nth-child(1):before {
+  content: "P1";
+
+  @include respond(tablet) {
+    content: "Player 1";
+  }
+}
+.stats-field:nth-child(2):before {
+  content: "P2";
+
+  @include respond(tablet) {
+    content: "Player 2";
+  }
+}
+.stats-field:nth-child(3):before {
+  content: "P3";
+
+  @include respond(tablet) {
+    content: "Player 3";
+  }
+}
+.stats-field:nth-child(4):before {
+  content: "P4";
+
+  @include respond(tablet) {
+    content: "Player 4";
+  }
+}
+.multi-wrapper {
+  // height: 100%;
+  width: 100%;
+  display: grid;
+  grid-auto-columns: auto;
+  justify-content: center;
+  margin-bottom: 1rem;
 }
