@@ -3,7 +3,6 @@ import SelectFields from "./shared/SelectFields";
 
 import { connect } from "react-redux";
 import { setupFullGame } from "../redux/actions/gameSetup.actions";
-import { initialiseGame } from "../redux/actions/game.actions";
 
 function SetupComponent({ setupFullGame }) {
   const [setupValue, setSetupValue] = useState({
@@ -14,7 +13,6 @@ function SetupComponent({ setupFullGame }) {
 
   const setValue = (mode, value) => {
     setSetupValue((prevState) => ({ ...prevState, [mode]: value }));
-    // console.log(setupValue);
   };
 
   const startGame = () => {

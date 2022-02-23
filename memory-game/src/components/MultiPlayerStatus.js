@@ -7,9 +7,8 @@ function MultiPlayerStatusComponent({ players, turn }) {
   const [p, setPlayers] = useState(players);
 
   useEffect(() => {
-    console.log("Players have changed", players);
     setPlayers(players);
-  });
+  }, [players]);
 
   return (
     <div className="multi-wrapper">

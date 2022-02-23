@@ -6,10 +6,26 @@ import {
   SET_PLAYERS,
   SET_PLAYER_TURN,
   GET_PLAYERS,
+  RESET_GAME,
+  SET_SOLVED_INDICES,
+  SET_MOVE,
+  START_GAME,
+  RESET_GAME_START,
 } from "../types";
 
+export function startPlaying() {
+  LOGGER("game.actions: ------- ", "startPlaying", "set has started to true");
+
+  return (dispatch) => {
+    dispatch({
+      type: START_GAME,
+    });
+  };
+}
+
 export function initialiseGame(items) {
-  console.log(items);
+  LOGGER("game.actions: ------- ", "initialise Game", items.length);
+
   return (dispatch) => {
     dispatch({
       type: INIT_GAME,
@@ -18,8 +34,74 @@ export function initialiseGame(items) {
   };
 }
 
+export function resetGameStart() {
+  LOGGER("game.actions: ------- ", "resetGameStart", "");
+
+  return (dispatch) => {
+    dispatch({
+      type: RESET_GAME_START,
+    });
+  };
+}
+
+export function resetGame(bool) {
+  console.log("resets the game");
+  return (dispatch) => {
+    dispatch({ type: RESET_GAME });
+  };
+}
+
+export function resetAll() {
+  console.log("game should be reset");
+  return (dispatch) => {
+    dispatch(resetGame());
+    dispatch(resetGameStart());
+  };
+}
+
+export function startNewGame(value) {
+  return (dispatch) => {
+    dispatch({
+      type: SET_SOLVED,
+      payload: value,
+    });
+  };
+}
+
+export function setPlayerWin(player) {
+  LOGGER("game.actions: ------- ", "player number", player);
+  return (dispatch) => {
+    dispatch({
+      type: SET_PLAYER_WIN,
+      payload: player,
+    });
+  };
+}
+
+export function setSolvedIndices(solvedTiles) {
+  LOGGER("game.actions: ------- ", "setSolvedTiles", solvedTiles);
+
+  return (dispatch) => {
+    dispatch({
+      type: SET_SOLVED_INDICES,
+      payload: { solvedTiles: [] },
+    });
+  };
+}
+
+export function setMove() {
+  LOGGER("game.actions: ------- ", "setMove", "move + 1 ");
+
+  return (dispatch) => {
+    dispatch({
+      type: SET_MOVE,
+    });
+  };
+}
+
 export function setSolved(value) {
-  console.log(value);
+  LOGGER("game.actions: ------- ", "setSolved", value);
+
   return (dispatch) => {
     dispatch({
       type: SET_SOLVED,
@@ -29,7 +111,8 @@ export function setSolved(value) {
 }
 
 export function setPlayers(players) {
-  console.log("I m here");
+  LOGGER("game.actions: ------- ", "setPlayers", players);
+
   return (dispatch) => {
     dispatch({
       type: SET_PLAYERS,
@@ -38,17 +121,9 @@ export function setPlayers(players) {
   };
 }
 
-export function setPlayerWin(player) {
-  LOGGER("game.actions: ", "player number", player);
-  return (dispatch) => {
-    dispatch({
-      type: SET_PLAYER_WIN,
-      payload: player,
-    });
-  };
-}
-
 export function getPlayers() {
+  LOGGER("game.actions: ------- ", "getPlayers");
+
   return (dispatch) => {
     dispatch({
       type: GET_PLAYERS,
@@ -56,29 +131,9 @@ export function getPlayers() {
   };
 }
 
-export function resetGame(value) {
-  console.log(value);
-  return (dispatch) => {
-    dispatch({
-      type: SET_SOLVED,
-      payload: value,
-    });
-  };
-}
-
-export function startNewGame(value) {
-  console.log(value);
-  return (dispatch) => {
-    dispatch({
-      type: SET_SOLVED,
-      payload: value,
-    });
-  };
-}
-
 export function setPlayerTurn(nextPlayer) {
-  console.log("inside the action: setPlayerTurn", nextPlayer);
   LOGGER("gameActions", "setPlayerTurn", nextPlayer);
+
   return (dispatch) => {
     dispatch({
       type: SET_PLAYER_TURN,

@@ -47,8 +47,8 @@ function SinglePlayerStatusComponent({ hasStarted, moves }) {
 }
 
 const mapStateToProps = (state) => {
-  let moves = state.score.moves;
-  let hasStarted = state.score.hasStarted;
+  let moves = state.game.moves;
+  let hasStarted = state.game.hasStarted;
 
   return { moves, hasStarted };
 };

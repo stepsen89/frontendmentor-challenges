@@ -1,4 +1,4 @@
-import { SET_GAME_SETUP, SET_PLAYERS } from "../types";
+import { SET_GAME_SETUP, NEW_GAME } from "../types";
 
 import { setPlayers } from "./game.actions";
 
@@ -10,11 +10,18 @@ export function setupFullGame(setup) {
 }
 
 export function setGame(setup) {
-  console.log("was executed");
   return (dispatch) => {
     dispatch({
       type: SET_GAME_SETUP,
       payload: setup,
+    });
+  };
+}
+
+export function newGame() {
+  return (dispatch) => {
+    dispatch({
+      type: NEW_GAME,
     });
   };
 }

@@ -1,11 +1,56 @@
 import React, { useState } from "react";
+import { connect } from "react-redux";
+import { newGame } from "../redux/actions/gameSetup.actions";
+import { resetAll } from "../redux/actions/game.actions";
 
-function Header() {
+function Header({ newGame, resetAll }) {
   const [showMenu, setShowMenu] = useState(false);
 
   const showMenuPopup = () => {
     setShowMenu(showMenu ? false : true);
   };
+
+  const reset = () => {
+    setShowMenu(false);
+    resetAll();
+  };
+
+  const startNewGame = () => {
+    setShowMenu(false);
+    newGame();
+  };
+
+  const resumeGame = () => {
+    setShowMenu(false);
+  };
+
+  const showPopupHeader = () => {
+    return (
+      <div class="menu">
+        <div class="box">
+          <div>
+            <button className="btn" onClick={reset}>
+              {" "}
+              Restart{" "}
+            </button>
+          </div>
+          <div>
+            <button className="btn gray" onClick={startNewGame}>
+              {" "}
+              New Game{" "}
+            </button>
+          </div>
+          <div>
+            <button className="btn gray" onClick={resumeGame}>
+              {" "}
+              Resume Game{" "}
+            </button>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   return (
     <>
       <div class="header">
@@ -21,48 +66,9 @@ function Header() {
           </div>
         </div>
       </div>
-      {showMenu && <Menu close={showMenuPopup} />}
+      {showMenu && showPopupHeader()}
     </>
   );
 }
 
-function Menu({ close }) {
-  const resetGame = () => {
-    close();
-  };
-
-  const startNewGame = () => {
-    close();
-  };
-
-  const resumeGame = () => {
-    close();
-  };
-
-  return (
-    <div class="menu">
-      <div class="box">
-        <div>
-          <button className="btn" onClick={resetGame}>
-            {" "}
-            Restart{" "}
-          </button>
-        </div>
-        <div>
-          <button className="btn gray" onClick={startNewGame}>
-            {" "}
-            New Game{" "}
-          </button>
-        </div>
-        <div>
-          <button className="btn gray" onClick={resumeGame}>
-            {" "}
-            Resume Game{" "}
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-export default Header;
+export default connect(null, { newGame, resetAll })(Header);
