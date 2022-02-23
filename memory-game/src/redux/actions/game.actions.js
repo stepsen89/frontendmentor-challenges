@@ -5,6 +5,7 @@ import {
   SET_PLAYER_WIN,
   SET_PLAYERS,
   SET_PLAYER_TURN,
+  GET_PLAYERS,
 } from "../types";
 
 export function initialiseGame(items) {
@@ -37,11 +38,20 @@ export function setPlayers(players) {
   };
 }
 
-export function setPlayerWin(player, stats) {
+export function setPlayerWin(player) {
+  LOGGER("game.actions: ", "player number", player);
   return (dispatch) => {
     dispatch({
       type: SET_PLAYER_WIN,
-      payload: { player, stats },
+      payload: player,
+    });
+  };
+}
+
+export function getPlayers() {
+  return (dispatch) => {
+    dispatch({
+      type: GET_PLAYERS,
     });
   };
 }

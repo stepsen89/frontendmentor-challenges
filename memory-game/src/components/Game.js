@@ -7,6 +7,7 @@ import {
   initialiseGame,
   setSolved,
   setPlayerTurn,
+  setPlayerWin,
 } from "../redux/actions/game.actions";
 import { createRandomisedGrid } from "../utils/utils";
 import { setMove, startPlaying } from "../redux/actions/score.actions";
@@ -20,6 +21,7 @@ function Game({
   setMove,
   participants,
   setPlayerTurn,
+  setPlayerWin,
 }) {
   // const setGame = () => {
   //   let size = grid === "6x6" ? 36 : 16;
@@ -37,6 +39,7 @@ function Game({
 
   const [shownIndex, setShownIndex] = useState([]);
   const [solvedIndices, setSolvedIndices] = useState([]);
+  const [allPlayers, setAllPlayers] = useState(participants);
 
   useEffect(() => {
     let size = grid === "6x6" ? 36 : 16;
@@ -90,8 +93,11 @@ function Game({
         //     : setPlayerOnTurn(0);
 
         // setPlayerTurn(nextPlayer);
+        setPlayerWin(playerOnTurn);
         setPrevTry(null);
         setPrevTryPos(null);
+        let pls = allPlayers;
+        pls[playerOnTurn].score += 1;
       } else {
         let nextPlayer =
           playerOnTurn < participants.length - 1 ? playerOnTurn + 1 : 0;
@@ -102,8 +108,8 @@ function Game({
         setPrevTryPos(null);
         setTimeout(() => {
           setShownIndex([]);
-          setPlayerTurn(nextPlayer);
         }, 700);
+        setPlayerTurn(nextPlayer);
       }
     }
   };
@@ -142,4 +148,5 @@ export default connect(mapStateToProps, {
   setMove,
   startPlaying,
   setPlayerTurn,
+  setPlayerWin,
 })(Game);

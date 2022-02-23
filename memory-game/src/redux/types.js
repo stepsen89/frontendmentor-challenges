@@ -4,6 +4,7 @@ export const SET_SOLVED = "SET_SOLVED";
 
 // players
 export const SET_PLAYERS = "SET_PLAYERS";
+export const GET_PLAYERS = "GET_PLAYERS";
 export const SET_PLAYER_WIN = "SET_PLAYER_WIN";
 export const SET_PLAYER_TURN = "SET_PLAYER_TURN";
 

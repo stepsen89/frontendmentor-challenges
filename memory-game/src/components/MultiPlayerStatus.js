@@ -1,14 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import StatsFieldComponent from "./shared/StatsField";
 
 import { connect } from "react-redux";
 
 function MultiPlayerStatusComponent({ players, turn }) {
+  const [p, setPlayers] = useState(players);
+
+  useEffect(() => {
+    console.log("Players have changed", players);
+    setPlayers(players);
+  });
+
   return (
     <div className="multi-wrapper">
       <div className="game--stats">
+        {console.log("players", players)}
         {players.map((player, i) => (
-          <StatsFieldComponent player={player} index={i} active={turn === i} />
+          <StatsFieldComponent
+            score={player.score}
+            index={i}
+            active={turn === i}
+          />
         ))}
       </div>
     </div>

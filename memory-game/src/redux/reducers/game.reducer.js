@@ -1,4 +1,11 @@
-import { INIT_GAME, SET_SOLVED, SET_PLAYERS, SET_PLAYER_TURN } from "../types";
+import {
+  INIT_GAME,
+  SET_SOLVED,
+  SET_PLAYERS,
+  SET_PLAYER_TURN,
+  SET_PLAYER_WIN,
+  GET_PLAYERS,
+} from "../types";
 
 const initialGameState = {
   items: null,
@@ -24,8 +31,14 @@ export function gameReducer(state = initialGameState, action) {
         players.push({ number: p, score: 0 });
       }
       return { ...state, players };
+    case SET_PLAYER_WIN:
+      let updatedPlayers = state.players;
+      updatedPlayers[action.payload].score += 1;
+      return { ...state, updatedPlayers };
     case SET_PLAYER_TURN:
       return { ...state, turn: action.payload };
+    case GET_PLAYERS:
+      return state;
     default:
       return state;
   }
