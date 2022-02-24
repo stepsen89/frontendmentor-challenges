@@ -12,7 +12,7 @@
 
 .popup-container {
   width: 75%;
-  height: 50%;
+  height: fit-content;
   background: white;
   display: flex;
   flex-direction: column;
@@ -21,6 +21,14 @@
   z-index: 99;
   position: relative;
   border-radius: 20px;
+
+  @include respond(tablet) {
+    width: 40%;
+  }
+
+  @include respond(desktop) {
+    width: 20%;
+  }
 }
 
 // div.btn {
@@ -68,4 +76,9 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 0.5rem;
+}
+
+.popup-info.won {
+  background: $very-dark-gray;
+  color: white;
 }

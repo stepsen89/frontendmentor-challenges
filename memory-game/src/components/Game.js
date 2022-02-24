@@ -111,9 +111,11 @@ function Game({
 
         // setPlayerTurn(nextPlayer);
         !isSinglePlayer && setPlayerWin(playerOnTurn);
+        // setAllPlayers()
+
+        // setAllPlayers(updatedPlayers);
         setPrevTry(null);
         setPrevTryPos(null);
-        console.log(gameArea.length);
       } else {
         if (!isSinglePlayer) {
           let nextPlayer =
@@ -125,11 +127,48 @@ function Game({
 
         setPrevTry(null);
         setPrevTryPos(null);
-        setTimeout(() => {
-          setShownIndex([]);
-        }, 700);
+        // setTimeout(() => {
+        //   setShownIndex([]);
+        // }, 700);
       }
     }
+  };
+
+  const generateWinner = () => {
+    let gameInformation = {};
+
+    let ranks = participants.sort(function (a, b) {
+      return b.score - a.score;
+    });
+
+    // let unequalPlayers = [
+    //   {
+    //     number: 1,
+    //     score: 15,
+    //   },
+    //   {
+    //     number: 2,
+    //     score: 15,
+    //   },
+    //   {
+    //     number: 3,
+    //     score: 13,
+    //   },
+    // ];
+    // let ranks = unequalPlayers.sort(function (a, b) {
+    //   return b.score - a.score;
+    // });
+
+    if (participants[0].score === participants[1].score) {
+      let highest = participants[0].score;
+      let tie = participants.filter((p) => p.score === highest);
+      gameInformation.winner = tie.length;
+    } else {
+      gameInformation.winner = participants[0].number;
+    }
+    gameInformation.players = ranks;
+
+    return gameInformation;
   };
 
   return (
@@ -147,12 +186,14 @@ function Game({
             />
           ))}
       </div>
-
-      {solvedIndices.length === gameArea.length && isSinglePlayer && (
+      {/* {solvedIndices.length === gameArea.length && isSinglePlayer && (
         <PopUpSolo />
+      )} */}
+      {solvedIndices.length === gameArea.length && (
+        <div> {console.log(allPlayers)} </div>
       )}
       {solvedIndices.length === gameArea.length && !isSinglePlayer && (
-        <PopUpMulti />
+        <PopUpMulti gameResults={generateWinner()} />
       )}
     </div>
   );

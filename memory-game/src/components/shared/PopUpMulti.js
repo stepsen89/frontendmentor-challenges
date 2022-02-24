@@ -3,7 +3,8 @@ import { connect } from "react-redux";
 import { newGame } from "../../redux/actions/gameSetup.actions";
 import { resetAll } from "../../redux/actions/game.actions";
 
-function PopUpMulti({ time = "00:00", moves, newGame, resetAll }) {
+function PopUpMulti({ gameResults, newGame, resetAll }) {
+  console.log(gameResults);
   const reset = () => {
     resetAll();
   };
@@ -16,19 +17,28 @@ function PopUpMulti({ time = "00:00", moves, newGame, resetAll }) {
     <div className="popup-wrapper">
       <div className="popup-container">
         <div className="popup-info">
-          <h2> You did it! </h2>
-          <p> Here's how you got on ... </p>
+          <h2>
+            {" "}
+            {gameResults.winner === 1
+              ? `Player ${gameResults.players[0].number} Won!`
+              : "It`s a tie!"}{" "}
+          </h2>
+          <p> Game over! Here are the results ... </p>
         </div>
 
-        <div className="popup-info">
-          <h2> Time Elapsed </h2>
-          <h2 className="popup-stat"> {time}</h2>
-        </div>
-
-        <div className="popup-info">
-          <h2> Moves Taken </h2>
-          <h2 className="popup-stat"> {moves}</h2>
-        </div>
+        {gameResults.players.map((player, index) => (
+          <div
+            className={`popup-info ${index < gameResults.winner ? "won" : ""}`}
+            key={player.number}
+          >
+            <h2>
+              {" "}
+              Player {player.number}{" "}
+              {index < gameResults.winner ? "(Winner!)" : ""}{" "}
+            </h2>
+            <h2 className="popup-stat"> {player.score} Pairs </h2>
+          </div>
+        ))}
 
         <button className="btn" onClick={reset}>
           {" "}
