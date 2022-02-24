@@ -13,7 +13,6 @@ function MultiPlayerStatusComponent({ players, turn }) {
   return (
     <div className="multi-wrapper">
       <div className="game--stats">
-        {console.log("players", players)}
         {players.map((player, i) => (
           <StatsFieldComponent
             score={player.score}

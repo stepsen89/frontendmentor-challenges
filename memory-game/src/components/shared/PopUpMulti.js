@@ -4,7 +4,6 @@ import { newGame } from "../../redux/actions/gameSetup.actions";
 import { resetAll } from "../../redux/actions/game.actions";
 
 function PopUpMulti({ gameResults, newGame, resetAll }) {
-  console.log(gameResults);
   const reset = () => {
     resetAll();
   };

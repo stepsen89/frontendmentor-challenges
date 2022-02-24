@@ -186,12 +186,10 @@ function Game({
             />
           ))}
       </div>
-      {/* {solvedIndices.length === gameArea.length && isSinglePlayer && (
+      {solvedIndices.length === gameArea.length && isSinglePlayer && (
         <PopUpSolo />
-      )} */}
-      {solvedIndices.length === gameArea.length && (
-        <div> {console.log(allPlayers)} </div>
       )}
+
       {solvedIndices.length === gameArea.length && !isSinglePlayer && (
         <PopUpMulti gameResults={generateWinner()} />
       )}

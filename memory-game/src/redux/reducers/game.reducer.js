@@ -66,7 +66,6 @@ export function gameReducer(state = initialGameState, action) {
     case SET_PLAYER_WIN:
       let updatedPlayers = state.players;
       updatedPlayers[action.payload].score += 1;
-      console.log(updatedPlayers);
       return { ...state, players: updatedPlayers };
 
     case SET_PLAYER_TURN:
