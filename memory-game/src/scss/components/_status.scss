@@ -8,11 +8,14 @@
 }
 
 .game--stats {
-  width: 80%;
   width: 327px;
   display: flex;
   justify-content: space-around;
   position: relative;
+
+  @include respond(tablet) {
+    width: 80vw;
+  }
 }
 
 .stats-box {
@@ -28,6 +31,10 @@
 
   h3 {
     padding-bottom: 5px;
+  }
+
+  @include respond(tablet) {
+    width: 100%;
   }
 }
 
@@ -47,6 +54,10 @@
   }
   h3 {
     font-size: 1.5rem;
+  }
+
+  @include respond(tablet) {
+    padding: 2rem 5rem;
   }
 }
 

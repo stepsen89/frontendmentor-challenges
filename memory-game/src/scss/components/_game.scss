@@ -5,6 +5,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  @include respond(tablet) {
+    height: 70%;
+  }
 }
 
 .game--area {
@@ -12,6 +16,16 @@
   height: 327px;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
+
+  @include respond(tablet) {
+    width: 532px;
+    height: 532px;
+  }
+
+  @include respond(desktop) {
+    width: 572px;
+    height: 572px;
+  }
 }
 
 .game--area.small {

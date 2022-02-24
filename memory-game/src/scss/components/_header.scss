@@ -1,6 +1,10 @@
 .header {
   height: 10vh;
   width: 100%;
+
+  @include respond(tablet) {
+    height: 15vh;
+  }
 }
 
 .flex {
@@ -13,6 +17,17 @@
   align-items: center;
   height: 100%;
   // margin-top: 2rem;
+
+  @include respond(tablet) {
+    width: 75%;
+  }
+}
+
+.flex img {
+  @include respond(tablet) {
+    width: 180px;
+    height: 40px;
+  }
 }
 
 .btn.small {
@@ -48,4 +63,24 @@
 .btn.gray {
   background: $button-gray;
   color: black;
+}
+
+.mobile {
+  @include respond(tablet) {
+    display: none;
+  }
+}
+
+.tablet {
+  display: none;
+
+  @include respond(tablet) {
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+  }
+
+  @include respond(desktop) {
+    width: 30%;
+  }
 }

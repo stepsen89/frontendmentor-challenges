@@ -41,6 +41,7 @@ body {
 
   @include respond(tablet) {
     width: 50%;
+    height: 70%;
   }
 
   h1 {
@@ -58,12 +59,20 @@ body {
   flex-direction: column;
   justify-content: space-around;
   border-radius: 20px;
+
+  @include respond(tablet) {
+    height: fit-content;
+  }
 }
 
 .form--field {
   width: 90%;
   // margin: 1rem 0;
   padding: 0 1rem;
+
+  @include respond(tablet) {
+    padding: 0.5rem 2rem;
+  }
 }
 .select {
   display: flex;
@@ -96,6 +105,12 @@ body {
   height: 40px;
 
   border-radius: 20px;
+
+  @include respond(tablet) {
+    margin: 0.5rem;
+    font-size: 1rem;
+    height: 50px;
+  }
 }
 
 .active {
@@ -110,4 +125,10 @@ body {
   margin-top: 1rem;
   color: white;
   background: #fda214;
+
+  @include respond(tablet) {
+    padding: 1rem 1rem;
+
+    font-size: 1.5rem;
+  }
 }
