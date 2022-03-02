@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300&family=Permanent+Marker&display=swap");
+
 body {
   background: white;
   color: black;
