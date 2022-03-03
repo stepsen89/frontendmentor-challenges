@@ -5,15 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
 
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
-    />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
 
     <title>Frontend Mentor | Time tracking dashboard</title>
-    <link href="/dist/output.css" rel="stylesheet" />
+    <link href="dist/output.css" rel="stylesheet" />
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
     <style>
@@ -27,186 +22,112 @@
     </style>
   </head>
   <body class="antialiased bg-very-dark-blue">
-    <div
-      class="container lg:flex lg:justify-center lg:items-center h-screen lg:w-1/2"
-    >
-      <div
-        class="grid sm-grid-cols-1 gap-6 lg:grid-cols-4 sm:mt-10 p-6 lg:h-2/6"
-      >
+    <div class="container lg:flex lg:justify-center lg:items-center h-screen lg:w-1/2">
+      <div class="grid sm-grid-cols-1 gap-6 lg:grid-cols-4 sm:mt-10 p-6 lg:h-2/6">
         <div class="bg-dark-blue rounded-lg text-white relative lg:row-span-2">
-          <div
-            class="flex justify-start space-x-4 items-center p-6 rounded-lg bg-blue-400 lg:h-4/6 lg:items-start lg:justify-start lg:flex-col lg:space-x-2 lg:space-y-3"
-          >
-            <img
-              src="images/image-jeremy.png"
-              alt="Jeremy"
-              class="w-14 h-14 border-white border-2 rounded-full"
-            />
+          <div class="flex justify-start space-x-4 items-center p-6 rounded-lg bg-blue-400 lg:h-4/6 lg:items-start lg:justify-start lg:flex-col lg:space-x-2 lg:space-y-3">
+            <img src="images/image-jeremy.png" alt="Jeremy" class="w-14 h-14 border-white border-2 rounded-full" />
             <div>
               <h3 class="font-bold text-xs opacity-30">Report for</h3>
               <h1 class="lg:text-2xl text-lg">Jeremy Robson</h1>
             </div>
           </div>
-          <div
-            class="bg-dark-blue rounded-lg flex justify-around py-4 lg:flex-col lg:items-start lg:gap-3 lg:h-2/6 lg:p-6 lg:py-8"
-          >
+          <div class="bg-dark-blue rounded-lg flex justify-around py-4 lg:flex-col lg:items-start lg:gap-3 lg:h-2/6 lg:p-6 lg:py-8">
             <button class="text-sm hover:opacity-100">Daily</button>
             <button class="text-sm hover:opacity-100">Weekly</button>
             <button class="text-sm hover:opacity-100">Monthly</button>
           </div>
         </div>
-        <div
-          class="bg-soft-red rounded-lg text-white relative lg:w-auto lg:h-2/4"
-        >
-          <div
-            class="items-center h-7 rounded-lg bg-work-red z-10 overflow-hidden"
-          >
-            <img
-              src="images/icon-work.svg"
-              alt="Jeremy"
-              class="w-14 h-14 float-right -mt-2 mr-5"
-            />
+        <div class="bg-soft-red rounded-lg text-white relative lg:w-auto lg:h-2/4">
+          <div class="items-center h-7 rounded-lg bg-work-red z-10 overflow-hidden">
+            <img src="images/icon-work.svg" alt="Jeremy" class="w-14 h-14 float-right -mt-2 mr-5" />
           </div>
           <div class="bg-dark-blue rounded-lg p-4 hover:bg-desaturated-blue">
             <div class="flex justify-between items-center lg:pb-5">
               <h3 class="text-sm font-bold">Work</h3>
               <p class="font-bold -mt-3">...</p>
             </div>
-            <div
-              class="flex justify-between items-center lg:flex-col lg:items-start lg:pb-2 work"
-            >
+            <div class="flex justify-between items-center lg:flex-col lg:items-start lg:pb-2 work">
               <h1 class="text-2xl font-light">32hrs</h1>
               <p class="text-xs opacity-60">Last Week - 36hrs</p>
             </div>
           </div>
         </div>
         <!-- play -->
-        <div
-          class="bg-soft-blue rounded-lg text-white relative lg:w-auto lg:h-2/4"
-        >
-          <div
-            class="items-center h-7 rounded-lg bg-work-red z-10 overflow-hidden"
-          >
-            <img
-              src="images/icon-play.svg"
-              alt="Jeremy"
-              class="w-14 h-14 float-right -mt-2 mr-5"
-            />
+        <div class="bg-soft-blue rounded-lg text-white relative lg:w-auto lg:h-2/4">
+          <div class="items-center h-7 rounded-lg bg-work-red z-10 overflow-hidden">
+            <img src="images/icon-play.svg" alt="Jeremy" class="w-14 h-14 float-right -mt-2 mr-5" />
           </div>
-          <div
-            class="bg-dark-blue rounded-lg p-4 hover:bg-desaturated-blue hover:bg-desaturated-blue"
-          >
+          <div class="bg-dark-blue rounded-lg p-4 hover:bg-desaturated-blue hover:bg-desaturated-blue">
             <div class="flex justify-between items-center lg:pb-5">
               <h3 class="text-sm font-bold">Play</h3>
               <p class="font-bold -mt-3">...</p>
             </div>
-            <div
-              class="flex justify-between items-center lg:flex-col lg:items-start lg:pb-2 play"
-            >
+            <div class="flex justify-between items-center lg:flex-col lg:items-start lg:pb-2 play">
               <h1 class="text-2xl font-light">10hrs</h1>
               <p class="text-xs opacity-60">Last Week - 8hrs</p>
             </div>
           </div>
         </div>
         <!-- study -->
-        <div
-          class="bg-light-red rounded-lg text-white relative lg:w-auto lg:h-2/4"
-        >
-          <div
-            class="items-center h-7 rounded-lg bg-work-red z-10 overflow-hidden"
-          >
-            <img
-              src="images/icon-study.svg"
-              alt="Jeremy"
-              class="w-14 h-14 float-right -mt-2 mr-5"
-            />
+        <div class="bg-light-red rounded-lg text-white relative lg:w-auto lg:h-2/4">
+          <div class="items-center h-7 rounded-lg bg-work-red z-10 overflow-hidden">
+            <img src="images/icon-study.svg" alt="Jeremy" class="w-14 h-14 float-right -mt-2 mr-5" />
           </div>
           <div class="bg-dark-blue rounded-lg p-4 hover:bg-desaturated-blue">
             <div class="flex justify-between items-center lg:pb-5">
               <h3 class="text-sm font-bold">Study</h3>
               <p class="font-bold -mt-3">...</p>
             </div>
-            <div
-              class="flex justify-between items-center lg:flex-col lg:items-start lg:pb-2 study"
-            >
+            <div class="flex justify-between items-center lg:flex-col lg:items-start lg:pb-2 study">
               <h1 class="text-2xl font-light">4hrs</h1>
               <p class="text-xs opacity-60">Last Week - 7hrs</p>
             </div>
           </div>
         </div>
         <!-- exercise -->
-        <div
-          class="bg-lime-green rounded-lg text-white relative lg:w-auto lg:h-2/4"
-        >
-          <div
-            class="items-center h-7 rounded-lg bg-work-red z-10 overflow-hidden"
-          >
-            <img
-              src="images/icon-exercise.svg"
-              alt="Jeremy"
-              class="w-14 h-11 float-right -mt-1 mr-5"
-            />
+        <div class="bg-lime-green rounded-lg text-white relative lg:w-auto lg:h-2/4">
+          <div class="items-center h-7 rounded-lg bg-work-red z-10 overflow-hidden">
+            <img src="images/icon-exercise.svg" alt="Jeremy" class="w-14 h-11 float-right -mt-1 mr-5" />
           </div>
           <div class="bg-dark-blue rounded-lg p-4 hover:bg-desaturated-blue">
             <div class="flex justify-between items-center lg:pb-5">
               <h3 class="text-sm font-bold">Exercise</h3>
               <p class="font-bold -mt-3">...</p>
             </div>
-            <div
-              class="flex justify-between items-center lg:flex-col lg:items-start lg:pb-2 exercise"
-            >
+            <div class="flex justify-between items-center lg:flex-col lg:items-start lg:pb-2 exercise">
               <h1 class="text-2xl font-light">4hrs</h1>
               <p class="text-xs opacity-60">Last Week - 5hrs</p>
             </div>
           </div>
         </div>
         <!-- social -->
-        <div
-          class="bg-violet rounded-lg text-white relative lg:w-auto lg:h-2/4"
-        >
-          <div
-            class="items-center h-7 rounded-lg bg-work-red z-10 overflow-hidden"
-          >
-            <img
-              src="images/icon-social.svg"
-              alt="Jeremy"
-              class="w-14 h-14 float-right -mt-2 mr-5"
-            />
+        <div class="bg-violet rounded-lg text-white relative lg:w-auto lg:h-2/4">
+          <div class="items-center h-7 rounded-lg bg-work-red z-10 overflow-hidden">
+            <img src="images/icon-social.svg" alt="Jeremy" class="w-14 h-14 float-right -mt-2 mr-5" />
           </div>
           <div class="bg-dark-blue rounded-lg p-4 hover:bg-desaturated-blue">
             <div class="flex justify-between items-center lg:pb-5">
               <h3 class="text-sm font-bold">Social</h3>
               <p class="font-bold -mt-3">...</p>
             </div>
-            <div
-              class="flex justify-between items-center lg:flex-col lg:items-start lg:pb-2 social"
-            >
+            <div class="flex justify-between items-center lg:flex-col lg:items-start lg:pb-2 social">
               <h1 class="text-2xl font-light">5hrs</h1>
               <p class="text-xs opacity-60">Last Week - 10hrs</p>
             </div>
           </div>
         </div>
         <!-- self care -->
-        <div
-          class="bg-soft-orange rounded-lg text-white relative lg:w-auto lg:h-2/4"
-        >
-          <div
-            class="items-center h-7 rounded-lg bg-work-red z-10 overflow-hidden"
-          >
-            <img
-              src="images/icon-self-care.svg"
-              alt="Jeremy"
-              class="w-14 h-14 float-right -mt-2 mr-5"
-            />
+        <div class="bg-soft-orange rounded-lg text-white relative lg:w-auto lg:h-2/4">
+          <div class="items-center h-7 rounded-lg bg-work-red z-10 overflow-hidden">
+            <img src="images/icon-self-care.svg" alt="Jeremy" class="w-14 h-14 float-right -mt-2 mr-5" />
           </div>
           <div class="bg-dark-blue rounded-lg p-4 hover:bg-desaturated-blue">
             <div class="flex justify-between items-center lg:pb-5">
               <h3 class="text-sm font-bold">Self Care</h3>
               <p class="font-bold -mt-3">...</p>
             </div>
-            <div
-              class="flex justify-between items-center lg:flex-col lg:items-start lg:pb-2 selfCare"
-            >
+            <div class="flex justify-between items-center lg:flex-col lg:items-start lg:pb-2 selfCare">
               <h1 class="text-2xl font-light">2hrs</h1>
               <p class="text-xs opacity-60">Last Week - 2hrs</p>
             </div>
@@ -215,12 +136,10 @@
       </div>
     </div>
 
-    <div class="attribution">
+    <!-- <div class="attribution">
       Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
     <script>
       let stats = {
         social: {
@@ -349,10 +268,8 @@
             monthly: "Last Month - ",
             weekly: "Last Week - ",
           };
-          element[0].querySelector("p").innerHTML =
-            modifiedText[mode] + stats[element[1]][mode].previous;
-          element[0].querySelector("h1").innerHTML =
-            stats[element[1]][mode].current;
+          element[0].querySelector("p").innerHTML = modifiedText[mode] + stats[element[1]][mode].previous;
+          element[0].querySelector("h1").innerHTML = stats[element[1]][mode].current;
         });
       };
       btnDaily.forEach((btn) => btn.addEventListener("click", changeStats));
