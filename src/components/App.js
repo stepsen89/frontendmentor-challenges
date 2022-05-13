@@ -2,6 +2,7 @@ import Header from "./Header";
 import Projects from "./Projects";
 import ProjectDetails from "./Project";
 import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+import Footer from "./Footer";
 
 function App() {
   return (

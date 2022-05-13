@@ -4,6 +4,16 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300&family=Permanent+Marker&display=swap");
 
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+#root {
+  height: 100%;
+}
+
 body {
   background: white;
   color: black;

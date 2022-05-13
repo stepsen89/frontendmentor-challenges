@@ -2,8 +2,7 @@ const projects = [
   {
     id: "1",
     name: "Article Preview",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu tortor eget mi auctor feugiat.",
+    description: "Article Preview",
     technologies: ["HTML", "SCSS"],
     images: {
       desktop: {
@@ -11,8 +10,8 @@ const projects = [
         full: "assets/article-preview-desktop.png",
       },
       mobile: {
-        preview: "assets/article-preview-desktop.png",
-        full: "assets/article-preview-desktop.png",
+        preview: "/assets/article-preview-desktop.png",
+        full: "/assets/article-preview-desktop.png",
       },
     },
   },
@@ -55,7 +54,7 @@ const projects = [
     name: "Clock App",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu tortor eget mi auctor feugiat.",
-    technologies: ["HTML", "SCSS", "Parcel", "API", "AXIOS"],
+    technologies: ["HTML", "SCSS", "Parcel", "API", "Axios"],
     images: {
       desktop: {
         preview: "/assets/desktop-clock-app-day.png",
@@ -75,11 +74,11 @@ const projects = [
     technologies: ["HTML", "SCSS"],
     images: {
       desktop: {
-        preview: "/assets/fylo-desktop-preview.png",
+        preview: "/assets/fylo_test.png",
         full: "assets/article-preview-desktop.png",
       },
       mobile: {
-        preview: "assets/article-preview-desktop.png",
+        preview: "/assets/fylo-test.png",
         full: "assets/article-preview-desktop.png",
       },
     },
@@ -89,7 +88,7 @@ const projects = [
     name: "GitHub User Search Application",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu tortor eget mi auctor feugiat.",
-    technologies: ["React", "Styled Components", "Redux", "Redux Thunk", "Api"],
+    technologies: ["React", "Redux", "Redux Thunk", "API"],
     images: {
       desktop: {
         preview: "/assets/article-preview-desktop.png",
@@ -157,7 +156,7 @@ const projects = [
     name: "Memory Game",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu tortor eget mi auctor feugiat.",
-    technologies: ["React", "Redux", "React Hooks", "SCSS"],
+    technologies: ["React", "Redux", "React", "SCSS"],
     images: {
       desktop: {
         preview: "/assets/article-preview-desktop.png",
@@ -212,11 +211,11 @@ const projects = [
     images: {
       desktop: {
         preview: "/assets/social-desktop-light-mode.png",
-        full: "assets/article-preview-desktop.png",
+        full: "/assets/social-desktop-dark.png",
       },
       mobile: {
-        preview: "assets/article-preview-desktop.png",
-        full: "assets/article-preview-desktop.png",
+        preview: "/assets/social-mobile-dark-preview.png",
+        full: "/assets/social-mobile-full.png",
       },
     },
   },
