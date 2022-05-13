@@ -1,10 +1,9 @@
 import "regenerator-runtime/runtime";
 import axios from "axios";
 
-let timeApi = "http://worldtimeapi.org/api/ip";
+let timeApi = "https://worldtimeapi.org/api/ip";
 let quotesApi = "https://programming-quotes-api.herokuapp.com/Quotes/random";
-let locationApi =
-  "https://api.freegeoip.app/json/?apikey=080dafb0-90de-11ec-a4c8-338b1cebf5d9";
+let locationApi = "https://api.freegeoip.app/json/?apikey=080dafb0-90de-11ec-a4c8-338b1cebf5d9";
 document.addEventListener("DOMContentLoaded", function () {
   // dom elements for quote
   let quoteText = document.querySelector("#quoteText");
@@ -88,12 +87,9 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     let current =
-      time.getHours() <= 18 && time.getHours() >= 6
-        ? daytimeMatch.day
-        : daytimeMatch.night;
+      time.getHours() <= 18 && time.getHours() >= 6 ? daytimeMatch.day : daytimeMatch.night;
 
-    let adjustMinutes =
-      time.getMinutes() < 10 ? `0${time.getMinutes()}` : time.getMinutes();
+    let adjustMinutes = time.getMinutes() < 10 ? `0${time.getMinutes()}` : time.getMinutes();
     timeDisplay.innerHTML = `${time.getHours()}:${adjustMinutes}`;
     greetingDisplay.innerHTML = current.greeting;
 
