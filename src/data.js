@@ -96,6 +96,8 @@ const projects = [
     description:
       "Application to search for github users and see basic information such as name, location, followers and description.",
     technologies: ["React", "Redux", "Redux Thunk", "API"],
+    activeLink:
+      "https://stepsen89.github.io/frontendmentor-challenges/github-user-search/build/index.html",
     images: {
       desktop: {
         preview: "/assets/article-preview-desktop.png",
@@ -165,6 +167,8 @@ const projects = [
     description:
       "Simple memory game for up to 4 players. Single and multi-player mode in different grid sizes. Responsive for desktop and mobile.",
     technologies: ["React", "Redux", "React", "SCSS"],
+    activeLink:
+      "https://stepsen89.github.io/frontendmentor-challenges/memory-game/build/index.html",
     images: {
       desktop: {
         preview: "/assets/article-preview-desktop.png",
@@ -289,6 +293,8 @@ const projects = [
     description:
       "Landing page and URL shortening functionality. Responsive for desktop and mobile.",
     technologies: ["React", "JS", "API", "TailwindCSS"],
+    activeLink:
+      "https://stepsen89.github.io/frontendmentor-challenges/url-shortening-application/build/index.html",
     images: {
       desktop: {
         preview: "/assets/shortener-desktop-with-link.png",
