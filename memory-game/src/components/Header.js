@@ -56,7 +56,7 @@ function Header({ newGame, resetAll }) {
       <div class="header">
         <div class="flex">
           {/* <div> */}
-          <img src="/images/logo.svg" alt="" />
+          <img src="images/logo.svg" alt="" />
           {/* </div> */}
           <div className="mobile">
             <button class="btn small" onClick={showMenuPopup}>

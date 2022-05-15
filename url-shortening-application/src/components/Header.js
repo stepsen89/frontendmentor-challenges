@@ -35,10 +35,7 @@ export default function Header() {
             {" "}
             Log In{" "}
           </a>
-          <a
-            href="#SignUp"
-            className="w-50 rounded-full bg-cyan p-2 px-8 font-bold text-white"
-          >
+          <a href="#SignUp" className="w-50 rounded-full bg-cyan p-2 px-8 font-bold text-white">
             {" "}
             Sign Up{" "}
           </a>

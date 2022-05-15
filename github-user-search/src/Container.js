@@ -8,7 +8,6 @@ import { Formik } from "formik";
 function Container({ getUser, user }) {
   // const [user, setUser] = useState({});
   const [value, setValue] = useState({});
-  const [error, setError] = useState({});
 
   // componentDidMount() {
   //   const { user } = this.props;

@@ -2,7 +2,7 @@ const projects = [
   {
     id: "1",
     name: "Article Preview",
-    description: "Article Preview",
+    description: "Simple component to preview short article.",
     technologies: ["HTML", "SCSS"],
     images: {
       desktop: {
@@ -18,8 +18,7 @@ const projects = [
   {
     id: "2",
     name: "Bookmark Manager",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu tortor eget mi auctor feugiat.",
+    description: "Landing Page for bookmark manager extension.",
     technologies: ["HTML", "TailwindCSS"],
     images: {
       desktop: {

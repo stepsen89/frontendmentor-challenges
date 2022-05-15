@@ -4,8 +4,7 @@ import Container from "./Container";
 import { GlobalStyles } from "./theme/GlobalStyles";
 import { useTheme } from "./theme/useTheme";
 import { useState, useEffect } from "react";
-import styled, { ThemeProvider } from "styled-components";
-import { getFromLS } from "./theme/storage";
+import { ThemeProvider } from "styled-components";
 import { connect } from "react-redux";
 
 function App({ th }) {
@@ -15,7 +14,7 @@ function App({ th }) {
   useEffect(() => {
     let newTheme = setThemeTwo(th);
     setSelectedTheme(newTheme);
-  }, [themeLoaded, th]);
+  }, [themeLoaded]);
 
   return (
     <>

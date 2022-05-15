@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300&family=Permanent+Marker&display=swap");
-
 html,
 body {
   height: 100%;
@@ -17,4 +15,34 @@ body {
 body {
   background: white;
   color: black;
+}
+
+.badge {
+  @apply px-4 py-2 text-sm rounded bg-primary;
+}
+
+.badge.small {
+  @apply px-2 py-1 text-xs;
+}
+
+.card {
+  border-radius: 1rem;
+  @apply p-4 bg-container box-shdw;
+}
+
+.card img {
+  /* @apply bg-darkBG p-4; */
+  border-radius: 1rem;
+}
+
+.box-shdw {
+  box-shadow: 0 2px 8px hsla(219, 48%, 8%, 0.1);
+}
+
+.section-title {
+  @apply text-3xl font-bold;
+}
+
+.section-subtitle {
+  @apply text-lg font-bold text-primary text-center;
 }
