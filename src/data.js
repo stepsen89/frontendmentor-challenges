@@ -34,8 +34,7 @@ const projects = [
   {
     id: "3",
     name: "Bootcamp Testimonial",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu tortor eget mi auctor feugiat.",
+    description: "Bootcamp Testimonial Slider",
     technologies: ["HTML", "SCSS"],
     images: {
       desktop: {

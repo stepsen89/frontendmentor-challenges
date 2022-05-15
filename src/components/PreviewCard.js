@@ -26,11 +26,11 @@ function PreviewCardComponent({ project }) {
             <TechTag name={tech} />
           ))}
         </div>
-        <h3 className="text-md font-bold">{project.description}</h3>
+        <h3 className="text-md font-bold">{project.name}</h3>
         <p className="text-sm">{project.description}</p>
         {project.activeLink && (
           <a
-            href="#"
+            href="/article-preview/index.html"
             class="self-end justify-self-end py-2 px-4 border-2 border-primary rounded-lg text-sm"
           >
             Demo <i class="fa-solid fa-chevron-right"></i>
