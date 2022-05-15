@@ -20,7 +20,6 @@ function App({ th }) {
     <>
       {themeLoaded && (
         <ThemeProvider theme={selectedTheme}>
-          {console.log("selectedTheme", selectedTheme)}
           <GlobalStyles />
 
           <Header />

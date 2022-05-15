@@ -202,7 +202,7 @@ body {
 
 .input {
   background-color: var(--primary, white);
-  width: 100%;
+  width: 76%;
   padding: 0;
   border: none;
   height: 60px;
@@ -488,6 +488,7 @@ body {
     height: 75px;
     width: 80%;
     margin-left: 14rem;
+    padding-bottom: 1rem;
   }
 
   .address-box div span {
@@ -519,6 +520,7 @@ body {
     align-self: flex-start;
     margin: 0;
     margin-left: 11rem;
+    line-height: normal;
   }
 
   .profile-details {

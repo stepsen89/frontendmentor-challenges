@@ -9,32 +9,17 @@ function Container({ getUser, user }) {
   // const [user, setUser] = useState({});
   const [value, setValue] = useState({});
 
-  // componentDidMount() {
-  //   const { user } = this.props;
-  //   // console.log(this.props);
-
-  //   if (!user) {
-  //     this.props.getUser("octocat");
-  //     // console.log(user);
-  //     // this.setState({ user });
-  //     console.log("state", this.props.user);
-  //   }
-  // }
-
   useEffect(() => {
     getUser("octocat");
     setValue({ searchTerm: user.login });
   }, []);
 
   useEffect(() => {
-    console.log("inner useEffect nr 2");
-    console.log(value);
     getUser(value.searchTerm)
       .then((res) => {
         console.log(res);
       })
       .catch((err) => console.log("err", err));
-    console.log(getUser(value.searchTerm));
   }, [value]);
 
   // componentDidUpdate(prevProps) {
@@ -47,7 +32,6 @@ function Container({ getUser, user }) {
   function handleUserSearch(e) {
     e.preventDefault();
     setValue(e);
-    console.log("value", e);
   }
 
   return (
