@@ -2,8 +2,10 @@ const projects = [
   {
     id: "1",
     name: "Article Preview",
-    description: "Simple component to preview short article.",
+    description:
+      "Simple component to preview short article. Responsive for desktop, mobile and tablet.",
     technologies: ["HTML", "SCSS"],
+    activeLink: "https://stepsen89.github.io/frontendmentor-challenges/article-preview/index.html",
     images: {
       desktop: {
         preview: "/assets/article-preview-desktop.png",
@@ -18,8 +20,10 @@ const projects = [
   {
     id: "2",
     name: "Bookmark Manager",
-    description: "Landing Page for bookmark manager extension.",
+    description:
+      "Landing Page for bookmark manager extension. Responsive for desktop, mobile and tablet.",
     technologies: ["HTML", "TailwindCSS"],
+    activeLink: "https://stepsen89.github.io/frontendmentor-challenges/bookmark-manager/index.html",
     images: {
       desktop: {
         preview: "assets/bookmark-desktop-preview.png",
@@ -35,7 +39,9 @@ const projects = [
     id: "3",
     name: "Bootcamp Testimonial",
     description: "Bootcamp Testimonial Slider",
-    technologies: ["HTML", "SCSS"],
+    technologies: ["HTML", "JS", "SCSS"],
+    activeLink:
+      "https://stepsen89.github.io/frontendmentor-challenges/bootcamp-testimonial/index.html",
     images: {
       desktop: {
         preview: "/assets/article-preview-desktop.png",
@@ -51,8 +57,9 @@ const projects = [
     id: "4",
     name: "Clock App",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu tortor eget mi auctor feugiat.",
-    technologies: ["HTML", "SCSS", "Parcel", "API", "Axios"],
+      "Landing page which displays current date && time (IP), theme depending on daytime. Mobile and Desktop versions.",
+    technologies: ["HTML", "JS", "SCSS", "Parcel", "API", "Axios"],
+    activeLink: "https://stepsen89.github.io/frontendmentor-challenges/clock-app/dist/index.html",
     images: {
       desktop: {
         preview: "/assets/desktop-clock-app-day.png",
@@ -68,8 +75,10 @@ const projects = [
     id: "5",
     name: "Fylo Landing Page",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu tortor eget mi auctor feugiat.",
+      "Landing Page for fictive Fylo cloud storage and sharing platform. Fully resposive.",
     technologies: ["HTML", "SCSS"],
+    activeLink:
+      "https://stepsen89.github.io/frontendmentor-challenges/fylo-landing-page/index.html",
     images: {
       desktop: {
         preview: "/assets/fylo_test.png",
@@ -85,7 +94,7 @@ const projects = [
     id: "6",
     name: "GitHub User Search Application",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu tortor eget mi auctor feugiat.",
+      "Application to search for github users and see basic information such as name, location, followers and description.",
     technologies: ["React", "Redux", "Redux Thunk", "API"],
     images: {
       desktop: {
@@ -101,9 +110,9 @@ const projects = [
   {
     id: "7",
     name: "Huddle Landing Page",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu tortor eget mi auctor feugiat.",
+    description: "Landing page for a community platform. Desktop, tablet and mobile versions.",
     technologies: ["HTML", "SCSS"],
+    activeLink: "https://stepsen89.github.io/frontendmentor-challenges/huddle/index.html",
     images: {
       desktop: {
         preview: "/assets/huddle-desktop-preview.png",
@@ -118,8 +127,8 @@ const projects = [
   {
     id: "8",
     name: "Intro Component",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu tortor eget mi auctor feugiat.",
+    description: "Registration page and sign up component (form) for coding platform.",
+    activeLink: "https://stepsen89.github.io/frontendmentor-challenges/intro-component/index.html",
     technologies: ["HTML", "SCSS"],
     images: {
       desktop: {
@@ -135,9 +144,10 @@ const projects = [
   {
     id: "9",
     name: "Meet Landing Page",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu tortor eget mi auctor feugiat.",
+    description: "Landing Page for group chat application. Fully responsive.",
     technologies: ["HTML", "SCSS"],
+    activeLink:
+      "https://stepsen89.github.io/frontendmentor-challenges/meet-landing-page/index.html",
     images: {
       desktop: {
         preview: "/assets/meeet-desktop-preview.png",
@@ -153,7 +163,7 @@ const projects = [
     id: "10",
     name: "Memory Game",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu tortor eget mi auctor feugiat.",
+      "Simple memory game for up to 4 players. Single and multi-player mode in different grid sizes. Responsive for desktop and mobile.",
     technologies: ["React", "Redux", "React", "SCSS"],
     images: {
       desktop: {
@@ -169,9 +179,10 @@ const projects = [
   {
     id: "11",
     name: "NFT Preview Component",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu tortor eget mi auctor feugiat.",
+    description: "Simple preview component for NFT values. Responsive.",
     technologies: ["HTML", "SCSS"],
+    activeLink:
+      "https://stepsen89.github.io/frontendmentor-challenges/nft-preview-card-component-main/index.html",
     images: {
       desktop: {
         preview: "/assets/nft-desktop.png",
@@ -186,9 +197,10 @@ const projects = [
   {
     id: "12",
     name: "Profile Card Component",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu tortor eget mi auctor feugiat.",
+    description: "Simple profile card. Responsive.",
     technologies: ["HTML", "SCSS"],
+    activeLink:
+      "https://stepsen89.github.io/frontendmentor-challenges/profile-card-component/index.html",
     images: {
       desktop: {
         preview: "/assets/profile-desktop.png",
@@ -204,8 +216,10 @@ const projects = [
     id: "13",
     name: "Social Media Dashboard",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu tortor eget mi auctor feugiat.",
+      "Social media stats dashboard for different platforms. Dark and light mode. Responsive for desktop, tablet and mobile.",
     technologies: ["HTML", "SCSS"],
+    activeLink:
+      "https://stepsen89.github.io/frontendmentor-challenges/social-media-dashbaord/index.html",
     images: {
       desktop: {
         preview: "/assets/social-desktop-light-mode.png",
@@ -220,9 +234,9 @@ const projects = [
   {
     id: "14",
     name: "SunnySide Landing Page",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu tortor eget mi auctor feugiat.",
+    description: "Landing Page for digital agency. Responsive for desktop and mobile.",
     technologies: ["HTML", "SCSS"],
+    activeLink: "https://stepsen89.github.io/frontendmentor-challenges/sunnyside/index.html",
     images: {
       desktop: {
         preview: "/assets/desktop-sunnyside-preview.png",
@@ -237,8 +251,7 @@ const projects = [
   {
     id: "15",
     name: "Testimonial Grid",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu tortor eget mi auctor feugiat.",
+    description: "Grid preview of testimonials. Desktop and mobile views.",
     technologies: ["HTML", "TailwindCSS"],
     images: {
       desktop: {
@@ -255,8 +268,10 @@ const projects = [
     id: "16",
     name: "Time Tracking Dashboard",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu tortor eget mi auctor feugiat.",
-    technologies: ["HTML", "TailwindCSS"],
+      "Simple time tracking dashboard interface which displays daily, weekly and monthly stats.",
+    technologies: ["HTML", "JS", "TailwindCSS"],
+    activeLink:
+      "https://stepsen89.github.io/frontendmentor-challenges/time-tracking-dashboard/index.html",
     images: {
       desktop: {
         preview: "/assets/time-tracking-desktop.png",
@@ -272,8 +287,8 @@ const projects = [
     id: "17",
     name: "Url Shortening Application",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eu tortor eget mi auctor feugiat.",
-    technologies: ["React", "TailwindCSS", "API"],
+      "Landing page and URL shortening functionality. Responsive for desktop and mobile.",
+    technologies: ["React", "JS", "API", "TailwindCSS"],
     images: {
       desktop: {
         preview: "/assets/shortener-desktop-with-link.png",

@@ -13,6 +13,14 @@ function PreviewCardComponent({ project }) {
   return (
     <div class="card">
       <div class="relative">
+        {project.activeLink && (
+          <a
+            href={project.activeLink}
+            class="absolute py-2 px-4 bg-primary rounded-lg text-sm right-2 top-2"
+          >
+            Demo <i class="fa-solid fa-chevron-right"></i>
+          </a>
+        )}
         <img
           src={project.images.desktop.preview}
           alt={`Preview Screenshot of Project ${project.name}`}
@@ -28,14 +36,6 @@ function PreviewCardComponent({ project }) {
         </div>
         <h3 className="text-md font-bold">{project.name}</h3>
         <p className="text-sm">{project.description}</p>
-        {project.activeLink && (
-          <a
-            href="/article-preview/index.html"
-            class="self-end justify-self-end py-2 px-4 border-2 border-primary rounded-lg text-sm"
-          >
-            Demo <i class="fa-solid fa-chevron-right"></i>
-          </a>
-        )}
       </div>
     </div>
   );
