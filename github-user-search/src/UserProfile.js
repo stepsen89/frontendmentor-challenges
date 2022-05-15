@@ -5,10 +5,7 @@ import { ReactComponent as TwitterIcon } from "./assets/icon-twitter.svg";
 import { ReactComponent as CompanyIcon } from "./assets/icon-company.svg";
 
 const UserProfile = ({ user }) => {
-  useEffect(() => {
-    console.log("Hello");
-    console.log(user);
-  }, [user]);
+  useEffect(() => {}, [user]);
 
   const getJoinedDate = (d) => {
     let dDate = new Date(d);
@@ -66,9 +63,7 @@ const UserProfile = ({ user }) => {
           <span> {user.blog || "Not Available"}</span>
         </div>
         <div>
-          <TwitterIcon
-            className={user.twitter_username ? "icon" : "icon grey"}
-          />
+          <TwitterIcon className={user.twitter_username ? "icon" : "icon grey"} />
           <span className={user.twitter_username ? "" : "grey"}>
             {user.twitter_username || "Not Available"}
           </span>

@@ -6,14 +6,12 @@ export function getUser(username) {
     return axios
       .get(`https://api.github.com/users/${username}`)
       .then((response) => {
-        console.log("res", response);
         dispatch({
           type: FETCH_USER,
           payload: response.data,
         });
       })
       .catch((error) => {
-        console.log("Error", error);
         dispatch({
           type: FETCH_USER_FAIL,
           payload: error.response.data,
