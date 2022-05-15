@@ -257,6 +257,7 @@ const projects = [
     name: "Testimonial Grid",
     description: "Grid preview of testimonials. Desktop and mobile views.",
     technologies: ["HTML", "TailwindCSS"],
+    activeLink: "https://stepsen89.github.io/frontendmentor-challenges/testimonial-grid/index.html",
     images: {
       desktop: {
         preview: "/assets/article-preview-desktop.png",
