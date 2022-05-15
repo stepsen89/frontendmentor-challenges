@@ -163,7 +163,7 @@ table {
 .card-box.right {
   width: 327px;
   height: 308px;
-  background: url("../../images/pattern-bg.svg");
+  background: url("../images/pattern-bg.svg");
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -196,7 +196,7 @@ table {
 }
 
 .card-box.left {
-  background: url("../../images/pattern-quotes.svg");
+  background: url("../images/pattern-quotes.svg");
   background-position: top;
   background-repeat: no-repeat;
 }
@@ -315,7 +315,7 @@ table {
 }
 
 .slider-button.previous {
-  background-image: url("../../images/icon-prev.svg");
+  background-image: url("../images/icon-prev.svg");
 }
 
 body {

@@ -2985,7 +2985,7 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-var timeApi = "http://worldtimeapi.org/api/ip";
+var timeApi = "https://worldtimeapi.org/api/ip";
 var quotesApi = "https://programming-quotes-api.herokuapp.com/Quotes/random";
 var locationApi = "https://api.freegeoip.app/json/?apikey=080dafb0-90de-11ec-a4c8-338b1cebf5d9";
 document.addEventListener("DOMContentLoaded", function () {
@@ -3218,7 +3218,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50565" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52229" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
