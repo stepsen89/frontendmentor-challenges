@@ -8,7 +8,7 @@ const projects = [
     activeLink: "https://stepsen89.github.io/frontendmentor-challenges/article-preview/index.html",
     images: {
       desktop: {
-        preview: "/assets/article-preview-desktop.png",
+        preview: "assets/article-preview-desktop.png",
         full: "assets/article-preview-desktop.png",
       },
       mobile: {
@@ -44,7 +44,7 @@ const projects = [
       "https://stepsen89.github.io/frontendmentor-challenges/bootcamp-testimonial/index.html",
     images: {
       desktop: {
-        preview: "/assets/article-preview-desktop.png",
+        preview: "assets/bootcamp-desktop.png",
         full: "assets/article-preview-desktop.png",
       },
       mobile: {
@@ -100,7 +100,7 @@ const projects = [
       "https://stepsen89.github.io/frontendmentor-challenges/github-user-search/build/index.html",
     images: {
       desktop: {
-        preview: "/assets/article-preview-desktop.png",
+        preview: "/assets/github-user-search-desktop.png",
         full: "assets/article-preview-desktop.png",
       },
       mobile: {
@@ -171,7 +171,7 @@ const projects = [
       "https://stepsen89.github.io/frontendmentor-challenges/memory-game/build/index.html",
     images: {
       desktop: {
-        preview: "/assets/article-preview-desktop.png",
+        preview: "/assets/memory_game.png",
         full: "assets/article-preview-desktop.png",
       },
       mobile: {
@@ -260,7 +260,7 @@ const projects = [
     activeLink: "https://stepsen89.github.io/frontendmentor-challenges/testimonial-grid/index.html",
     images: {
       desktop: {
-        preview: "/assets/article-preview-desktop.png",
+        preview: "/assets/testimonial-desktop-preview.png",
         full: "assets/article-preview-desktop.png",
       },
       mobile: {

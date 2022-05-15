@@ -28,13 +28,13 @@ function PreviewCardComponent({ project }) {
         />
       </div>
 
-      <div class="grid grid-rows-4 gap h-48">
+      <div class="grid grid-rows-4 gap h-36">
         <div className="flex">
           {project.technologies.map((tech) => (
             <TechTag name={tech} />
           ))}
         </div>
-        <h3 className="text-md font-bold">{project.name}</h3>
+        <h3 className="text-md font-bold pt-2">{project.name}</h3>
         <p className="text-sm">{project.description}</p>
       </div>
     </div>
