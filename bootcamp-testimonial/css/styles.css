@@ -1,4 +1,4 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
+/* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
@@ -89,7 +89,8 @@ video {
   border: 0;
   font-size: 100%;
   font: inherit;
-  vertical-align: baseline; }
+  vertical-align: baseline;
+}
 
 /* HTML5 display-role reset for older browsers */
 article,
@@ -103,29 +104,35 @@ hgroup,
 menu,
 nav,
 section {
-  display: block; }
+  display: block;
+}
 
 body {
-  line-height: 1; }
+  line-height: 1;
+}
 
 ol,
 ul {
-  list-style: none; }
+  list-style: none;
+}
 
 blockquote,
 q {
-  quotes: none; }
+  quotes: none;
+}
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
   content: "";
-  content: none; }
+  content: none;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 .card {
   width: auto;
@@ -133,19 +140,25 @@ table {
   background: transparent;
   position: relative;
   display: flex;
-  flex-direction: column-reverse; }
-  @media only screen and (min-width: 110em) {
-    .card {
-      flex-direction: row;
-      height: 80vh;
-      width: 60vw; } }
+  flex-direction: column-reverse;
+}
+@media only screen and (min-width: 110em) {
+  .card {
+    flex-direction: row;
+    height: 80vh;
+    width: 60vw;
+  }
+}
 
 .card-box {
   display: flex;
-  flex-direction: column; }
-  @media only screen and (min-width: 110em) {
-    .card-box {
-      height: 600px; } }
+  flex-direction: column;
+}
+@media only screen and (min-width: 110em) {
+  .card-box {
+    height: 600px;
+  }
+}
 
 .card-box.right {
   width: 327px;
@@ -156,55 +169,70 @@ table {
   justify-content: center;
   align-items: center;
   margin-bottom: 50px;
-  overflow: visible; }
-  @media only screen and (min-width: 110em) {
-    .card-box.right {
-      width: 50%;
-      height: 100%;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center; } }
+  overflow: visible;
+}
+@media only screen and (min-width: 110em) {
+  .card-box.right {
+    width: 50%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
 
 .card-box.left {
   width: 327px;
   height: 228px;
   justify-content: space-around;
-  align-items: center; }
-  @media only screen and (min-width: 110em) {
-    .card-box.left {
-      width: 50%;
-      height: 50%;
-      align-self: center; } }
+  align-items: center;
+}
+@media only screen and (min-width: 110em) {
+  .card-box.left {
+    width: 50%;
+    height: 50%;
+    align-self: center;
+  }
+}
 
 .card-box.left {
   background: url("../../images/pattern-quotes.svg");
   background-position: top;
-  background-repeat: no-repeat; }
-  @media only screen and (min-width: 110em) {
-    .card-box.left {
-      background-position-x: 60px;
-      background-repeat: no-repeat; } }
+  background-repeat: no-repeat;
+}
+@media only screen and (min-width: 110em) {
+  .card-box.left {
+    background-position-x: 60px;
+    background-repeat: no-repeat;
+  }
+}
 
 .card-box img {
   width: 254px;
-  height: 253px; }
-  @media only screen and (min-width: 110em) {
-    .card-box img {
-      width: 440px;
-      height: 440px; } }
+  height: 253px;
+}
+@media only screen and (min-width: 110em) {
+  .card-box img {
+    width: 440px;
+    height: 440px;
+  }
+}
 
 .card-text {
   line-height: 25px;
   text-align: center;
   font-weight: 200;
   font-size: 1.2rem;
-  padding-top: 20px; }
-  @media only screen and (min-width: 110em) {
-    .card-text {
-      font-size: 2rem;
-      text-align: left;
-      line-height: 50px;
-      padding-top: 140px; } }
+  padding-top: 20px;
+}
+@media only screen and (min-width: 110em) {
+  .card-text {
+    font-size: 2rem;
+    text-align: left;
+    line-height: 50px;
+    padding-top: 140px;
+  }
+}
 
 .card-username {
   padding-top: 20px;
@@ -212,34 +240,44 @@ table {
   text-align: center;
   font-weight: 700;
   font-size: 1.3rem;
-  line-height: 30px; }
-  @media only screen and (min-width: 110em) {
-    .card-username {
-      padding-top: 0; } }
+  line-height: 30px;
+}
+@media only screen and (min-width: 110em) {
+  .card-username {
+    padding-top: 0;
+  }
+}
 
 .card-personal {
   display: flex;
   flex-direction: column;
-  align-items: center; }
-  @media only screen and (min-width: 110em) {
-    .card-personal {
-      display: flex;
-      flex-direction: row;
-      align-self: flex-start;
-      padding-top: 40px;
-      align-items: center; } }
+  align-items: center;
+}
+@media only screen and (min-width: 110em) {
+  .card-personal {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+    padding-top: 40px;
+    align-items: center;
+  }
+}
 
 .card-personal span {
-  font-weight: 100; }
-  @media only screen and (min-width: 110em) {
-    .card-personal span {
-      padding-left: 10px;
-      color: #babacf;
-      font-weight: 200; } }
+  font-weight: 100;
+}
+@media only screen and (min-width: 110em) {
+  .card-personal span {
+    padding-left: 10px;
+    color: #babacf;
+    font-weight: 200;
+  }
+}
 
 .card-image {
   background: green;
-  position: fixed; }
+  position: fixed;
+}
 
 .slider {
   position: relative;
@@ -252,27 +290,33 @@ table {
   -webkit-box-shadow: -2px 0px 42px 10px #756675;
   -moz-box-shadow: -2px 0px 42px 10px #756675;
   box-shadow: -2px 0px 42px 10px #756675;
-  border: none; }
-  @media only screen and (min-width: 110em) {
-    .slider {
-      margin-top: 440px;
-      align-self: flex-start;
-      margin-left: 200px;
-      height: 8vh;
-      width: 112px; } }
-  .slider-button {
-    background-color: transparent;
-    background-size: 25%;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 50%;
-    z-index: 100;
-    border: none; }
-  .slider-button.next {
-    background-image: url("../../images/icon-next.svg"); }
+  border: none;
+}
+@media only screen and (min-width: 110em) {
+  .slider {
+    margin-top: 440px;
+    align-self: flex-start;
+    margin-left: 200px;
+    height: 8vh;
+    width: 112px;
+  }
+}
+.slider-button {
+  background-color: transparent;
+  background-size: 25%;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 50%;
+  z-index: 100;
+  border: none;
+}
+.slider-button.next {
+  background-image: url("../images/icon-next.svg");
+}
 
 .slider-button.previous {
-  background-image: url("../../images/icon-prev.svg"); }
+  background-image: url("../../images/icon-prev.svg");
+}
 
 body {
   font-size: 1rem;
@@ -283,14 +327,17 @@ body {
   background-image: url("../images/pattern-curve.svg");
   background-repeat: no-repeat;
   background-position-y: bottom;
-  background-size: 80%; }
+  background-size: 80%;
+}
 
 .container {
   width: 100vw;
   height: 100vh;
   margin: 0 auto;
   display: flex;
-  position: relative; }
+  position: relative;
+}
 
 .hidden {
-  display: none; }
+  display: none;
+}
